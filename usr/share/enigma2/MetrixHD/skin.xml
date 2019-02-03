@@ -278,7 +278,7 @@
 		<parameter name="PiconManagerListFont" value="screen_text;20"/>
 		<parameter name="ProgrammlistenUpdaterList" value="10,8,480,200,40"/>
 		<parameter name="ProgrammlistenUpdaterListFont" value="screen_text;22"/>
-		<parameter name="EpgListMulti" value="160,120,75,20"/>
+		<parameter name="EpgListMulti" value="160,110,76,10"/>
 <!-- cf#_#rename -->
 		<parameter name="EpgListMultiProgressBar" value="70,10,1"/>
 <!-- cf#_#rename -->
@@ -287,6 +287,10 @@
 		<parameter name="EpgListIcon" value="1,10,21,21,1"/>
 <!-- cf#_#rename -->
 		<parameter name="EpgListIcon#_FHDscreen" value="2,12,25,25,2"/>
+<!-- cf#_#rename -->
+		<parameter name="EpgListSingle" value="34,120"/>
+<!-- cf#_#rename -->
+		<parameter name="EpgListSingle#_FHDscreen" value="50,175"/>
 <!-- cf#_#begin -->
 	</parameters>
 <!-- SKINPARTS -->
@@ -302,6 +306,5 @@
 	<include filename="/usr/share/enigma2/MetrixHD/skin_00p_plugins.xml" />
 	<include filename="/usr/share/enigma2/MetrixHD/skin_00u_unchecked.xml" />
 	<include filename="/usr/share/enigma2/MetrixHD/skin_00z_design.xml" />
-	<!-- placeholder_skinparts /-->
 <!-- SKINPARTS -->
 </skin>
