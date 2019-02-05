@@ -1,8 +1,6 @@
 MetrixHD
 ========
 
-##**Open Vision 7.0 default skin**
-
 MetrixHD is created by iMaxxx http://open-store.net
 
 ![alt tag](https://raw.github.com/OpenVisionE2/MetrixHD/master/MetrixHD-INFO/openstore.png)
