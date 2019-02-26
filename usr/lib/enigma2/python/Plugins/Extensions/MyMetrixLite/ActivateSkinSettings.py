@@ -249,6 +249,11 @@ class ActivateSkinSettings:
 			if config.plugins.MetrixWeather.enabled.getValue() is False:
 				infobarSkinSearchAndReplace.append(['<panel name="INFOBARWEATHERWIDGET" />', ''])
 
+			if config.plugins.MetrixWeather.type.getValue() is False:
+				infobarSkinSearchAndReplace.append(['<panel name="INFOBARWEATHERWIDGET-2" />', '<panel name="INFOBARWEATHERWIDGET" />'])
+			else:
+				infobarSkinSearchAndReplace.append(['<panel name="INFOBARWEATHERWIDGET" />', '<panel name="INFOBARWEATHERWIDGET-2" />'])
+
 			if config.plugins.MyMetrixLiteOther.showInfoBarServiceIcons.getValue() is False: 
 				infobarSkinSearchAndReplace.append(['<panel name="INFOBARSERVICEINFO" />', '']) 
 
@@ -331,6 +336,11 @@ class ActivateSkinSettings:
 			if config.plugins.MetrixWeather.MoviePlayer.getValue() is False or config.plugins.MetrixWeather.enabled.getValue() is False:
 				moviePlayerSkinSearchAndReplace.append(['<panel name="INFOBARWEATHERWIDGET" />', ''])
 
+			if config.plugins.MetrixWeather.type.getValue() is False:
+				moviePlayerSkinSearchAndReplace.append(['<panel name="INFOBARWEATHERWIDGET-2" />', '<panel name="INFOBARWEATHERWIDGET" />'])
+			else:
+				moviePlayerSkinSearchAndReplace.append(['<panel name="INFOBARWEATHERWIDGET" />', '<panel name="INFOBARWEATHERWIDGET-2" />'])
+
 			if config.plugins.MyMetrixLiteOther.showSTBinfoMoviePlayer.getValue() is True:
 				if config.plugins.MyMetrixLiteOther.InfoBarMoviePlayerDesign.getValue() == "1":
 					moviePlayerSkinSearchAndReplace.append(['<!--panel name="STBINFOMOVIEPLAYER" /-->', '<panel name="STBINFOMOVIEPLAYER" />'])
@@ -389,6 +399,11 @@ class ActivateSkinSettings:
 
 			if config.plugins.MetrixWeather.MoviePlayer.getValue() is False or config.plugins.MetrixWeather.enabled.getValue() is False:
 				EMCSkinSearchAndReplace.append(['<panel name="INFOBARWEATHERWIDGET" />', ''])
+
+			if config.plugins.MetrixWeather.type.getValue() is False:
+				EMCSkinSearchAndReplace.append(['<panel name="INFOBARWEATHERWIDGET-2" />', '<panel name="INFOBARWEATHERWIDGET" />'])
+			else:
+				EMCSkinSearchAndReplace.append(['<panel name="INFOBARWEATHERWIDGET" />', '<panel name="INFOBARWEATHERWIDGET-2" />'])
 
 			if config.plugins.MyMetrixLiteOther.showSTBinfoMoviePlayer.getValue() is True:
 				if config.plugins.MyMetrixLiteOther.InfoBarMoviePlayerDesign.getValue() == "1":
