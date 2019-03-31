@@ -1,7 +1,7 @@
 MetrixHD [![Build Status](https://travis-ci.org/OpenVisionE2/MetrixHD.svg?branch=master)](https://travis-ci.org/OpenVisionE2/MetrixHD)
-==========
+========
 
-MetrixHD is created by iMaxxx http://open-store.net
+MetrixHD is created by iMaxxx
 
 ![alt tag](https://raw.github.com/OpenVisionE2/MetrixHD/master/MetrixHD-INFO/openstore.png)
 
@@ -124,3 +124,4 @@ MetrixHD is created by iMaxxx http://open-store.net
 
 ###Eventview  - OSD&VIDEO
 ![alt tag](https://raw.github.com/OpenVisionE2/MetrixHD/master/MetrixHD-INFO/eventview.png)
+
