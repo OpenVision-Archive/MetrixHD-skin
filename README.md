@@ -3,8 +3,6 @@ MetrixHD [![Build Status](https://travis-ci.org/OpenVisionE2/MetrixHD.svg?branch
 
 MetrixHD is created by iMaxxx
 
-![alt tag](https://raw.github.com/OpenVisionE2/MetrixHD/master/MetrixHD-INFO/openstore.png)
-
 **The skin uses a modern 2-layer style with 2 main fonts and several font colors to catch the users attention on the important areas of a screen.**
 
 **_background-text_** *- MetrixColors - color for texts in background*  
