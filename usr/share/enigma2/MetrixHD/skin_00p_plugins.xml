@@ -3371,9 +3371,9 @@
 		<widget source="list_left_head2" render="Listbox" position="70,141" size="565,30" foregroundColor="layer-a-accent1" selectionDisabled="1" backgroundColor="layer-a-background" transparent="1" >
 		<convert type="TemplatedMultiContent">
 			{"template": [
-				MultiContentEntryText(pos = (20, 0), size = (100, 30), font = 0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is a symbolic mode
-				MultiContentEntryText(pos = (140, 0), size = (120, 30), font = 0, flags = RT_HALIGN_RIGHT, text = 11), # index 11 is the scaled size
-				MultiContentEntryText(pos = (300, 0), size = (245, 30), font = 0, flags = RT_HALIGN_RIGHT, text = 13), # index 13 is the modification time
+				MultiContentEntryText(pos = (140, 0), size = (80, 30), font = 0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is a symbolic mode
+				MultiContentEntryText(pos = (220, 0), size = (100, 30), font = 0, flags = RT_HALIGN_RIGHT, text = 11), # index 11 is the scaled size
+				MultiContentEntryText(pos = (320, 0), size = (240, 30), font = 0, flags = RT_HALIGN_RIGHT, text = 13), # index 13 is the modification time
 				],
 				"fonts": [gFont("screen_text", 18)],
 				"itemHeight": 30,
@@ -3381,13 +3381,13 @@
 			}
 		</convert>
 		</widget>
-		<widget name="list_right_head1" position="650,90" size="565,50" font="screen_text;19" valign="center" foregroundColor="layer-a-accent1" backgroundColor="layer-a-background" transparent="1"/>
+		<widget name="list_right_head1" position="645,90" size="565,50" font="screen_text;19" valign="center" foregroundColor="layer-a-accent1" backgroundColor="layer-a-background" transparent="1"/>
 		<widget source="list_right_head2" render="Listbox" position="645,141" size="565,30" foregroundColor="layer-a-accent1" backgroundColor="layer-a-background" selectionDisabled="1" transparent="1" >
 			<convert type="TemplatedMultiContent">
 				{"template": [
-					MultiContentEntryText(pos = (20, 0), size = (100, 30), font = 0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is a symbolic mode
-					MultiContentEntryText(pos = (140, 0), size = (120, 30), font = 0, flags = RT_HALIGN_RIGHT, text = 11), # index 11 is the scaled size
-					MultiContentEntryText(pos = (300, 0), size = (245, 30), font = 0, flags = RT_HALIGN_RIGHT, text = 13), # index 13 is the modification time
+					MultiContentEntryText(pos = (140, 0), size = (80, 30), font = 0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is a symbolic mode
+					MultiContentEntryText(pos = (220, 0), size = (100, 30), font = 0, flags = RT_HALIGN_RIGHT, text = 11), # index 11 is the scaled size
+					MultiContentEntryText(pos = (320, 0), size = (240, 30), font = 0, flags = RT_HALIGN_RIGHT, text = 13), # index 13 is the modification time
 					],
 					"fonts": [gFont("screen_text", 18)],
 					"itemHeight": 30,
@@ -3395,6 +3395,8 @@
 				}
 			</convert>
 		</widget>
+		<widget name="sort_left" position="75,141" size="100,30" font="screen_text;18" halign="left" foregroundColor="layer-a-accent1" backgroundColor="layer-a-background" transparent="1"/>
+		<widget name="sort_right" position="650,141" size="100,30" font="screen_text;18" halign="left" foregroundColor="layer-a-accent1" backgroundColor="layer-a-background" transparent="1"/>
 		<eLabel position="70,140" size="1140,1" backgroundColor="layer-a-accent2" />
 		<eLabel position="70,165" size="1140,1" backgroundColor="layer-a-accent2" />
 		<eLabel position="640,140" size="1,480" backgroundColor="layer-a-accent2" />
@@ -3414,9 +3416,9 @@
 		<widget source="list_left_head2" render="Listbox" position="105,213" size="848,45" foregroundColor="layer-a-accent1" selectionDisabled="1" backgroundColor="layer-a-background" transparent="1" >
 		<convert type="TemplatedMultiContent">
 			{"template": [
-				MultiContentEntryText(pos = (30, 0), size = (150, 45), font = 0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is a symbolic mode
-				MultiContentEntryText(pos = (210, 0), size = (180, 45), font = 0, flags = RT_HALIGN_RIGHT, text = 11), # index 11 is the scaled size
-				MultiContentEntryText(pos = (450, 0), size = (368, 45), font = 0, flags = RT_HALIGN_RIGHT, text = 13), # index 13 is the modification time
+				MultiContentEntryText(pos = (210, 0), size = (120, 45), font = 0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is a symbolic mode
+				MultiContentEntryText(pos = (330, 0), size = (150, 45), font = 0, flags = RT_HALIGN_RIGHT, text = 11), # index 11 is the scaled size
+				MultiContentEntryText(pos = (480, 0), size = (360, 45), font = 0, flags = RT_HALIGN_RIGHT, text = 13), # index 13 is the modification time
 				],
 				"fonts": [gFont("screen_text", 27)],
 				"itemHeight": 45,
@@ -3424,13 +3426,13 @@
 			}
 		</convert>
 		</widget>
-		<widget name="list_right_head1" position="975,135" size="848,75" font="screen_text;29" valign="center" foregroundColor="layer-a-accent1" backgroundColor="layer-a-background" transparent="1"/>
+		<widget name="list_right_head1" position="968,135" size="848,75" font="screen_text;29" valign="center" foregroundColor="layer-a-accent1" backgroundColor="layer-a-background" transparent="1"/>
 		<widget source="list_right_head2" render="Listbox" position="968,213" size="848,45" foregroundColor="layer-a-accent1" backgroundColor="layer-a-background" selectionDisabled="1" transparent="1" >
 			<convert type="TemplatedMultiContent">
 				{"template": [
-					MultiContentEntryText(pos = (30, 0), size = (150, 45), font = 0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is a symbolic mode
-					MultiContentEntryText(pos = (210, 0), size = (180, 45), font = 0, flags = RT_HALIGN_RIGHT, text = 11), # index 11 is the scaled size
-					MultiContentEntryText(pos = (450, 0), size = (368, 45), font = 0, flags = RT_HALIGN_RIGHT, text = 13), # index 13 is the modification time
+					MultiContentEntryText(pos = (210, 0), size = (120, 45), font = 0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is a symbolic mode
+					MultiContentEntryText(pos = (330, 0), size = (150, 45), font = 0, flags = RT_HALIGN_RIGHT, text = 11), # index 11 is the scaled size
+					MultiContentEntryText(pos = (480, 0), size = (360, 45), font = 0, flags = RT_HALIGN_RIGHT, text = 13), # index 13 is the modification time
 					],
 					"fonts": [gFont("screen_text", 27)],
 					"itemHeight": 45,
@@ -3438,6 +3440,8 @@
 				}
 			</convert>
 		</widget>
+		<widget name="sort_left" position="113,213" size="150,45" font="screen_text;27" halign="left" foregroundColor="layer-a-accent1" backgroundColor="layer-a-background" transparent="1"/>
+		<widget name="sort_right" position="975,213" size="150,45" font="screen_text;27" halign="left" foregroundColor="layer-a-accent1" backgroundColor="layer-a-background" transparent="1"/>
 		<eLabel position="105,210" size="1710,2" backgroundColor="layer-a-accent2" />
 		<eLabel position="105,248" size="1710,2" backgroundColor="layer-a-accent2" />
 		<eLabel position="960,210" size="2,720" backgroundColor="layer-a-accent2" />
@@ -3463,7 +3467,7 @@
 	<screen name="FileCommanderFileStatInfo" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent" title="File/Directory Status Information" >
 		<widget source="Title" render="Label" position="58,36" size="800,50" valign="bottom" font="global_title;34" foregroundColor="layer-a-title-foreground" backgroundColor="layer-a-background" transparent="1" />
 		<widget name="filename" position="70,90" size="525,50" font="screen_text;19" valign="center" foregroundColor="layer-a-accent1" backgroundColor="layer-a-background"/>
-		<widget source="list" render="Listbox" position="70,170" size="700,450" itemHeight="30" font="screen_text; 20" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarSlidercolor" scrollbarSliderBorderColor="scrollbarSliderbordercolor" scrollbarMode="showOnDemand" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" backgroundColorSelected="layer-a-selection-background" foregroundColorSelected="layer-a-selection-foreground" transparent="1" >
+		<widget source="list" render="Listbox" position="70,170" size="700,330" itemHeight="30" font="screen_text; 20" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarSlidercolor" scrollbarSliderBorderColor="scrollbarSliderbordercolor" scrollbarMode="showOnDemand" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" backgroundColorSelected="layer-a-selection-background" foregroundColorSelected="layer-a-selection-foreground" transparent="1" >
 			<convert type="TemplatedMultiContent">
 				{"template": [
 					# 0   100 200 300 400 500
@@ -3478,6 +3482,9 @@
 				}
 			</convert>
 		</widget>
+		<widget name="link_sep" position="70,508" size="700,1" backgroundColor="layer-a-accent1" />
+		<widget name="link_label" position="70,520" size="300,30" font="screen_text; 20" transparent="1" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background"/>
+		<widget name="link_value" position="390,520" size="380,30" font="screen_text; 20" transparent="1" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background"/>
 		<ePixmap position="890,175" size="256,256" zPosition="2" pixmap="MetrixHD/icons/filecom.png" transparent="1" alphatest="blend" />
 		<panel name="template1_2layer" />
 		<panel name="_oe-buttons_template1" />
