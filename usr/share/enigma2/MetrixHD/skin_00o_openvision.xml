@@ -1,5 +1,5 @@
 <skin>
-<!-- cf#_#begin -->
+<!-- cf#_#start -->
 	<!--About/Info Screens-->
 	<screen name="AboutOE" position="0,0" size="1280,720" title="About" flags="wfNoBorder" backgroundColor="transparent">
 		<widget source="Title" render="Label" position="58,36" foregroundColor="layer-a-title-foreground" size="525,50" valign="bottom" font="global_title;34" backgroundColor="layer-a-background" transparent="1" />
@@ -2975,7 +2975,9 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<widget name="text" position="70,100" size="700,510" font="Console;16" transparent="1" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarSlidercolor" scrollbarSliderBorderColor="scrollbarSliderbordercolor" scrollbarMode="showOnDemand"/>
 		<ePixmap position="890,175" size="256,256" zPosition="2" pixmap="MetrixHD/icons/console.png" transparent="1" alphatest="blend" />
 		<panel name="template1_2layer" />
-		<panel name="__e-buttons_template1" />
+		<panel name="rg__-buttons_template1" />
+		<panel name="rg__-keys_template1" />
+		<panel name="_oe-buttons_template1" />
 	</screen>
 	<screen name="JobView" position="0,0" size="1280,720" title="JobView" flags="wfNoBorder" backgroundColor="transparent">
 		<eLabel position="290,160" zPosition="-10" size="700,400" backgroundColor="layer-a-background" />
@@ -3072,7 +3074,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<eLabel name="epg-service-background" position="90,311" size="1740,1" backgroundColor="epg-borderlines" zPosition="-1" transparent="0" />
 		<eLabel name="epg-service-background" position="84,357" size="1752,1" backgroundColor="epg-borderlines" zPosition="-1" transparent="0" />
 	</screen>
-<!-- cf#_#begin -->
+<!-- cf#_#start -->
 	<screen name="EPGvertical" position="0,0" size="1280,720" title="Electronic Program Guide" flags="wfNoBorder" backgroundColor="transparent">
 		<eLabel text="Electronic Program Guide" position="58,36" size="475,50" valign="bottom" font="global_title;34" backgroundColor="epg-background" foregroundColor="layer-a-title-foreground" transparent="1" />
 		<ePixmap position="534,46" size="36,36" zPosition="10" pixmap="MetrixHD/left.png" alphatest="on" />
@@ -4467,9 +4469,9 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<widget name="stars" position="562,110" size="210,21" pixmap="MetrixHD/imdb/starsbar_filled.png" zPosition="3" transparent="1" />
 		<widget name="ratinglabel" position="470,135" size="300,30" font="SetrixHD;20" halign="right" backgroundColor="layer-a-background" foregroundColor="unf0b400" transparent="1" />
 		<widget name="poster" position=" 70,150" size="160,230" alphatest="blend" />
-		<widget name="detailslabel" position="270,170" size="570,175" font="SetrixHD;20" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
-		<widget name="castlabel" position=" 70,395" size="700,220" font="SetrixHD;20" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
-		<widget name="extralabel" position=" 70,150" size="700,480" font="SetrixHD;20" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
+		<widget name="detailslabel" position="270,170" size="500,210" itemHeight="30" font="screen_text; 20" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarSlidercolor" scrollbarSliderBorderColor="scrollbarSliderbordercolor" scrollbarMode="showOnDemand" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" backgroundColorSelected="layer-a-selection-background" foregroundColorSelected="layer-a-selection-foreground" transparent="1" />
+		<widget name="castlabel" position=" 70,395" size="700,220" itemHeight="30" font="screen_text; 20" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarSlidercolor" scrollbarSliderBorderColor="scrollbarSliderbordercolor" scrollbarMode="showOnDemand" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" backgroundColorSelected="layer-a-selection-background" foregroundColorSelected="layer-a-selection-foreground" transparent="1" />
+		<widget name="extralabel" position=" 70,150" size="700,480" itemHeight="30" font="screen_text; 20" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarSlidercolor" scrollbarSliderBorderColor="scrollbarSliderbordercolor" scrollbarMode="showOnDemand" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" backgroundColorSelected="layer-a-selection-background" foregroundColorSelected="layer-a-selection-foreground" transparent="1" />
 		<widget name="statusbar" position="810,415" size="415,190" font="screen_info; 20" foregroundColor="layer-b-foreground" halign="center" backgroundColor="layer-b-background" valign="center" transparent="1"/>
 		<panel name="rgyb-buttons_template1" />
 		<panel name="rgyb-keys_template1" />
@@ -4696,7 +4698,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<widget name="arrowup" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="blend" />
 		<widget name="arrowup2" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="blend" />
 	</screen>
-<!-- cf#_#begin -->
+<!-- cf#_#start -->
 	<screen name="HelpMenu" position="0,0" size="1280,720" title="Menu" flags="wfNoBorder" backgroundColor="transparent">
 		<eLabel text="help..." position="58,36" foregroundColor="layer-a-title-foreground" size="525,50" valign="bottom" font="global_title;34" backgroundColor="layer-a-background" transparent="1" />
 		<widget name="list" position="70,100" size="700,510" itemHeight="30" font="screen_text; 20" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarSlidercolor" scrollbarSliderBorderColor="scrollbarSliderbordercolor" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" backgroundColorSelected="layer-a-selection-background" foregroundColorSelected="layer-a-selection-foreground" transparent="1" />
@@ -4979,7 +4981,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<eLabel position="0,0" size="1280,720" backgroundColor="black" zPosition="0"/>
 <!-- cf#_#stop -->
 		<widget name="picture" pixmap="distro-logo.png" position="0,0" size="500,500" alphatest="blend" zPosition="1"/>
-<!-- cf#_#begin -->
+<!-- cf#_#start -->
 	</screen>
 	<!-- Screensaver -->
 	<!-- dBackup -->
