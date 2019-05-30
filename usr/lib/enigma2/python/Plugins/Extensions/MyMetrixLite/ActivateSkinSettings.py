@@ -429,7 +429,7 @@ class ActivateSkinSettings:
 				EMCSkinSearchAndReplace.append(['<panel name="EMCSelectionCover_no" />', '<panel name="EMCSelectionCover_small" />'])
 			elif config.plugins.MyMetrixLiteOther.showEMCSelectionCover.getValue() == "large":
 				EMCSkinSearchAndReplace.append(['<panel name="EMCSelectionCover_no" />', '<panel name="EMCSelectionCover_large" />'])
-				if config.plugins.MyMetrixLiteOther.showEMCSelectionCoverLargeDescription.getValue() is False:
+			if config.plugins.MyMetrixLiteOther.showEMCSelectionCoverLargeDescription.getValue() is False:
 					EMCSkinSearchAndReplace.append(['<panel name="EMCSelectionCover_large_description_on" />', '<panel name="EMCSelectionCover_large_description_off" />'])
 
 			posNR = config.plugins.MyMetrixLiteOther.showEMCSelectionPicon.value == 'right'
@@ -1864,6 +1864,21 @@ class ActivateSkinSettings:
 				line = line.replace(' font=', ' borderWidth="%s" borderColor="#%s%s" font=' %(config.plugins.MyMetrixLiteColors.backgroundtextborderwidth.value, config.plugins.MyMetrixLiteColors.backgroundtextbordertransparency.value, config.plugins.MyMetrixLiteColors.backgroundtextbordercolor.value))
 			if not config.plugins.MyMetrixLiteOther.SkinDesignMenuScrollInfo.value and 'name="menu_next_side_marker"' in line:
 				line = line.replace('text="&#x25ba;"', 'text=""')
+			if config.plugins.MyMetrixLiteOther.emc_pig.value:
+				if 'screen name="EMCSelection_PIG"' in line:
+					line = line.replace('screen name="EMCSelection_PIG"', 'screen name="EMCSelection"')
+				elif 'screen name="EMCSelection"' in line:
+					line = line.replace('screen name="EMCSelection"', 'screen name="EMCSelection_noPIG"')
+			if config.plugins.MyMetrixLiteOther.movielist_pig.value:
+				if 'screen name="MovieSelection_PIG"' in line:
+					line = line.replace('screen name="MovieSelection_PIG"', 'screen name="MovieSelection"')
+				elif 'screen name="MovieSelection"' in line:
+					line = line.replace('screen name="MovieSelection"', 'screen name="MovieSelection_noPIG"')
+			if config.usage.use_pig.value:
+				if 'screen name="ChannelSelection_PIG"' in line:
+					line = line.replace('screen name="ChannelSelection_PIG"', 'screen name="ChannelSelection"')
+				elif 'screen name="MovieSelection"' in line:
+					line = line.replace('screen name="ChannelSelection"', 'screen name="ChannelSelection_noPIG"')
 #options for all skin files end
 			if self.EHDenabled:
 				try: 
