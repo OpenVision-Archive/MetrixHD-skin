@@ -1,4 +1,4 @@
-MetrixHD [![Build Status](https://travis-ci.org/OpenVisionE2/MetrixHD.svg?branch=master)](https://travis-ci.org/OpenVisionE2/MetrixHD)
+MetrixHD [![Build Status](https://travis-ci.org/OpenVisionE2/MetrixHD-skin.svg?branch=master)](https://travis-ci.org/OpenVisionE2/MetrixHD-skin)
 ========
 
 MetrixHD is created by iMaxxx
