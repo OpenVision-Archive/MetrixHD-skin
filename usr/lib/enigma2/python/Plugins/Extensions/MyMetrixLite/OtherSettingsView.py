@@ -544,7 +544,6 @@ class OtherSettingsView(ConfigListScreen, Screen):
 			list.append(getConfigListEntry(tab*2 + _("Show PROTOCOL"), config.plugins.MyMetrixLiteOther.showExtended_protocol, itext + "(caid - pid - source - PROTOCOL - hops - ecm time)"))
 			list.append(getConfigListEntry(tab*2 + _("Show HOPS"), config.plugins.MyMetrixLiteOther.showExtended_hops,  itext + "(caid - pid - source - protocol - HOPS - ecm time)"))
 			list.append(getConfigListEntry(tab*2 + _("Show ECM TIME"), config.plugins.MyMetrixLiteOther.showExtended_ecmtime, itext + "(caid - pid - source - protocol - hops - ECM TIME)"))
-		#list.append(getConfigListEntry(tab + _("Enable Color Gradient"), config.plugins.MyMetrixLiteOther.SkinDesignInfobarColorGradient, _("helptext")))
 		list.append(getConfigListEntry(tab + _("Choose Picon Type"), config.plugins.MyMetrixLiteOther.SkinDesignInfobarPicon, _("helptext"), "ENABLED"))
 		if config.plugins.MyMetrixLiteOther.SkinDesignInfobarPicon.value == "1":
 			if self.EHDenabled:
@@ -580,7 +579,7 @@ class OtherSettingsView(ConfigListScreen, Screen):
 		list.append(getConfigListEntry(tab + _("ChannelName/Number FontSize"), config.plugins.MyMetrixLiteOther.infoBarChannelNameFontSize, _("helptext")))
 		section = _("mini TV")
 		list.append(getConfigListEntry(section + tab + sep*(char-len(section)-len(tab)), ))
-		list.append(getConfigListEntry(tab + _("Show in Channel selection?"), config.usage.use_pig, _("Setting is the same as\n'") + _("Channel list show MiniTV*") + _("'\nin\n'") + _("Channel selection settings"), "ENABLED"))
+		list.append(getConfigListEntry(tab + _("Show in Channel selection?"), config.usage.use_pig, _("Setting is the same as\n'") + _("Channel list show MiniTV*") + _("'\nin\n'") + _("Channel selection settings") + "'", "ENABLED"))
 		#list.append(getConfigListEntry(tab + _("Show in graphical EPG?"), config.epgselection.graph_pig, _("Setting is the same as\n'") + _("Picture in graphics") + _("'\nin\n'") + _("GraphicalEPG settings") + "'"))
 		list.append(getConfigListEntry(tab + _("Show in Movie Center?"), config.plugins.MyMetrixLiteOther.movielist_pig, _("helptext"), "ENABLED"))
 		list.append(getConfigListEntry(tab + _("Show in EMC?"), config.plugins.MyMetrixLiteOther.emc_pig, _("helptext"), "ENABLED"))
