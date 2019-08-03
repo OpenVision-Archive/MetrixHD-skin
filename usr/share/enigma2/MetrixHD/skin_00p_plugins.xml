@@ -640,8 +640,8 @@
 		<widget name="sysTemp" position="70,580" size="350,30" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" font="screen_text;20" halign="left" zPosition="1" transparent="1" />
 		<widget name="hddTemp" position="420,580" size="350,30" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" font="screen_text;20" halign="right" zPosition="1" transparent="1" />
 		<widget name="powerstatus" position="70,550" size="300,30" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" font="screen_text;20" zPosition="1" transparent="1" />
-		<widget name="daemon0" alphatest="blend" pixmap="skin_default/buttons/button_green_off.png" position="405,555" size="15,16" zPosition="10" transparent="1"/>
-		<widget name="daemon1" alphatest="blend" pixmap="skin_default/buttons/button_green.png" position="405,555" size="15,16" zPosition="10" transparent="1"/>
+		<widget name="daemon0" alphatest="blend" pixmap="buttons/button_green_off.png" position="405,555" size="15,16" zPosition="10" transparent="1"/>
+		<widget name="daemon1" alphatest="blend" pixmap="buttons/button_green.png" position="405,555" size="15,16" zPosition="10" transparent="1"/>
 		<widget name="cancel" position="70,638" size="170,30" zPosition="1" valign="center" font="global_button;20" halign="left" foregroundColor="layer-a-button-foreground" backgroundColor="layer-a-background" transparent="1" />
 		<widget name="ok" position="253,638" size="170,30" zPosition="1" valign="center" font="global_button;20" halign="left" foregroundColor="layer-a-button-foreground" backgroundColor="layer-a-background" transparent="1" />
 		<panel name="template1_2layer" />
@@ -672,8 +672,8 @@
 		<widget name="lab4" position="70,230" size="150,30" font="Regular;20" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" valign="center" transparent="1" />
 		<widget name="inactive" position="220,230" size="100,30" font="Regular;20" valign="center" halign="center" foregroundColor="layer-a-foreground" backgroundColor="red"/>
 		<widget name="active" position="220,230" size="100,30" font="Regular;20" valign="center" halign="center" foregroundColor="layer-a-foreground" backgroundColor="green"/>
-		<widget name="autostart_off" position="70,300" zPosition="1" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
-		<widget name="autostart_on" position="70,300" zPosition="2" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
+		<widget name="autostart_off" position="70,300" zPosition="1" pixmap="icons/lock_off.png" size="32,32" alphatest="on" />
+		<widget name="autostart_on" position="70,300" zPosition="2" pixmap="icons/lock_on.png" size="32,32" alphatest="on" />
 		<widget name="lab1" position="110,300" size="360,30" font="Regular;20" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" valign="center" transparent="1"/>
 		<panel name="template1_2layer" />
 		<panel name="rgy_-buttons_template1" />
@@ -1335,7 +1335,7 @@
 		<widget source="session.CurrentService" render="Label" position="70,560" size="700,25" font="SetrixHD;20" halign="center" valign="center" backgroundColor="layer-a-background" transparent="1">
 			<convert type="ServicePosition">Position,Detailed</convert>
 		</widget>
-		<widget name="Timeline" position="70,597" size="700,20" backgroundColor="un808888" pointer="skin_default/position_arrow.png:3,5" foregroundColor="layer-a-background" />
+		<widget name="Timeline" position="70,597" size="700,20" backgroundColor="un808888" pointer="position_arrow.png:3,5" foregroundColor="layer-a-background" />
 		<eLabel position="800,130" size="420,440" zPosition="1" backgroundColor="layer-a-foreground" />
 		<eLabel position="802,132" size="416,436" zPosition="2" backgroundColor="layer-a-background" />
 		<widget source="cutlist" render="Listbox" position="810,145" size="400,420" zPosition="3" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarSlidercolor" scrollbarSliderBorderColor="scrollbarSliderbordercolor" scrollbarMode="showOnDemand" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" backgroundColorSelected="layer-a-selection-background" foregroundColorSelected="layer-a-selection-foreground" transparent="1" >
@@ -2543,7 +2543,7 @@
 	</screen>
 	<screen name="FastScanStatus" position="0,0" size="1280,720" title="Service Scan" flags="wfNoBorder" backgroundColor="transparent">
 		<widget name="Title" position="58,36" foregroundColor="layer-a-title-foreground" size="525,50" valign="bottom" font="global_title;34" backgroundColor="layer-a-background" transparent="1" />
-		<widget name="frontend" pixmap="skin_default/icons/scan-s.png" position="995,420" size="64,64" transparent="1" alphatest="blend"/>
+		<widget name="frontend" pixmap="icons/scan-s.png" position="995,420" size="64,64" transparent="1" alphatest="blend"/>
 		<widget name="scan_state" position="70,180" size="700,30" zPosition="2" font="SetrixHD;20" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
 		<widget name="scan_progress" position="70,250" size="700,20" borderColor="layer-a-accent1" foregroundColor="layer-a-progress" borderWidth="1" transparent="1" />
 		<panel name="template1_2layer" />
@@ -3239,11 +3239,11 @@
 			<convert type="FrontendInfo">BER</convert>
 		</widget>
 		<eLabel name="lock" text="Lock:" position="120,219" size=" 80,30" font="SetrixHD;21" halign="right" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
-		<widget source="Frontend" render="Pixmap" position="210,220" size=" 32,32" zPosition="1" pixmap="skin_default/icons/lock_on.png" alphatest="blend">
+		<widget source="Frontend" render="Pixmap" position="210,220" size=" 32,32" zPosition="1" pixmap="icons/lock_on.png" alphatest="blend">
 			<convert type="FrontendInfo">LOCK</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="Frontend" render="Pixmap" position="210,220" size=" 32,32" zPosition="1" pixmap="skin_default/icons/lock_off.png" alphatest="blend">
+		<widget source="Frontend" render="Pixmap" position="210,220" size=" 32,32" zPosition="1" pixmap="icons/lock_off.png" alphatest="blend">
 			<convert type="FrontendInfo">LOCK</convert>
 			<convert type="ConditionalShowHide">Invert</convert>
 		</widget>

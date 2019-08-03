@@ -147,7 +147,7 @@
 		<ePixmap position="890,175" size="256,256" zPosition="2" pixmap="MetrixHD/icons/setup.png" transparent="1" alphatest="blend" />
 	</screen>
 	<screen name="SubservicesQuickzap" position="380,600" size="560,100" title="Subservices" flags="wfNoBorder" backgroundColor="transparent">
-		<widget source="session.RecordState" render="Pixmap" pixmap="skin_default/icons/record.png" position="450,0" zPosition="2" size="14,14" alphatest="blend">
+		<widget source="session.RecordState" render="Pixmap" pixmap="icons/record.png" position="450,0" zPosition="2" size="14,14" alphatest="blend">
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
 		<eLabel text="Subservices" position="0,0" size="560,28" font="SetrixHD;20" halign="center" valign="center" backgroundColor="layer-a-background" />
@@ -377,7 +377,7 @@
 		<widget source="session.CurrentService" render="Label" position="70,560" size="700,25" font="SetrixHD;20" halign="center" valign="center" backgroundColor="layer-a-background" transparent="1">
 			<convert type="ServicePosition">Position,Detailed</convert>
 		</widget>
-		<widget name="Timeline" position="70,597" size="700,20" backgroundColor="un808888" pointer="skin_default/position_arrow.png:3,5" foregroundColor="layer-a-background" />
+		<widget name="Timeline" position="70,597" size="700,20" backgroundColor="un808888" pointer="position_arrow.png:3,5" foregroundColor="layer-a-background" />
 		<eLabel position="800,130" size="420,440" zPosition="1" backgroundColor="layer-a-foreground" />
 		<eLabel position="802,132" size="416,436" zPosition="2" backgroundColor="layer-a-background" />
 		<widget source="cutlist" render="Listbox" position="810,140" size="400,420" zPosition="3" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarSlidercolor" scrollbarSliderBorderColor="scrollbarSliderbordercolor" scrollbarMode="showOnDemand">
@@ -1089,9 +1089,9 @@
 	</screen>
 	<screen name="MessageBoxGenuine" position="350,120" size="500,450" title="Message" backgroundColor="layer-a-background">
 		<widget name="text" position="65,8" size="420,28" font="SetrixHD;22" />
-		<widget name="ErrorPixmap" pixmap="skin_default/icons/input_error.png" position="5,5" size="53,53" alphatest="blend" />
-		<widget name="QuestionPixmap" pixmap="skin_default/icons/input_question.png" position="5,5" size="53,53" alphatest="blend" />
-		<widget name="InfoPixmap" pixmap="skin_default/icons/input_info.png" position="5,5" size="53,53" alphatest="blend" />
+		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="5,5" size="53,53" alphatest="blend" />
+		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="5,5" size="53,53" alphatest="blend" />
+		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="5,5" size="53,53" alphatest="blend" />
 		<widget name="list" position="65,65" size="380,375" transparent="1" />
 		<applet type="onLayoutFinish">
 # this should be factored out into some helper code, but currently demonstrates applets.
@@ -1137,7 +1137,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap position="869,265" size="330,204" pixmap="MetrixHD/menu/vti.png" alphatest="blend" transparent="1" />
 <!-- cf#_#start -->
 		<widget source="title" render="Label" position="58,36" size="800,50" valign="bottom" font="global_title;34" foregroundColor="layer-a-title-foreground" backgroundColor="layer-a-background" transparent="1" />
-		<widget name="messagepic" pixmaps="skin_default/icons/input_info.png,skin_default/icons/input_error.png,skin_default/icons/input_question.png" position="70,120" size="53,53" transparent="1" alphatest="on" />
+		<widget name="messagepic" pixmaps="icons/input_info.png,skin_default/icons/input_error.png,skin_default/icons/input_question.png" position="70,120" size="53,53" transparent="1" alphatest="on" />
 		<widget name="messagetype" position="125,120" size="630,53" font="SetrixHD;24" halign="left" valign="center" transparent="1" />
 		<widget name="messagetext" position="70,180" size="690,420" font="SetrixHD;20" halign="center" backgroundColor="layer-a-background" transparent="1" />
 		<ePixmap pixmap="MetrixHD/buttons/key_red.png" position=" 70,635" size="30,40" alphatest="blend" />
