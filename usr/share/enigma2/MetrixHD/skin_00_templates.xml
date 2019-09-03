@@ -393,10 +393,10 @@
 			</widget>
 			<eLabel backgroundColor="layer-b-background" position="960,45" size="116,61" transparent="0" zPosition="-2"/>
 			<widget backgroundColor="layer-b-background" font="global_clock; 16" foregroundColor="layer-b-clock-foreground" noWrap="1" valign="bottom" halign="right" position="963,72" render="Label" size="104,30" source="global.CurrentTime" transparent="1">
-				<convert type="ClockToText">Format:%e. %B</convert>
+				<convert type="ClockToText"></convert>
 			</widget>
 			<widget backgroundColor="layer-b-background" font="global_clock; 16" foregroundColor="layer-b-clock-foreground" valign="bottom" halign="right" noWrap="1" position="963,42" render="Label" size="104,30" source="global.CurrentTime" transparent="1">
-				<convert type="ClockToText">Format:%A</convert>
+				<convert type="ClockToText"></convert>
 			</widget>
 			<!-- ClockWidget */-->
 		</screen>
@@ -1814,10 +1814,10 @@
 				<convert type="ClockToText">Default</convert>
 			</widget>
 			<widget source="global.CurrentTime" render="Label" position="51,634" size="150,30" font="global_clock; 20" noWrap="1" halign="right" foregroundColor="layer-a-clock-foreground" backgroundColor="layer-a-background" transparent="1" valign="bottom">
-				<convert type="ClockToText">Format:%e. %B</convert>
+				<convert type="ClockToText"></convert>
 			</widget>
 			<widget source="global.CurrentTime" render="Label" position="51,604" size="150,30" font="global_clock; 20" noWrap="1" halign="right" foregroundColor="layer-a-clock-foreground" backgroundColor="layer-a-background" transparent="1" valign="bottom">
-				<convert type="ClockToText">Format:%A</convert>
+				<convert type="ClockToText"></convert>
 			</widget>
 			<eLabel position="51,600" zPosition="-1" size="340,70" backgroundColor="layer-a-background" transparent="0" />
 		<!--ClockWidget */-->
@@ -1828,10 +1828,10 @@
 				<convert type="ClockToText">Default</convert>
 			</widget>
 			<widget source="global.CurrentTime" render="Label" position="933,30" size="160,27" font="global_clock; 16" noWrap="1" halign="right" valign="bottom" foregroundColor="layer-a-clock-foreground" backgroundColor="layer-a-background" transparent="1">
-				<convert type="ClockToText">Format:%A</convert>
+				<convert type="ClockToText"></convert>
 			</widget>
 			<widget source="global.CurrentTime" render="Label" position="933,54" size="160,27" font="global_clock; 16" noWrap="1" halign="right" valign="bottom" foregroundColor="layer-a-clock-foreground" backgroundColor="layer-a-background" transparent="1">
-				<convert type="ClockToText">Format:%e. %B</convert>
+				<convert type="ClockToText"></convert>
 			</widget>
 		</screen>
 		<screen name="CLOCKWIDGET_2layer-1">
@@ -1839,10 +1839,10 @@
 				<convert type="ClockToText">Default</convert>
 			</widget>
 			<widget source="global.CurrentTime" render="Label" position="512,30" size="140,27" font="global_clock; 16" noWrap="1" halign="right" valign="bottom" foregroundColor="layer-a-clock-foreground" backgroundColor="layer-a-background" transparent="1">
-				<convert type="ClockToText">Format:%A</convert>
+				<convert type="ClockToText"></convert>
 			</widget>
 			<widget source="global.CurrentTime" render="Label" position="512,54" size="140,27" font="global_clock; 16" noWrap="1" halign="right" valign="bottom" foregroundColor="layer-a-clock-foreground" backgroundColor="layer-a-background" transparent="1">
-				<convert type="ClockToText">Format:%e. %b.</convert>
+				<convert type="ClockToText"></convert>
 			</widget>
 		</screen>
 		<screen name="CLOCKWIDGET_2layer-2">
@@ -1850,10 +1850,10 @@
 				<convert type="ClockToText">Default</convert>
 			</widget>
 			<widget source="global.CurrentTime" render="Label" position="938,30" size="160,27" font="global_clock; 16" noWrap="1" halign="right" valign="bottom" foregroundColor="layer-b-clock-foreground" backgroundColor="layer-b-background" transparent="1">
-				<convert type="ClockToText">Format:%A</convert>
+				<convert type="ClockToText"></convert>
 			</widget>
 			<widget source="global.CurrentTime" render="Label" position="938,54" size="160,27" font="global_clock; 16" noWrap="1" halign="right" valign="bottom" foregroundColor="layer-b-clock-foreground" backgroundColor="layer-b-background" transparent="1">
-				<convert type="ClockToText">Format:%e. %B</convert>
+				<convert type="ClockToText"></convert>
 			</widget>
 		</screen>
 		<!-- template1_1layer -->
@@ -1870,10 +1870,10 @@
 				<convert type="ClockToText">Default</convert>
 			</widget>
 			<widget source="global.CurrentTime" render="Label" position="933,30" size="160,27" font="global_clock; 16" noWrap="1" halign="right" valign="bottom" foregroundColor="layer-a-clock-foreground" backgroundColor="epg-background" transparent="1">
-				<convert type="ClockToText">Format:%A</convert>
+				<convert type="ClockToText"></convert>
 			</widget>
 			<widget source="global.CurrentTime" render="Label" position="933,54" size="160,27" font="global_clock; 16" noWrap="1" halign="right" valign="bottom" foregroundColor="layer-a-clock-foreground" backgroundColor="epg-background" transparent="1">
-				<convert type="ClockToText">Format:%e. %B</convert>
+				<convert type="ClockToText"></convert>
 			</widget>
 			<panel name="SKINPART_screens"/>
 		</screen>
@@ -1929,10 +1929,10 @@
 				<convert type="ClockToText">Default</convert>
 			</widget>
 			<widget source="global.CurrentTime" render="Label" position="265,444" size="150,30" font="global_clock; 20" noWrap="1" halign="right" foregroundColor="layer-a-clock-foreground" backgroundColor="layer-a-background" transparent="1" valign="bottom">
-				<convert type="ClockToText">Format:%e. %B</convert>
+				<convert type="ClockToText"></convert>
 			</widget>
 			<widget source="global.CurrentTime" render="Label" position="265,414" size="150,30" font="global_clock; 20" noWrap="1" halign="right" foregroundColor="layer-a-clock-foreground" backgroundColor="layer-a-background" transparent="1" valign="bottom">
-				<convert type="ClockToText">Format:%A</convert>
+				<convert type="ClockToText"></convert>
 			</widget>
 			<!--ClockWidget */-->
 		</screen>
@@ -2016,11 +2016,11 @@
 		</widget>
 		<widget source="ServiceEvent" render="Label" position="843,152" size="64,25" font="screen_text;19" backgroundColor="layer-b-background" foregroundColor="layer-b-foreground" transparent="0" halign="right" valign="center" >
 			<convert type="EventTime">StartTime</convert>
-			<convert type="ClockToText">Format:%H:%M</convert>
+			<convert type="ClockToText"></convert>
 		</widget>
 		<widget source="ServiceEvent" render="Label" position="1128,152" size="77,25" font="screen_text;19" backgroundColor="layer-b-background" foregroundColor="layer-b-foreground" transparent="0" valign="center" >
 			<convert type="EventTime">EndTime</convert>
-			<convert type="ClockToText">Format:%H:%M</convert>
+			<convert type="ClockToText"></convert>
 		</widget>
 		<eLabel position="914,165" size="206,1" backgroundColor="layer-b-accent1" />
 		<widget source="ServiceEvent" render="Progress" position="914,163" size="206,5" foregroundColor="layer-b-progress" transparent="1" zPosition="1">
@@ -2043,11 +2043,11 @@
 		</widget>
 		<widget source="ServiceEvent" render="Label" position="843,152" size="64,25" font="screen_text;19" backgroundColor="layer-b-background" foregroundColor="layer-b-foreground" transparent="0" halign="right" valign="center" >
 			<convert type="EventTime">StartTime</convert>
-			<convert type="ClockToText">Format:%H:%M</convert>
+			<convert type="ClockToText"></convert>
 		</widget>
 		<widget source="ServiceEvent" render="Label" position="1128,152" size="77,25" font="screen_text;19" backgroundColor="layer-b-background" foregroundColor="layer-b-foreground" transparent="0" valign="center" >
 			<convert type="EventTime">EndTime</convert>
-			<convert type="ClockToText">Format:%H:%M</convert>
+			<convert type="ClockToText"></convert>
 		</widget>
 		<eLabel position="914,165" size="206,1" backgroundColor="layer-b-accent1" />
 		<widget source="ServiceEvent" render="Progress" position="914,163" size="206,5" foregroundColor="layer-b-progress" transparent="1" zPosition="1">
@@ -2075,11 +2075,11 @@
 		</widget>
 		<widget source="ServiceEvent" render="Label" position="843,272" size="64,25" font="screen_text;19" backgroundColor="layer-b-background" foregroundColor="layer-b-foreground" transparent="0" halign="right" valign="center" >
 			<convert type="EventTime">StartTime</convert>
-			<convert type="ClockToText">Format:%H:%M</convert>
+			<convert type="ClockToText"></convert>
 		</widget>
 		<widget source="ServiceEvent" render="Label" position="1128,272" size="77,25" font="screen_text;19" backgroundColor="layer-b-background" foregroundColor="layer-b-foreground" transparent="0" valign="center" >
 			<convert type="EventTime">EndTime</convert>
-			<convert type="ClockToText">Format:%H:%M</convert>
+			<convert type="ClockToText"></convert>
 		</widget>
 		<eLabel position="914,285" size="206,1" backgroundColor="layer-b-accent1" />
 		<widget source="ServiceEvent" render="Progress" position="914,283" size="206,5" foregroundColor="layer-b-progress" transparent="1" zPosition="1">
@@ -2106,11 +2106,11 @@
 		</widget>
 		<widget source="ServiceEvent" render="Label" position="843,272" size="64,25" font="screen_text;19" backgroundColor="layer-b-background" foregroundColor="layer-b-foreground" transparent="0" halign="right" valign="center" >
 			<convert type="EventTime">StartTime</convert>
-			<convert type="ClockToText">Format:%H:%M</convert>
+			<convert type="ClockToText"></convert>
 		</widget>
 		<widget source="ServiceEvent" render="Label" position="1128,272" size="77,25" font="screen_text;19" backgroundColor="layer-b-background" foregroundColor="layer-b-foreground" transparent="0" valign="center" >
 			<convert type="EventTime">EndTime</convert>
-			<convert type="ClockToText">Format:%H:%M</convert>
+			<convert type="ClockToText"></convert>
 		</widget>
 		<eLabel position="914,285" size="206,1" backgroundColor="layer-b-accent1" />
 		<widget source="ServiceEvent" render="Progress" position="914,283" size="206,5" foregroundColor="layer-b-progress" transparent="1" zPosition="1">
@@ -2139,11 +2139,11 @@
 		</widget>
 		<widget source="ServiceEvent" render="Label" position="55,250" size="54,25" font="screen_text;19" backgroundColor="layer-b-background" foregroundColor="layer-b-foreground" transparent="0" halign="right" valign="center" >
 			<convert type="EventTime">StartTime</convert>
-			<convert type="ClockToText">Format:%H:%M</convert>
+			<convert type="ClockToText"></convert>
 		</widget>
 		<widget source="ServiceEvent" render="Label" position="330,250" size="57,25" font="screen_text;19" backgroundColor="layer-b-background" foregroundColor="layer-b-foreground" transparent="0" valign="center" >
 			<convert type="EventTime">EndTime</convert>
-			<convert type="ClockToText">Format:%H:%M</convert>
+			<convert type="ClockToText"></convert>
 		</widget>
 		<eLabel position="117,263" size="206,1" backgroundColor="layer-b-accent1" />
 		<widget source="ServiceEvent" render="Progress" position="117,261" size="206,5" foregroundColor="layer-b-progress" transparent="1" zPosition="1">
@@ -2168,11 +2168,11 @@
 		</widget>
 		<widget source="ServiceEvent" render="Label" position="55,130" size="54,25" font="screen_text;19" backgroundColor="layer-b-background" foregroundColor="layer-b-foreground" transparent="0" halign="right" valign="center"  >
 			<convert type="EventTime">StartTime</convert>
-			<convert type="ClockToText">Format:%H:%M</convert>
+			<convert type="ClockToText"></convert>
 		</widget>
 		<widget source="ServiceEvent" render="Label" position="330,130" size="57,25" font="screen_text;19" backgroundColor="layer-b-background" foregroundColor="layer-b-foreground" transparent="0" valign="center" >
 			<convert type="EventTime">EndTime</convert>
-			<convert type="ClockToText">Format:%H:%M</convert>
+			<convert type="ClockToText"></convert>
 		</widget>
 		<eLabel position="117,143" size="206,1" backgroundColor="layer-b-accent1" />
 		<widget source="ServiceEvent" render="Progress" position="117,141" size="206,5" foregroundColor="layer-b-progress" transparent="1" zPosition="1">

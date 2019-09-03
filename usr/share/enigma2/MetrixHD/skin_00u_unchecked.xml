@@ -39,10 +39,10 @@
 			<convert type="ClockToText">Default</convert>
 		</widget>
 		<widget source="global.CurrentTime" render="Label" position="1057,368" size="148,29" font="global_clock;17" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-clock-foreground" transparent="1">
-			<convert type="ClockToText">Format:%e. %b</convert>
+			<convert type="ClockToText"></convert>
 		</widget>
 		<widget source="global.CurrentTime" render="Label" position="1057,348" size="125,30" font="global_clock;17" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-clock-foreground" transparent="1">
-			<convert type="ClockToText">Format:%A</convert>
+			<convert type="ClockToText"></convert>
 		</widget>
 		<eLabel position="950,348" zPosition="-1" size="270,50" backgroundColor="layer-a-background" transparent="0" />
 		<!--ClockWidget */-->
@@ -71,11 +71,11 @@
 		</widget>
 		<widget source="Event" render="Label" position="70,131" size=" 65, 22" font="Regular;18" halign="right" backgroundColor="layer-a-background" transparent="1">
 			<convert type="EventTime">StartTime</convert>
-			<convert type="ClockToText">Format:%H:%M </convert>
+			<convert type="ClockToText"></convert>
 		</widget>
 		<widget source="Event" render="Label" position="1142,131" size=" 80, 22" font="Regular;18" backgroundColor="layer-a-background" transparent="1">
 			<convert type="EventTime">EndTime</convert>
-			<convert type="ClockToText">Format:%H:%M</convert>
+			<convert type="ClockToText"></convert>
 		</widget>
 		<widget source="Event" render="Progress" position="146,143" size="990,5" borderWidth="0" backgroundColor="layer-a-foreground" pixmap="MetrixHD/colors/000F6EB2.png" transparent="1" zPosition="20">
 			<convert type="EventTime">Progress</convert>
@@ -465,7 +465,7 @@
 			<convert type="ClockToText">Default</convert>
 		</widget>
 		<widget source="global.CurrentTime" render="Label" position="1040,12" size="120,22" font="global_clock;18" halign="right" backgroundColor="layer-a-background" foregroundColor="layer-a-clock-foreground" transparent="1">
-			<convert type="ClockToText">Format:%d.%m.%Y</convert>
+			<convert type="ClockToText"></convert>
 		</widget>
 		<ePixmap position="150,55" size="100,40" zPosition="4" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MyTube/pluginmanager.png" alphatest="blend" transparent="1" />
 		<widget source="session.CurrentService" render="Label" position="170,95" size="100,32" font="SetrixHD;24" halign="center" valign="center" backgroundColor="layer-a-background" shadowColor="layer-a-background" shadowOffset="-1,-1" transparent="1">
@@ -947,10 +947,10 @@
 			<convert type="ClockToText">Default</convert>
 		</widget>
 		<widget source="global.CurrentTime" render="Label" position="265,444" size="148,29" font="global_clock;20" halign="right" backgroundColor="layer-a-background" foregroundColor="layer-a-clock-foreground" transparent="1">
-			<convert type="ClockToText">Format:%e. %b</convert>
+			<convert type="ClockToText"></convert>
 		</widget>
 		<widget source="global.CurrentTime" render="Label" position="287,415" size="125,30" font="global_clock;20" halign="right" backgroundColor="layer-a-background" foregroundColor="layer-a-clock-foreground" transparent="1">
-			<convert type="ClockToText">Format:%A</convert>
+			<convert type="ClockToText"></convert>
 		</widget>
 		<eLabel position="208,410" zPosition="-1" size="368,70" backgroundColor="layer-a-background" transparent="0" />
 		<!--ClockWidget */-->

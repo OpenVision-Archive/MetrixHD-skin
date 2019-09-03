@@ -173,7 +173,7 @@
 		<eLabel text="Next Event:" position="866,360" size="355,30" font="epg_text;16" foregroundColor="epg-timeline-foreground" backgroundColor="epg-background" transparent="1" />
 		<widget source="session.Event_Next" render="Label" position="866,390" size="60,30" font="epg_text;20" halign="left" foregroundColor="epg-event-foreground" backgroundColor="epg-background"  >
 			<convert type="EventTime">StartTime</convert>
-			<convert type="ClockToText">Format:%H:%M</convert>
+			<convert type="ClockToText"></convert>
 		</widget>
 		<widget source="session.Event_Next" render="Label" position="926,390" size="305,30" font="epg_text;20" foregroundColor="epg-event-foreground" backgroundColor="epg-background" transparent="1">
 			<convert type="EventName">Name</convert>
@@ -205,11 +205,11 @@
 	<screen name="template_cool_description_pig">
 		<widget source="Event" render="Label"  position="65,76" size="70,40" font="epg_event;24" halign="left" backgroundColor="epg-background" foregroundColor="epg-timeline-foreground" transparent="1">
 			<convert type="EventTime">StartTime</convert>
-			<convert type="ClockToText">Format:%H:%M</convert>
+			<convert type="ClockToText"></convert>
 		</widget>
 		<widget source="Event" render="Label" position="132,76" size="80,40" font="epg_event;24" halign="left" backgroundColor="epg-background" foregroundColor="epg-timeline-foreground" transparent="1">
 			<convert type="EventTime">EndTime</convert>
-			<convert type="ClockToText">Format:- %H:%M</convert>
+			<convert type="ClockToText"></convert>
 		</widget>
 		<widget source="Event" render="Label" position="220,76" size="530,40" font="epg_event;24" halign="left" backgroundColor="epg-background" foregroundColor="epg-event-foreground" transparent="1">
 			<convert type="EventName">Name</convert>
@@ -231,11 +231,11 @@
 	<screen name="template_cool_large_description_pig">
 		<widget source="Event" render="Label"  position="65,76" size="70,40" font="epg_event;24" halign="left" backgroundColor="epg-background" foregroundColor="epg-timeline-foreground" transparent="1">
 			<convert type="EventTime">StartTime</convert>
-			<convert type="ClockToText">Format:%H:%M</convert>
+			<convert type="ClockToText"></convert>
 		</widget>
 		<widget source="Event" render="Label" position="132,76" size="80,40" font="epg_event;24" halign="left" backgroundColor="epg-background" foregroundColor="epg-timeline-foreground" transparent="1">
 			<convert type="EventTime">EndTime</convert>
-			<convert type="ClockToText">Format:- %H:%M</convert>
+			<convert type="ClockToText"></convert>
 		</widget>
 		<widget source="Event" render="Label" position="220,76" size="530,40" font="epg_event;24" halign="left" backgroundColor="epg-background" foregroundColor="epg-event-foreground" transparent="1">
 			<convert type="EventName">Name</convert>
@@ -269,11 +269,11 @@
 	<screen name="template_cool_gepg">
 		<widget source="Event" render="Label" position="65,76" size="70,40" font="epg_event;24" halign="left" backgroundColor="epg-background" foregroundColor="epg-timeline-foreground" transparent="1">
 			<convert type="EventTime">StartTime</convert>
-			<convert type="ClockToText">Format:%H:%M</convert>
+			<convert type="ClockToText"></convert>
 		</widget>
 		<widget source="Event" render="Label" position="132,76" size="80,40" font="epg_event;24" halign="left" backgroundColor="epg-background" foregroundColor="epg-timeline-foreground" transparent="1">
 			<convert type="EventTime">EndTime</convert>
-			<convert type="ClockToText">Format:- %H:%M</convert>
+			<convert type="ClockToText"></convert>
 		</widget>
 		<widget source="Event" render="Label" position="220,76" size="890,40" font="epg_event;24" halign="left" backgroundColor="epg-background" foregroundColor="epg-event-foreground" transparent="0">
 			<convert type="EventName">Name</convert>
@@ -322,11 +322,11 @@
 	<screen name="template_cool_gepg_pig">
 		<widget source="Event" render="Label"  position="65,76" size="70,40" font="epg_event;24" halign="left" backgroundColor="epg-background" foregroundColor="epg-timeline-foreground" transparent="1">
 			<convert type="EventTime">StartTime</convert>
-			<convert type="ClockToText">Format:%H:%M</convert>
+			<convert type="ClockToText"></convert>
 		</widget>
 		<widget source="Event" render="Label" position="132,76" size="80,40" font="epg_event;24" halign="left" backgroundColor="epg-background" foregroundColor="epg-timeline-foreground" transparent="1">
 			<convert type="EventTime">EndTime</convert>
-			<convert type="ClockToText">Format:- %H:%M</convert>
+			<convert type="ClockToText"></convert>
 		</widget>
 		<widget source="Event" render="Label" position="220,76" size="530,40" font="epg_event;24" halign="left" backgroundColor="epg-background" foregroundColor="epg-event-foreground" transparent="0">
 			<convert type="EventName">Name</convert>
@@ -908,10 +908,10 @@
 			<convert type="ClockToText">Default</convert>
 		</widget>
 		<widget source="global.CurrentTime" render="Label" position="968,10" size="160,27" font="global_clock; 16" noWrap="1" backgroundColor="black" halign="right" valign="bottom" foregroundColor="layer-a-clock-foreground" transparent="1">
-			<convert type="ClockToText">Format:%A</convert>
+			<convert type="ClockToText"></convert>
 		</widget>
 		<widget source="global.CurrentTime" render="Label" position="968,34" size="160,27" font="global_clock; 16" noWrap="1" backgroundColor="black" halign="right" valign="bottom" foregroundColor="layer-a-clock-foreground" transparent="1">
-			<convert type="ClockToText">Format:%e. %b</convert>
+			<convert type="ClockToText"></convert>
 		</widget>
 	</screen>	
 	<screen name="MerlinMusicPlayerLyrics" position="0,0" size="1280,720" title="Merlin Music Player" flags="wfNoBorder" backgroundColor="transparent">
@@ -1157,10 +1157,10 @@
 			<convert type="ClockToText">Default</convert>
 		</widget>
 		<widget source="global.CurrentTime" render="Label" font="global_clock; 16" position="968,10" size="160,27" noWrap="1" zPosition="2" halign="right" valign="bottom" backgroundColor="transpBlack" foregroundColor="layer-a-clock-foreground" transparent="1">
-			<convert type="ClockToText">Format:%A</convert>
+			<convert type="ClockToText"></convert>
 		</widget>
 		<widget source="global.CurrentTime" render="Label" font="global_clock; 16" position="968,34" size="160,27" noWrap="1" zPosition="2" halign="right" valign="bottom" backgroundColor="transpBlack" foregroundColor="layer-a-clock-foreground" transparent="1">
-			<convert type="ClockToText">Format:%e. %B</convert>
+			<convert type="ClockToText"></convert>
 		</widget>
 	</screen>
 	<!-- MSNWeatherPlugin *-->
