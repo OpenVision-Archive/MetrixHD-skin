@@ -1137,7 +1137,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap position="869,265" size="330,204" pixmap="MetrixHD/menu/vti.png" alphatest="blend" transparent="1" />
 <!-- cf#_#start -->
 		<widget source="title" render="Label" position="58,36" size="800,50" valign="bottom" font="global_title;34" foregroundColor="layer-a-title-foreground" backgroundColor="layer-a-background" transparent="1" />
-		<widget name="messagepic" pixmaps="icons/input_info.png,skin_default/icons/input_error.png,skin_default/icons/input_question.png" position="70,120" size="53,53" transparent="1" alphatest="on" />
+		<widget name="messagepic" pixmaps="icons/input_info.png,icons/input_error.png,icons/input_question.png" position="70,120" size="53,53" transparent="1" alphatest="on" />
 		<widget name="messagetype" position="125,120" size="630,53" font="SetrixHD;24" halign="left" valign="center" transparent="1" />
 		<widget name="messagetext" position="70,180" size="690,420" font="SetrixHD;20" halign="center" backgroundColor="layer-a-background" transparent="1" />
 		<ePixmap pixmap="MetrixHD/buttons/key_red.png" position=" 70,635" size="30,40" alphatest="blend" />
