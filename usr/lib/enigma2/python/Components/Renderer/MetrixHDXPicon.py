@@ -5,7 +5,7 @@
 from Renderer import Renderer
 from enigma import ePixmap
 from enigma import iServiceInformation, iPlayableService, iPlayableServicePtr
-from Tools.Directories import fileExists, SCOPE_SKIN_IMAGE, SCOPE_CURRENT_SKIN, resolveFilename
+from Tools.Directories import fileExists, SCOPE_CURRENT_SKIN, resolveFilename
 from Plugins.Extensions.MyMetrixLite.__init__ import initOtherConfig
 from Components.config import config
 from PIL import Image, ImageFile, PngImagePlugin, ImageEnhance
@@ -108,8 +108,6 @@ class MetrixHDXPicon(Renderer):
 							tmp = resolveFilename(SCOPE_CURRENT_SKIN, "picon_default.png")
 							if fileExists(tmp):
 								pngname = tmp
-							else:
-								pngname = resolveFilename(SCOPE_SKIN_IMAGE, "picon_default.png")
 						self.nameCache["default"] = pngname
 				if self.pngname != pngname:
 					if config.plugins.MyMetrixLiteOther.piconresize_experimental.value:
@@ -120,8 +118,6 @@ class MetrixHDXPicon(Renderer):
 							tmp = resolveFilename(SCOPE_CURRENT_SKIN, "picon_default.png")
 							if fileExists(tmp):
 								pngname = tmp
-							else:
-								pngname = resolveFilename(SCOPE_SKIN_IMAGE, "picon_default.png")
 							im = Image.open(pngname).convert('RGBA')
 						imw, imh = im.size
 						inh = self.instance.size().height()
