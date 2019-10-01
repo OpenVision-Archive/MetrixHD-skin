@@ -35,11 +35,6 @@ MetrixHD is created by iMaxxx
 
 ##**Screenshots:**
 
-###Mainmenu
-![alt tag](https://raw.github.com/OpenVisionE2/MetrixHD/master/MetrixHD-INFO/mainmenu.png)
-
-=========
-
 ###Quickmenu
 ![alt tag](https://raw.github.com/OpenVisionE2/MetrixHD/master/MetrixHD-INFO/quickmenu.png)
 
