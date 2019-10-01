@@ -98,7 +98,7 @@ class MetrixHDXPicon(Renderer):
 							pngname = self.findPicon(name)
 							if not pngname and len(name) > 2 and name.endswith('hd'):
 								pngname = self.findPicon(name[:-2])
-					if pngname != "":
+					if pngname != "" and sname.split('_', 1)[0] == "1":
 						self.nameCache[sname] = pngname
 				if pngname == "": # no picon for service found
 					pngname = self.nameCache.get("default", "")
