@@ -97,7 +97,7 @@
 		<color name="layer-a-clock-foreground" value="#00FFFFFF" />					<!-- MetrixColors - Foreground color for clock in layer a -->
 		<color name="layer-b-clock-foreground" value="#00FFFFFF" />					<!-- MetrixColors - Foreground color for clock in layer b -->
 		<color name="menubackground" value="#1A0F0F0F" />							<!-- MetrixColors - Background color for menu -->
-		<color name="menusymbolbackground" value="#1A0F0F0F" />						<!-- MetrixColors - Background color for menu symbol -->
+		<color name="menusymbolbackground" value="#1A27408B" />						<!-- MetrixColors - Background color for menu symbol -->
 		<color name="menufont" value="#00FFFFFF" />									<!-- MetrixColors - Font color for menu item  -->
 		<color name="menufontselected" value="#00FFFFFF" />							<!-- MetrixColors - Font color for selected menu item -->
 		<color name="infobarbackground" value="#1A0F0F0F" />						<!-- MetrixColors - Background color for infobar,moviebar -->
