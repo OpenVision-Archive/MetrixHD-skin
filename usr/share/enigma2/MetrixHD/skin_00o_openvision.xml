@@ -2505,18 +2505,18 @@ self['config'].l.setSeperation(int(300*f))
 	<screen name="NumericalTextInputHelpDialog" position="818,25" size="402,128" backgroundColor="transparent" flags="wfNoBorder" zPosition="8">
 		<eLabel name="b" position="0,0" size="402,128" backgroundColor="layer-b-background" zPosition="-10" /> 
 		<eLabel name="a" position="1,1" size="400,126" backgroundColor="layer-a-background" zPosition="-9" /> 
-		<widget name="key1" position="0,15" size="150,16" font="Console;14" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1"/>
-		<widget name="key2" position="140,15" size="144,16" font="Console;14" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1"/>
-		<widget name="key3" position="268,15" size="144,16" font="Console;14" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1"/>
-		<widget name="key4" position="0,43" size="134,25" font="Console;18" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1"/>
-		<widget name="key5" position="134,43" size="134,25" font="Console;18" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1"/>
-		<widget name="key6" position="268,43" size="134,25" font="Console;18" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1"/>
-		<widget name="key7" position="0,71" size="134,25" font="Console;18" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1"/>
-		<widget name="key8" position="134,71" size="134,25" font="Console;18" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1"/>
-		<widget name="key9" position="268,71" size="134,25" font="Console;18" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1"/>
-		<widget name="help1" position="0,99" size="104,25" font="Console;22" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1"/>
-		<widget name="key0" position="104,99" size="194,20" font="Console;16" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1"/>
-		<widget name="help2" position="298,99" size="104,25" font="Console;22" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-b-background" transparent="1"/>
+		<widget name="key1" position="0,0" size="134,32" font="Console;18" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1"/>
+		<widget name="key2" position="134,0" size="134,32" font="Console;18" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1"/>
+		<widget name="key3" position="268,0" size="134,32" font="Console;18" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1"/>
+		<widget name="key4" position="0,32" size="134,32" font="Console;18" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1"/>
+		<widget name="key5" position="134,32" size="134,32" font="Console;18" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1"/>
+		<widget name="key6" position="268,32" size="134,32" font="Console;18" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1"/>
+		<widget name="key7" position="0,64" size="134,32" font="Console;18" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1"/>
+		<widget name="key8" position="134,64" size="134,32" font="Console;18" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1"/>
+		<widget name="key9" position="268,64" size="134,32" font="Console;18" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1"/>
+		<widget name="help1" position="0,96" size="70,32" font="Console;22" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1"/>
+		<widget name="key0" position="70,96" size="262,32" font="Console;16" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1"/>
+		<widget name="help2" position="332,96" size="70,32" font="Console;22" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-b-background" transparent="1"/>
 	</screen>
 	<screen name="VirtualKeyBoard" position="0,0" size="1280,720" zPosition="99" title="Virtual KeyBoard" flags="wfNoBorder" backgroundColor="transparent">
 		<widget source="Title" render="Label" position="58,36" font="global_title;34" foregroundColor="layer-a-title-foreground" size="525,50" valign="bottom" backgroundColor="layer-a-background" transparent="1" />
@@ -2525,7 +2525,7 @@ self['config'].l.setSeperation(int(300*f))
 		<eLabel position="70,170" size="700,46" zPosition="1" backgroundColor="layer-a-accent1" />
 		<widget name="text" position="72,172" size="696,42" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" zPosition="3" font="SetrixHD;29" noWrap="1" valign="center" halign="right" />
 		<widget name="list" position="95,320" size="640,300" selectionDisabled="1" transparent="1" />
-		<widget name="mode" conditional="mode" position="70,215" size="150,28" font="screen_info;20" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" halign="left" transparent="1" noWrap="1"/>
+		<widget name="mode" conditional="mode" position="70,215" size="200,28" font="screen_info;20" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" halign="left" transparent="1" noWrap="1"/>
 		<widget name="language" conditional="language" position="0,0" size="0,0" font="screen_info;20" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" noWrap="1" />
 		<panel name="template1_2layer" />
 		<widget name="locale" conditional="locale" position="810,410" size="415,190" font="screen_info; 20" foregroundColor="layer-b-foreground" halign="center" backgroundColor="layer-b-background" valign="center" transparent="1"/>
@@ -4533,9 +4533,9 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	<!-- Button Setup -->
 	<screen name="ButtonSetup" position="0,0" size="1280,720" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
 		<widget source="Title" render="Label" position="58,36" foregroundColor="layer-a-title-foreground" size="525,50" noWrap="1" valign="bottom" font="global_title;34" backgroundColor="layer-a-background" transparent="1" />
-		<widget name="list" position="70,100" size="700,330" itemHeight="30" font="screen_text; 20" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarSlidercolor" scrollbarSliderBorderColor="scrollbarSliderbordercolor" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" backgroundColorSelected="layer-a-selection-background" foregroundColorSelected="layer-a-selection-foreground" transparent="1" />
-		<eLabel position="70,450" size="700,1" backgroundColor="layer-a-accent2" />
-		<widget name="choosen" position="70,460" size="700,150" itemHeight="30" font="screen_text; 20" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarSlidercolor" scrollbarSliderBorderColor="scrollbarSliderbordercolor" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" backgroundColorSelected="layer-a-selection-background" foregroundColorSelected="layer-a-selection-foreground" transparent="1" />
+		<widget name="list" position="70,100" size="700,350" itemHeight="35" font="screen_text; 20" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarSlidercolor" scrollbarSliderBorderColor="scrollbarSliderbordercolor" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" backgroundColorSelected="layer-a-selection-background" foregroundColorSelected="layer-a-selection-foreground" transparent="1" />
+		<eLabel position="70,470" size="700,1" backgroundColor="layer-a-accent2" />
+		<widget name="choosen" position="70,480" size="700,150" itemHeight="30" font="screen_text; 20" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarSlidercolor" scrollbarSliderBorderColor="scrollbarSliderbordercolor" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" backgroundColorSelected="layer-a-selection-background" foregroundColorSelected="layer-a-selection-foreground" transparent="1" />
 		<widget name="description" position="810,415" size="415,190" font="screen_info; 20" foregroundColor="layer-b-foreground" halign="center" backgroundColor="layer-b-background" valign="center" transparent="1"/>
 		<panel name="template1_2layer" />
 		<panel name="_oe-buttons_template1" />
