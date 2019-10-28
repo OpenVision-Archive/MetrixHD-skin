@@ -23,7 +23,7 @@
 		<widget source="TranslationInfo" render="Label" position="70,160" size="370,25" font="Regular;19" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="0" zPosition="1" />
 		<widget source="TranslatorName" render="Label" position="70,185" size="369,25" font="Regular;19" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="0" zPosition="1" />
 		<eLabel text="OPEN SOURCE" position="825,110" size="380,55" font="screen_info;50" backgroundColor="layer-b-background" foregroundColor="layer-b-foreground" halign="center" transparent="0" zPosition="1" />
-		<eLabel text="https://github.com/OpenVisionE2/MetrixH" position="825,470" size="380,30" font="screen_info;20" backgroundColor="layer-b-background" foregroundColor="layer-b-foreground" halign="center" transparent="0" zPosition="1" />
+		<eLabel text="https://github.com/OpenVisionE2/MetrixHD" position="825,470" size="380,30" font="screen_info;20" backgroundColor="layer-b-background" foregroundColor="layer-b-foreground" halign="center" transparent="0" zPosition="1" />
 		<eLabel text="https://github.com/OpenVisionE2" position="825,520" size="380,30" font="screen_info;20" backgroundColor="layer-b-background" foregroundColor="layer-b-foreground" halign="center" transparent="0" zPosition="1" />
 		<ePixmap position="890,175" size="256,256" zPosition="10" pixmap="MetrixHD/icons/menu_information_about.png" transparent="1" alphatest="blend" />
 		<panel name="r___-keys_template1" />
