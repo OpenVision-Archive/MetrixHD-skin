@@ -16,7 +16,7 @@
 # next line is a picon position                                               #
 #(for centered position at different picon size -> xpicon scalable option)    #
 #<!-- cf#_#pixnore -->                                                        #
-# next line is a pixmap png file and not change path or check this            #
+# next line is a pixmap png file and not check is this file available         #
 ###############################################################################
 <!-- cf#_#start -->
 	<!-- MetrixHD v2.5 by iMaxxx | optimized for Open Vision 7.0 -->
@@ -136,10 +136,6 @@
 		<color name="unffff00" value="#00ffff00" />
 		<color name="unffffff" value="#00ffffff" />
 	</colors>
-	<switchpixmap>
-		<pixmap name="menu_on" filename="MetrixHD/icons/menu_on.png" />
-		<pixmap name="menu_off" filename="MetrixHD/icons/menu_off.png" />
-	</switchpixmap>
 	<fonts>
 		<font filename="/usr/share/fonts/lcd.ttf" name="LCD" scale="100" />
 		<font filename="/usr/share/fonts/ae_AlMateen.ttf" name="Replacement" scale="100" replacement="1" />
@@ -225,7 +221,6 @@
 			<!--lb pixmap pos="bpRight" filename="MetrixHD/border/1px/FFFFFF.png" /-->
 		</borderset>
 	</windowstyle>
-<!-- cf#_#start -->
 	<windowstyle type="skinned" id="1">
 		<color name="Background" color="layer-a-background" />
 		<color name="LabelForeground" color="layer-a-foreground" />
@@ -240,6 +235,11 @@
 		<color name="WindowTitleForeground" color="title-foreground" />
 		<color name="WindowTitleBackground" color="title-background"/>
 	</windowstyle>
+<!-- cf#_#start -->
+	<switchpixmap>
+		<pixmap name="menu_on" filename="MetrixHD/icons/menu_on.png" />
+		<pixmap name="menu_off" filename="MetrixHD/icons/menu_off.png" />
+	</switchpixmap>
 	<parameters>
 		<parameter name="AllowUserDatesAndTimes" value="1,1"/>
 		<parameter name="AutotimerEnabledIcon" value="5,2,25,25"/>
@@ -300,18 +300,18 @@
 		<parameter name="EpgListSingle#_FHDscreen" value="88,220"/>
 <!-- cf#_#start -->
 	</parameters>
-<!-- SKINPARTS -->
-	<include filename="/usr/share/enigma2/MetrixHD/skin_00_templates.xml" />
-	<include filename="/usr/share/enigma2/MetrixHD/skin_00a_InfoBar.xml" />
-	<include filename="/usr/share/enigma2/MetrixHD/skin_00b_SecondInfoBar.xml" />
-	<include filename="/usr/share/enigma2/MetrixHD/skin_00c_SecondInfoBarECM.xml" />
-	<include filename="/usr/share/enigma2/MetrixHD/skin_00d_InfoBarLite.xml" />
-	<include filename="/usr/share/enigma2/MetrixHD/skin_00e_ChannelSelection.xml" />
-	<include filename="/usr/share/enigma2/MetrixHD/skin_00f_MoviePlayer.xml" />
-	<include filename="/usr/share/enigma2/MetrixHD/skin_00g_EMC.xml" />
-	<include filename="/usr/share/enigma2/MetrixHD/skin_00o_openvision.xml" />
-	<include filename="/usr/share/enigma2/MetrixHD/skin_00p_plugins.xml" />
-	<include filename="/usr/share/enigma2/MetrixHD/skin_00u_unchecked.xml" />
-	<include filename="/usr/share/enigma2/MetrixHD/skin_00z_design.xml" />
-<!-- SKINPARTS -->
+<!-- SKINFILES -->
+	<include filename="/usr/share/enigma2/MetrixHD/skinfiles/skin_unchecked.xml" />
+	<include filename="/usr/share/enigma2/MetrixHD/skinfiles/skin_templates.xml" />
+	<include filename="/usr/share/enigma2/MetrixHD/skinfiles/skin_design.xml" />
+	<include filename="/usr/share/enigma2/MetrixHD/skinfiles/skin_infobar.xml" />
+	<include filename="/usr/share/enigma2/MetrixHD/skinfiles/skin_infobarlite.xml" />
+	<include filename="/usr/share/enigma2/MetrixHD/skinfiles/skin_secondinfobar.xml" />
+	<include filename="/usr/share/enigma2/MetrixHD/skinfiles/skin_secondinfobarecm.xml" />
+	<include filename="/usr/share/enigma2/MetrixHD/skinfiles/skin_channelselection.xml" />
+	<include filename="/usr/share/enigma2/MetrixHD/skinfiles/skin_openvision.xml" />
+	<include filename="/usr/share/enigma2/MetrixHD/skinfiles/skin_plugins.xml" />
+	<include filename="/usr/share/enigma2/MetrixHD/skinfiles/skin_movieplayer.xml" />
+	<include filename="/usr/share/enigma2/MetrixHD/skinfiles/skin_emc.xml" />
+<!-- SKINFILES -->
 </skin>

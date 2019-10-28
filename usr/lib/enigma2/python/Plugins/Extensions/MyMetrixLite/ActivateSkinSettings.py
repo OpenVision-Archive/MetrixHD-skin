@@ -37,7 +37,7 @@ from Components.config import config, configfile
 from Components.NimManager import nimmanager
 from shutil import move, copy, rmtree, copytree
 from enigma import getDesktop, getBoxType
-from os import path, remove, statvfs, listdir, system, mkdir
+from os import path, remove, statvfs, listdir, system, mkdir, unlink, symlink, rename
 from PIL import Image, ImageFont, ImageDraw
 import math
 
@@ -58,10 +58,10 @@ class ActivateSkinSettings:
 		#0:"No Error"
 		#1:"Unknown Error creating Skin. Please check after reboot MyMetrixLite-Plugin and apply your settings."
 		#2:"Error creating HD-Skin. Not enough flash memory free."
-		#3:"Error creating FullHD-Skin. Not enough flash memory free. Using HD-Skin!"
-		#4:"Error creating FullHD-Skin. Icon package download not available. Using HD-Skin!"
-		#5:"Error creating FullHD-Skin. Using HD-Skin!"
-		#6:"Some FullHD-Icons are missing. Using HD-Icons!"
+		#3:"Error creating EHD-Skin. Not enough flash memory free. Using HD-Skin!"
+		#4:"Error creating EHD-Skin. Icon package download not available. Using HD-Skin!"
+		#5:"Error creating EHD-Skin. Using HD-Skin!"
+		#6:"Error creating EHD-Skin. Some EHD-Icons are missing. Using HD-Skin!"
 		#7:"Error, unknown Result!"
 
 		self.silent = silent
@@ -97,8 +97,7 @@ class ActivateSkinSettings:
 				print "[MetrixHD] restoring original %s icons after changing skin..." % self.EHDres
 			else:
 				print "[MetrixHD] refreshing %s icons after software update..." % self.EHDres
-			self.iconFileCopy(self.EHDres)
-			self.iconFolderCopy(self.EHDres)
+			self.updateIcons(self.EHDres)
 			print "[MetrixHD] ...done."
 
 	def getEHDSettings(self, onlyCheck=False):
@@ -1244,18 +1243,18 @@ class ActivateSkinSettings:
 				skinSearchAndReplace.append([old, new ])
 
 			#skinfiles
-			skinSearchAndReplace.append(['skin_00_templates.xml', 'skin_00_templates.MySkin.xml'])
-			skinSearchAndReplace.append(['skin_00a_InfoBar.xml', 'skin_00a_InfoBar.MySkin.xml'])
-			skinSearchAndReplace.append(['skin_00b_SecondInfoBar.xml', 'skin_00b_SecondInfoBar.MySkin.xml'])
-			skinSearchAndReplace.append(['skin_00c_SecondInfoBarECM.xml', 'skin_00c_SecondInfoBarECM.MySkin.xml'])
-			skinSearchAndReplace.append(['skin_00d_InfoBarLite.xml', 'skin_00d_InfoBarLite.MySkin.xml'])
-			skinSearchAndReplace.append(['skin_00e_ChannelSelection.xml', 'skin_00e_ChannelSelection.MySkin.xml'])
-			skinSearchAndReplace.append(['skin_00f_MoviePlayer.xml', 'skin_00f_MoviePlayer.MySkin.xml'])
-			skinSearchAndReplace.append(['skin_00g_EMC.xml', 'skin_00g_EMC.MySkin.xml'])
-			skinSearchAndReplace.append(['skin_00o_openvision.xml', 'skin_00o_openvision.MySkin.xml'])
-			skinSearchAndReplace.append(['skin_00p_plugins.xml', 'skin_00p_plugins.MySkin.xml'])
-			skinSearchAndReplace.append(['skin_00u_unchecked.xml', 'skin_00u_unchecked.MySkin.xml'])
-			skinSearchAndReplace.append(['skin_00z_design.xml', 'skin_00z_design.MySkin.xml'])
+			skinSearchAndReplace.append([SKIN_INFOBAR_SOURCE, SKIN_INFOBAR_TARGET])
+			skinSearchAndReplace.append([SKIN_INFOBAR_LITE_SOURCE, SKIN_INFOBAR_LITE_TARGET])
+			skinSearchAndReplace.append([SKIN_SECOND_INFOBAR_SOURCE, SKIN_SECOND_INFOBAR_TARGET])
+			skinSearchAndReplace.append([SKIN_SECOND_INFOBAR_ECM_SOURCE, SKIN_SECOND_INFOBAR_ECM_TARGET])
+			skinSearchAndReplace.append([SKIN_CHANNEL_SELECTION_SOURCE, SKIN_CHANNEL_SELECTION_TARGET])
+			skinSearchAndReplace.append([SKIN_OPENVISION_SOURCE, SKIN_OPENVISION_TARGET])
+			skinSearchAndReplace.append([SKIN_PLUGINS_SOURCE, SKIN_PLUGINS_TARGET])
+			skinSearchAndReplace.append([SKIN_MOVIEPLAYER_SOURCE, SKIN_MOVIEPLAYER_TARGET])
+			skinSearchAndReplace.append([SKIN_EMC_SOURCE, SKIN_EMC_TARGET])
+			skinSearchAndReplace.append([SKIN_UNCHECKED_SOURCE, SKIN_UNCHECKED_TARGET])
+			skinSearchAndReplace.append([SKIN_TEMPLATES_SOURCE, SKIN_TEMPLATES_TARGET])
+			skinSearchAndReplace.append([SKIN_DESIGN_SOURCE, SKIN_DESIGN_TARGET])
 
 			#make skin file
 			skin_lines = appendSkinFile(SKIN_SOURCE, skinSearchAndReplace)
@@ -1318,8 +1317,8 @@ class ActivateSkinSettings:
 					if file == skinpart + '.xml':
 						partname = skinpart
 						partpath = filepath
-						TARGETpath = mySkindir + 'skin_' + skinpart + '.MySkin.xml'
-						TMPpath = skinpartdir + skinpart + '/' + skinpart + '.MySkin.xml.tmp'
+						TARGETpath = mySkindir + 'skin_' + skinpart + '.mySkin.xml'
+						TMPpath = skinpartdir + skinpart + '/' + skinpart + '.mySkin.xml.tmp'
 						#remove old MySkin files
 						if path.isfile(TMPpath.replace('.tmp','')):
 							remove(TMPpath.replace('.tmp',''))
@@ -1376,18 +1375,12 @@ class ActivateSkinSettings:
 						plustext = plustext + _("No files found or files already exist.")
 					plustext = plustext + _("\n--- additional files end ---\n\n")
 
-			#last step to ehd-mode - copy icon files for fixed paths in py-files
+			#last step to ehd-mode - update icon files
 			if self.EHDenabled and not self.skinline_error:
-				#set standard icons before copy new ehd icons (for saving new icons and clean start)
-				self.iconFileCopy("HD")
-				self.iconFolderCopy("HD")
-				#----
-				self.iconFileCopy(self.EHDres)
-				self.iconFolderCopy(self.EHDres)
+				self.updateIcons(self.EHDres)
 				self.makeGraphics(self.EHDfactor)
 			else:
-				self.iconFileCopy("HD")
-				self.iconFolderCopy("HD")
+				self.updateIcons()
 				self.makeGraphics(1)
 
 			#remove old _TMP files
@@ -1400,9 +1393,9 @@ class ActivateSkinSettings:
 			if self.skinline_error:
 				self.ErrorCode = 5
 				plustext = plustext + _("Error creating %s skin. HD skin is used!\n\n") % self.EHDres
-			elif not self.skinline_error and self.pixmap_error:
-				self.ErrorCode = 6
-				plustext = plustext + _("One or more %s icons are missing. Using HD icons for this.\n\n") % self.EHDres
+				if self.pixmap_error:
+					self.ErrorCode = 6
+					plustext = plustext.rstrip('\n') + _("\n(One or more %s icons are missing.)\n\n") % self.EHDres
 
 			text = plustext + _("GUI needs a restart to apply a new skin.\nDo you want to Restart the GUI now?")
 
@@ -1434,8 +1427,7 @@ class ActivateSkinSettings:
 				if path.exists(buttonbackupfile):
 					move(buttonbackupfile,buttonfile)
 			#retore icons
-			self.iconFileCopy("HD")
-			self.iconFolderCopy("HD")
+			self.updateIcons()
 
 			config.skin.primary_skin.setValue("MetrixHD/skin.xml")
 
@@ -1684,6 +1676,45 @@ class ActivateSkinSettings:
 		rgba = (int(color[-6:][:2],16), int(color[-4:][:2],16), int(color[-2:][:2],16), 255 - int(alpha,16))
 		imga = Image.new("RGBA",(sizex, sizey), rgba)
 		imga.save(name)
+
+	def updateIcons(self, target = "HD"):
+		# backward compatibility - remove old icon files
+		self.iconFileCopy("HD")
+		self.iconFolderCopy("HD")
+		# ---
+		spath = '/usr/share/enigma2/MetrixHD/%s' % target
+		dpath = '/usr/share/enigma2/MetrixHD'
+
+		# first reset / set hd icons
+		if not path.isdir(dpath):
+			return
+		for x in listdir(dpath):
+			dest = path.join(dpath, x)
+			if path.islink(dest):
+				unlink(dest)
+		for x in listdir(dpath):
+			src = path.join(dpath, x)
+			dest = path.join(dpath, x[1:-3])
+			if x.startswith('.') and x.endswith('_hd') and not path.exists(dest):
+				rename(src, dest)
+
+		# set other res icons
+		if target == "HD" or not path.isdir(spath):
+			return
+		for x in listdir(spath):
+			if x == "Plugins": #folder is current placeholder for unused icons
+				continue
+			src = path.join(spath, x)
+			dest = path.join(dpath, x)
+			hd = path.join(dpath, '.' + x + '_hd')
+			if x == 'emc' and int(config.plugins.MyMetrixLiteOther.showEMCSelectionRows.value) > 3:
+				if target == 'FHD':
+					continue
+				elif target == 'UHD' and path.isdir('/usr/share/enigma2/MetrixHD/FHD/emc'):
+					src = '/usr/share/enigma2/MetrixHD/FHD/emc'
+			if path.exists(dest) and not path.exists(hd):
+				rename(dest, hd)
+			symlink(src, dest)
 
 	def iconFileCopy(self, target):
 
@@ -2699,20 +2730,21 @@ class ActivateSkinSettings:
 							strnew = line[n1:n2+1] + " " + xnew
 							line = line[:n1] + strnew + line[n3:]
 #change pixmap path
-						if not next_pixmap_ignore and ('pixmap="' in line or "pixmaps=" in line or '<pixmap pos="bp' in line or 'render="EMCPositionGauge"' in line):
+						if not next_pixmap_ignore and ('filename="' in line or 'pixmap="' in line or "pixmaps=" in line or 'render="EMCPositionGauge"' in line):
 							if 'MetrixHD/' in line and not 'skin_default/' in line and '.png' in line:
 								s = 0
 								n2 = 0
 								for s in range(0,line.count('MetrixHD/')):
 									n1 = line.find('MetrixHD/', n2)
 									n2 = line.find('.png', n1)
-									file = "/usr/share/enigma2/MetrixHD/" + self.EHDres + line[(n1+8):(n2+4)]  
-									if path.exists(file):
-										strnew = "MetrixHD/" + self.EHDres + line[(n1+8):n2]
-										line = line[:n1] + strnew + line[n2:]
-									else:
+									file = "/usr/share/enigma2/MetrixHD/" + self.EHDres + line[(n1+8):(n2+4)]
+									if not path.exists(file):
+									#	strnew = "MetrixHD/" + self.EHDres + line[(n1+8):n2]
+									#	line = line[:n1] + strnew + line[n2:]
+									#else:
 										print "pixmap missing - line", i , file
 										self.pixmap_error = True
+										self.skinline_error = True
 							#!!! skin_default folder now in copy files !!!
 							#if 'skin_default/' in line and not '/skin_default/' in line and '.png"' in line:
 							#	s = 0

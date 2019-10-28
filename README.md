@@ -31,7 +31,7 @@ MetrixHD is created by iMaxxx
 
 **Additionally colors (2-layer style, selectionbar,...) and much more will be customizable using two options:**  
 * openStore Plugin by iMaxxx (suggested for SetTopBoxes with more then 128MB flashmemory) - fully customizable.  
-* MyMetrixHD lite Plugin by openATV (suggested for SetTopBoxes with up to 128MB flashmemory) - less customizable.  
+* MyMetrixHD lite Plugin (suggested for SetTopBoxes with up to 128MB flashmemory) - less customizable.  
 
 ##**Screenshots:**
 

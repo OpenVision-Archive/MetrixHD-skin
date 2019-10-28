@@ -23,7 +23,7 @@
 		<widget source="TranslationInfo" render="Label" position="70,160" size="370,25" font="Regular;19" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="0" zPosition="1" />
 		<widget source="TranslatorName" render="Label" position="70,185" size="369,25" font="Regular;19" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="0" zPosition="1" />
 		<eLabel text="OPEN SOURCE" position="825,110" size="380,55" font="screen_info;50" backgroundColor="layer-b-background" foregroundColor="layer-b-foreground" halign="center" transparent="0" zPosition="1" />
-		<eLabel text="https://github.com/OpenVisionE2/MetrixHD" position="825,470" size="380,30" font="screen_info;20" backgroundColor="layer-b-background" foregroundColor="layer-b-foreground" halign="center" transparent="0" zPosition="1" />
+		<eLabel text="https://github.com/OpenVisionE2/MetrixH" position="825,470" size="380,30" font="screen_info;20" backgroundColor="layer-b-background" foregroundColor="layer-b-foreground" halign="center" transparent="0" zPosition="1" />
 		<eLabel text="https://github.com/OpenVisionE2" position="825,520" size="380,30" font="screen_info;20" backgroundColor="layer-b-background" foregroundColor="layer-b-foreground" halign="center" transparent="0" zPosition="1" />
 		<ePixmap position="890,175" size="256,256" zPosition="10" pixmap="MetrixHD/icons/menu_information_about.png" transparent="1" alphatest="blend" />
 		<panel name="r___-keys_template1" />
@@ -83,7 +83,7 @@
 		<widget source="IFtext" render="Label" position="70,590" size="200,30" zPosition="10" font="screen_text;20" halign="left" backgroundColor="layer-a-background" transparent="1" />
 		<widget source="IF" render="Label" position="370,590" size="500,30" zPosition="10" font="screen_text;20" halign="left" backgroundColor="layer-a-background" transparent="1" />
 		<widget source="Statustext" render="Label" position="70,620" size="115,30" zPosition="10" font="screen_text;20" halign="left" backgroundColor="layer-a-background" transparent="1" />
-		<widget name="statuspic" pixmaps="buttons/button_green.png,buttons/button_green_off.png" position="368,626" zPosition="10" size="15,16" transparent="1" alphatest="blend" />
+		<widget name="statuspic" pixmaps="skin_default/buttons/button_green.png,skin_default/buttons/button_green_off.png" position="368,626" zPosition="10" size="15,16" transparent="1" alphatest="blend" />
 		<panel name="_oe-buttons_template1" />
 	</screen>
 	<screen name="ServiceInfo" position="0,0" size="1280,720" title="Serviceinfo" flags="wfNoBorder" backgroundColor="transparent">
@@ -115,7 +115,7 @@
 		<widget source="DNS1" render="Label" position="420,555" size="210,24" font="SetrixHD;20" halign="left" backgroundColor="layer-a-background" transparent="1" />
 		<widget source="DNS2" render="Label" position="420,585" size="210,24" font="SetrixHD;20" halign="left" backgroundColor="layer-a-background" transparent="1" />
 		<widget name="VKeyIcon" text="Text" position="430,638" size="70,24" zPosition="1" valign="center" font="global_button;20" halign="left" noWrap="1" backgroundColor="layer-a-background" transparent="1" />
-		<widget name="HelpWindow" position="818,25" size="402,128" zPosition="1" transparent="1" alphatest="blend" />
+		<widget name="HelpWindow" position="774,10" size="486,102" zPosition="1" transparent="1" alphatest="blend" />
 		<panel name="rg_b-buttons_template1" />
 		<panel name="rg_b-keys_template1-source" />
 		<panel name="template1_2layer" />
@@ -314,8 +314,8 @@
 		<widget name="labpass" position="320,370" size="350,30" font="Regular;22" valign="center" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
 		<widget name="alias" position="70,430" size="150,30" font="Regular;22" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
 		<widget name="labalias" position="320,430" size="350,30" font="Regular;22" valign="center" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
-		<widget name="sinactive" position="70,490" zPosition="1" pixmap="icons/lock_off.png" size="32,32" alphatest="on" />
-		<widget name="sactive" position="70,490" zPosition="2" pixmap="icons/lock_on.png" size="32,32" alphatest="on" />
+		<widget name="sinactive" position="70,490" zPosition="1" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
+		<widget name="sactive" position="70,490" zPosition="2" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
 		<widget name="system" position="110,490" size="100,30" font="Regular;22" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
 		<widget name="labsys" position="320,490" size="350,30" font="Regular;22" valign="center" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
 		<panel name="rgyb-buttons_template1" />
@@ -327,7 +327,7 @@
 		<panel name="template1_2layer" />
 		<widget source="Title" render="Label" position="58,36" foregroundColor="layer-a-title-foreground" size="525,50" valign="bottom" font="global_title;34" backgroundColor="layer-a-background" transparent="1" />
 		<widget name="config" position="70,100" size="700,510" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" backgroundColorSelected="layer-a-selection-background" foregroundColorSelected="layer-a-selection-foreground" itemHeight="30" font="screen_text; 20" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarSlidercolor" scrollbarSliderBorderColor="scrollbarSliderbordercolor" scrollbarMode="showOnDemand" transparent="1" />
-		<widget name="HelpWindow" position="818,25" size="402,128" zPosition="1" transparent="1" alphatest="blend" />
+		<widget name="HelpWindow" position="774,10" size="486,102" zPosition="1" transparent="1" alphatest="blend" />
 		<panel name="r___-buttons_template1" />
 		<panel name="r___-keys_template1" />
 		<panel name="_oe-buttons_template1" />
@@ -337,7 +337,7 @@
 		<panel name="template1_2layer" />
 		<widget source="Title" render="Label" position="58,36" foregroundColor="layer-a-title-foreground" size="525,50" valign="bottom" font="global_title;34" backgroundColor="layer-a-background" transparent="1" />
 		<widget name="config" position="70,100" size="700,510" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" backgroundColorSelected="layer-a-selection-background" foregroundColorSelected="layer-a-selection-foreground" itemHeight="30" font="screen_text; 20" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarSlidercolor" scrollbarSliderBorderColor="scrollbarSliderbordercolor" scrollbarMode="showOnDemand" transparent="1" />
-		<widget name="HelpWindow" position="818,25" size="402,128" zPosition="1" transparent="1" alphatest="blend" />
+		<widget name="HelpWindow" position="774,10" size="486,102" zPosition="1" transparent="1" alphatest="blend" />
 		<panel name="rg__-buttons_template1" />
 		<panel name="rg__-keys_template1" />
 		<panel name="_oe-buttons_template1" />
@@ -401,7 +401,7 @@
 		<widget source="Title" render="Label" position="58,36" font="global_title;34" foregroundColor="layer-a-title-foreground" size="525,50" valign="bottom" backgroundColor="layer-a-background" transparent="1" />
 		<widget name="config" position="70,100" size="700,510" itemHeight="30" font="screen_text; 20" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarSlidercolor" scrollbarSliderBorderColor="scrollbarSliderbordercolor" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" backgroundColorSelected="layer-a-selection-background" foregroundColorSelected="layer-a-selection-foreground" transparent="1" />
 		<widget name="description" position="810,385" size="415,220" font="screen_info; 20" foregroundColor="layer-b-foreground" halign="center" backgroundColor="layer-b-background" valign="center" transparent="1"/>
-		<widget name="HelpWindow" position="818,25" size="402,128" zPosition="1" transparent="1" alphatest="blend" />
+		<widget name="HelpWindow" position="774,10" size="486,102" zPosition="1" transparent="1" alphatest="blend" />
 		<widget name="footnote" position="70,610" size="700,25" font="screen_text; 16" halign="right" valign="center" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
 		<panel name="template1_2layer" />
 		<panel name="rgy_-buttons_template1" />
@@ -427,7 +427,7 @@
 		<widget name="labstop" position="320,190" size="172,30" font="Regular;22" valign="center" halign="center" backgroundColor="red" zPosition="1" />
 		<widget name="labrun" position="320,190" size="172,30" font="Regular;22" valign="center" halign="center" backgroundColor="green" zPosition="2" />
 		<widget name="labconfig" position="70,250" size="520,30" font="Regular;22" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
-		<widget name="labconfigfilename" position="600,250" size="180,30" font="Regular;22" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
++		<widget name="labconfigfilename" position="600,250" size="180,30" font="Regular;22" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
 		<panel name="rgyb-buttons_template1" />
 		<panel name="rgyb-keys_template1" />
 		<panel name="_oe-buttons_template1" />
@@ -478,14 +478,14 @@
 		<widget name="sharedir" position="70,490" size="150,30" font="Regular;22" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
 		<widget name="labsharedir" position="320,490" size="350,30" font="Regular;22" valign="center" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
 		<widget name="inotify" position="110,550" size="300,30" font="Regular;22" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
-		<widget name="inotifyactive" position="70,550" zPosition="1" pixmap="icons/lock_on.png" size="32,32" alphatest="on" />
-		<widget name="inotifyinactive" position="70,550" zPosition="2" pixmap="icons/lock_off.png" size="32,32" alphatest="on" />
+		<widget name="inotifyactive" position="70,550" zPosition="1" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
+		<widget name="inotifyinactive" position="70,550" zPosition="2" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
 		<widget name="tivo" position="440,550" size="300,30" font="Regular;22" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
-		<widget name="tivoactive" position="400,550" zPosition="1" pixmap="icons/lock_on.png" size="32,32" alphatest="on" />
-		<widget name="tivoinactive" position="400,550" zPosition="2" pixmap="icons/lock_off.png" size="32,32" alphatest="on" />
+		<widget name="tivoactive" position="400,550" zPosition="1" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
+		<widget name="tivoinactive" position="400,550" zPosition="2" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
 		<widget name="dlna" position="110,580" size="300,30" font="Regular;22" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
-		<widget name="dlnaactive" position="70,580" zPosition="1" pixmap="icons/lock_on.png" size="32,32" alphatest="on" />
-		<widget name="dlnainactive" position="70,580" zPosition="2" pixmap="icons/lock_off.png" size="32,32" alphatest="on" />
+		<widget name="dlnaactive" position="70,580" zPosition="1" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
+		<widget name="dlnainactive" position="70,580" zPosition="2" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
 		<panel name="template1_2layer" />
 		<panel name="rgyb-buttons_template1" />
 		<panel name="rgyb-keys_template1" />
@@ -511,17 +511,17 @@
 		<widget name="sharedir" position="70,490" size="150,30" font="Regular;22" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
 		<widget name="labsharedir" position="320,490" size="350,30" font="Regular;22" valign="center" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
 		<widget name="web" position="110,550" size="300,30" font="Regular;22" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
-		<widget name="webactive" position="70,550" zPosition="1" pixmap="icons/lock_on.png" size="32,32" alphatest="on" />
-		<widget name="webinactive" position="70,550" zPosition="2" pixmap="icons/lock_off.png" size="32,32" alphatest="on" />
+		<widget name="webactive" position="70,550" zPosition="1" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
+		<widget name="webinactive" position="70,550" zPosition="2" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
 		<widget name="telnet" position="440,550" size="300,30" font="Regular;22" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
-		<widget name="telnetactive" position="400,550" zPosition="1" pixmap="icons/lock_on.png" size="32,32" alphatest="on" />
-		<widget name="telnetinactive" position="400,550" zPosition="2" pixmap="icons/lock_off.png" size="32,32" alphatest="on" />
+		<widget name="telnetactive" position="400,550" zPosition="1" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
+		<widget name="telnetinactive" position="400,550" zPosition="2" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
 		<widget name="xbox" position="110,580" size="300,30" font="Regular;22" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
-		<widget name="xboxactive" position="70,580" zPosition="1" pixmap="icons/lock_on.png" size="32,32" alphatest="on" />
-		<widget name="xboxinactive" position="70,580" zPosition="2" pixmap="icons/lock_off.png" size="32,32" alphatest="on" />
+		<widget name="xboxactive" position="70,580" zPosition="1" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
+		<widget name="xboxinactive" position="70,580" zPosition="2" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
 		<widget name="dlna" position="440,580" size="300,30" font="Regular;22" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
-		<widget name="dlnaactive" position="400,580" zPosition="1" pixmap="icons/lock_on.png" size="32,32" alphatest="on" />
-		<widget name="dlnainactive" position="400,580" zPosition="2" pixmap="icons/lock_off.png" size="32,32" alphatest="on" />
+		<widget name="dlnaactive" position="400,580" zPosition="1" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
+		<widget name="dlnainactive" position="400,580" zPosition="2" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
 		<panel name="template1_2layer" />
 		<panel name="rgyb-buttons_template1" />
 		<panel name="rgyb-keys_template1" />
@@ -1246,7 +1246,7 @@
 			<convert type="MenuEntryCompare">cablescan</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="icons/scan-c.png" position="405,290" size="64,64" alphatest="blend" zPosition="1">
+		<widget source="menu" render="Pixmap" pixmap="skin_default/icons/scan-c.png" position="405,290" size="64,64" alphatest="blend" zPosition="1">
 			<convert type="MenuEntryCompare">cablescan</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
@@ -1699,7 +1699,7 @@ self.instance.move(ePoint(0,0))
 	<screen name="setup_common">
 		<widget name="config" position="70,100" size="700,510" itemHeight="30" font="screen_text; 20" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarSlidercolor" scrollbarSliderBorderColor="scrollbarSliderbordercolor" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" backgroundColorSelected="layer-a-selection-background" foregroundColorSelected="layer-a-selection-foreground" transparent="1" />
 		<widget name="description" position="810,385" size="415,220" font="screen_info; 20" foregroundColor="layer-b-foreground" halign="center" backgroundColor="layer-b-background" valign="center" transparent="1"/>
-		<widget name="HelpWindow" position="818,25" size="402,128" zPosition="1" transparent="1" alphatest="blend" />
+		<widget name="HelpWindow" position="774,10" size="486,102" zPosition="1" transparent="1" alphatest="blend" />
 		<widget name="footnote" position="70,610" size="700,25" font="screen_text; 16" halign="right" valign="center" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
 		<panel name="template1_2layer" />
 		<panel name="rg__-buttons_template1" />
@@ -1855,7 +1855,7 @@ self.instance.move(ePoint(0,0))
 		<widget source="Title" render="Label" position="58,36" font="global_title;34" foregroundColor="layer-a-title-foreground" size="525,50" valign="bottom" backgroundColor="layer-a-background" transparent="1" />
 		<widget name="config" position="70,100" size="700,510" itemHeight="30" font="screen_text; 20" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarSlidercolor" scrollbarSliderBorderColor="scrollbarSliderbordercolor" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" backgroundColorSelected="layer-a-selection-background" foregroundColorSelected="layer-a-selection-foreground" transparent="1" />
 		<widget name="description" position="810,415" size="415,190" font="screen_info; 20" foregroundColor="layer-b-foreground" halign="center" backgroundColor="layer-b-background" valign="center" transparent="1"/>
-		<widget name="HelpWindow" position="818,25" size="402,128" zPosition="1" transparent="1" alphatest="blend" />
+		<widget name="HelpWindow" position="774,10" size="486,102" zPosition="1" transparent="1" alphatest="blend" />
 		<widget name="footnote" position="70,610" size="700,25" font="screen_text; 18" halign="right" valign="center" backgroundColor="layer-b-background" foregroundColor="layer-b-foreground" transparent="1" />
 		<panel name="template1_2layer" />
 		<panel name="rgyb-buttons_template1" />
@@ -2141,7 +2141,7 @@ self['config'].l.setSeperation(int(300*f))
 	<screen name="AutoMountEdit" position="0,0" size="1280,720" title="MountEdit" flags="wfNoBorder" backgroundColor="transparent">
 		<widget source="Title" render="Label" position="58,36" foregroundColor="layer-a-title-foreground" size="525,50" zPosition="1" halign="left" valign="bottom" font="global_title;34" backgroundColor="layer-a-background" transparent="1" />
 		<widget name="config" position="70,121" size="700,450" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" backgroundColorSelected="layer-a-selection-background" foregroundColorSelected="layer-a-selection-foreground" itemHeight="30" font="screen_text; 20" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarSlidercolor" scrollbarSliderBorderColor="scrollbarSliderbordercolor" scrollbarMode="showOnDemand" transparent="1" />
-		<widget name="HelpWindow" position="818,25" size="402,128" zPosition="1" transparent="1" alphatest="blend" />
+		<widget name="HelpWindow" position="774,10" size="486,102" zPosition="1" transparent="1" alphatest="blend" />
 		<widget name="VKeyIcon" pixmap="MetrixHD/buttons/key_text.png" position="700,633" zPosition="10" size="70,30" transparent="1" alphatest="blend" />
 		<widget source="introduction" render="Label" position="810,415" size="415,190" font="screen_info; 20" foregroundColor="layer-b-foreground" halign="center" backgroundColor="layer-b-background" valign="center" transparent="1"/>
 		<panel name="template1_2layer" />
@@ -2205,7 +2205,7 @@ self['config'].l.setSeperation(int(300*f))
 	<screen name="UserDialog" position="0,0" size="1280,720" title="UserDialog" flags="wfNoBorder" backgroundColor="transparent">
 		<widget source="Title" render="Label" position="58,36" foregroundColor="layer-a-title-foreground" size="525,50" zPosition="1" halign="left" valign="bottom" font="global_title;34" backgroundColor="layer-a-background" transparent="1" />
 		<widget name="config" position="70,100" size="700,350" zPosition="3" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" backgroundColorSelected="layer-a-selection-background" foregroundColorSelected="layer-a-selection-foreground" itemHeight="30" font="screen_text; 20" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarSlidercolor" scrollbarSliderBorderColor="scrollbarSliderbordercolor" scrollbarMode="showOnDemand" transparent="1" />
-		<widget name="HelpWindow" position="818,25" size="402,128" zPosition="1" transparent="1" alphatest="blend" />
+		<widget name="HelpWindow" position="774,10" size="486,102" zPosition="1" transparent="1" alphatest="blend" />
 		<widget name="VKeyIcon" pixmap="MetrixHD/buttons/key_text.png" position="700,633" zPosition="10" size="70,30" transparent="1" alphatest="blend" />
 		<widget source="introduction" render="Label" position="810,415" size="415,190" font="screen_info; 20" foregroundColor="layer-b-foreground" halign="center" backgroundColor="layer-b-background" valign="center" transparent="1"/>
 		<panel name="template1_2layer" />
@@ -2311,7 +2311,7 @@ self['config'].l.setSeperation(int(300*f))
 		<panel name="__e-buttons_template1" />
 	</screen>
 	<screen name="TimerEntry" position="0,0" size="1280,720" title="Timer entry" flags="wfNoBorder" backgroundColor="transparent">
-		<widget name="HelpWindow" position="818,25" size="402,128" zPosition="1" transparent="1" alphatest="blend" />
+		<widget name="HelpWindow" position="774,10" size="486,102" zPosition="1" transparent="1" alphatest="blend" />
 		<widget source="Title" render="Label" position="58,36" font="global_title;34" foregroundColor="layer-a-title-foreground" size="525,50" valign="bottom" backgroundColor="layer-a-background" transparent="1" />
 		<widget name="config" position="70,100" size="700,510" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" backgroundColorSelected="layer-a-selection-background" foregroundColorSelected="layer-a-selection-foreground" itemHeight="30" font="screen_text; 20" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarSlidercolor" scrollbarSliderBorderColor="scrollbarSliderbordercolor" scrollbarMode="showOnDemand" transparent="1" />
 		<widget name="canceltext" position="70,638" size="170,30" zPosition="1" valign="center" font="global_button;20" halign="left" noWrap="1" foregroundColor="layer-a-button-foreground" backgroundColor="layer-a-background" transparent="1" />
@@ -2422,7 +2422,7 @@ self['config'].l.setSeperation(int(300*f))
 	<screen name="AutoTimerFilterEditor" position="0,0" size="1280,720" title="Edit AutoTimer Filters" flags="wfNoBorder" backgroundColor="transparent">
 		<widget source="Title" render="Label" position="58,36" foregroundColor="layer-a-title-foreground" size="525,50" noWrap="1" valign="bottom" font="global_title;34" backgroundColor="layer-a-background" transparent="1" />
 		<widget name="config" position="70,100" size="700,510" itemHeight="30" font="screen_text; 20" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarSlidercolor" scrollbarSliderBorderColor="scrollbarSliderbordercolor" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" backgroundColorSelected="layer-a-selection-background" foregroundColorSelected="layer-a-selection-foreground" transparent="1" />
-		<widget name="HelpWindow" position="818,25" size="402,128" zPosition="1" transparent="1" alphatest="blend" />
+		<widget name="HelpWindow" position="774,10" size="486,102" zPosition="1" transparent="1" alphatest="blend" />
 		<panel name="template1_2layer" />
 		<panel name="rgyb-buttons_template1" />
 		<panel name="rgyb-keys_template1-source" />
@@ -2541,21 +2541,21 @@ self['config'].l.setSeperation(int(300*f))
 		</widget>
 		<widget name="servicename" position="400,0" size="880,90" halign="center" valign="center" font="screen_info;60" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" />
 	</screen>
-	<screen name="NumericalTextInputHelpDialog" position="818,25" size="402,128" backgroundColor="transparent" flags="wfNoBorder" zPosition="8">
-		<eLabel name="b" position="0,0" size="402,128" backgroundColor="layer-b-background" zPosition="-10" /> 
-		<eLabel name="a" position="1,1" size="400,126" backgroundColor="layer-a-background" zPosition="-9" /> 
-		<widget name="key1" position="16,14" size="102,40" font="Console;16" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1"/>
-		<widget name="key2" position="150,14" size="102,40" font="Console;16" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1"/>
-		<widget name="key3" position="284,14" size="102,40" font="Console;16" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1"/>
-		<widget name="key4" position="0,56" size="134,20" font="Console;16" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1"/>
-		<widget name="key5" position="134,56" size="134,20" font="Console;16" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1"/>
-		<widget name="key6" position="268,56" size="134,20" font="Console;16" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1"/>
-		<widget name="key7" position="0,78" size="134,20" font="Console;16" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1"/>
-		<widget name="key8" position="134,78" size="134,20" font="Console;16" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1"/>
-		<widget name="key9" position="268,78" size="134,20" font="Console;16" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1"/>
-		<widget name="help1" position="0,100" size="70,20" font="Console;20" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1"/>
-		<widget name="key0" position="70,100" size="262,20" font="Console;16" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1"/>
-		<widget name="help2" position="332,100" size="70,20" font="Console;20" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-b-background" transparent="1"/>
+	<screen name="NumericalTextInputHelpDialog" position="774,10" size="486,102" backgroundColor="transparent" flags="wfNoBorder" zPosition="8">
+		<eLabel name="b" position="0,0" size="486,102" backgroundColor="layer-b-background" zPosition="-10" /> 
+		<eLabel name="a" position="1,1" size="484,100" backgroundColor="layer-a-background" zPosition="-9" /> 
+		<widget name="key1" position="10,10" size="162,20" font="Console;16" noWrap="1" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1"/>
+		<widget name="key2" position="174,10" size="162,20" font="Console;16" noWrap="1" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1"/>
+		<widget name="key3" position="324,10" size="162,20" font="Console;16" noWrap="1" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1"/>
+		<widget name="key4" position="10,32" size="162,20" font="Console;16" noWrap="1" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1"/>
+		<widget name="key5" position="162,32" size="162,20" font="Console;16" noWrap="1" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1"/>
+		<widget name="key6" position="324,32" size="162,20" font="Console;16" noWrap="1" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1"/>
+		<widget name="key7" position="10,54" size="162,20" font="Console;16" noWrap="1" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1"/>
+		<widget name="key8" position="162,54" size="162,20" font="Console;16" noWrap="1" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1"/>
+		<widget name="key9" position="324,54" size="162,20" font="Console;16" noWrap="1" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1"/>
+		<widget name="help1" position="10,76" size="162,20" font="Console;20" noWrap="1" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1"/>
+		<widget name="key0" position="81,76" size="324,20" font="Console;16" noWrap="1"  halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1"/>
+		<widget name="help2" position="324,76" size="162,20" font="Console;20" noWrap="1" halign="center" valign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-b-background" transparent="1"/>
 	</screen>
 	<screen name="VirtualKeyBoard" position="0,0" size="1280,720" zPosition="99" title="Virtual KeyBoard" flags="wfNoBorder" backgroundColor="transparent">
 		<widget source="Title" render="Label" position="58,36" font="global_title;34" foregroundColor="layer-a-title-foreground" size="525,50" valign="bottom" backgroundColor="layer-a-background" transparent="1" />
@@ -2580,9 +2580,9 @@ self['config'].l.setSeperation(int(300*f))
 		<widget name="QuestionPixmap" pixmap="MetrixHD/icons/message/question-53.png" position="30,10" size="53,53" alphatest="blend" />
 		<widget name="InfoPixmap" pixmap="MetrixHD/icons/message/info-53.png" position="30,10" size="53,53" alphatest="blend" />
 		<!--
-		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="30,10" size="53,53" alphatest="blend" />
-		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="30,10" size="53,53" alphatest="blend" />
-		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="30,10" size="53,53" alphatest="blend" />-->
+		<widget name="ErrorPixmap" pixmap="skin_default/icons/input_error.png" position="30,10" size="53,53" alphatest="blend" />
+		<widget name="QuestionPixmap" pixmap="skin_default/icons/input_question.png" position="30,10" size="53,53" alphatest="blend" />
+		<widget name="InfoPixmap" pixmap="skin_default/icons/input_info.png" position="30,10" size="53,53" alphatest="blend" />-->
 		<widget name="list" position="20,95" size="760,330" itemHeight="30" font="screen_text; 20" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarSlidercolor" scrollbarSliderBorderColor="scrollbarSliderbordercolor" scrollbarMode="showOnDemand" transparent="1" />
 		<applet type="onLayoutFinish">
 # this should be factored out into some helper code,but currently demonstrates applets.
@@ -2988,7 +2988,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 			<convert type="ClockToText">Default</convert>
 		</widget>
 		<widget source="global.CurrentTime" render="Label" position="84,4" size="200,21" font="global_small; 16" halign="left" backgroundColor="infobarbackground" foregroundColor="layer-a-extendedinfo2" transparent="1">
-			<convert type="ClockToText"></convert>
+			<convert type="ClockToText">Format:, %A , %d.%m.%Y</convert>
 		</widget>
 	</screen>
 	<screen name="Volume" position="40,40" size="335,71" title="Volume" flags="wfNoBorder" backgroundColor="transparent" zPosition="99">
@@ -3111,13 +3111,13 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<widget source="RdsDecoder" render="Label" position="200,60" size="941,40" font="LCD; 35" halign="center" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1" zPosition="1">
 			<convert type="RdsInfo">RadioText</convert>
 		</widget>
-		<widget source="RdsDecoder" render="Pixmap" alphatest="blend" pixmap="icons/rass_logo.png" position="1091,5" size="50,21" backgroundColor="layer-b-background" zPosition="1">
+		<widget source="RdsDecoder" render="Pixmap" alphatest="blend" pixmap="skin_default/icons/rass_logo.png" position="1091,5" size="50,21" backgroundColor="layer-b-background" zPosition="1">
 			<convert type="RdsInfo">RasInteractiveAvailable</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
 	</screen>
 	<screen name="RdsInfoDisplay" position="0,620" size="1280,100" zPosition="-8" flags="wfNoBorder" backgroundColor="transparent">
-		<widget name="RassLogo" pixmap="icons/rass_logo.png" position="1230,79" size="50,21" alphatest="blend" zPosition="1"/>
+		<widget name="RassLogo" pixmap="skin_default/icons/rass_logo.png" position="1230,79" size="50,21" alphatest="blend" zPosition="1"/>
 		<widget name="RadioText" position="0,0" size="1280,50" font="LCD;50" halign="center" valign="center" noWrap="1" backgroundColor="transpBlack" foregroundColor="layer-a-foreground" shadowOffset="-2,-2" shadowColor="black" transparent="0" zPosition="1"/>
 		<widget name="RtpText" position="0,40" size="1280,60" font="LCD;50" halign="center" valign="center" noWrap="1" backgroundColor="transpBlack" foregroundColor="layer-a-foreground" shadowOffset="-2,-2" shadowColor="black" transparent="0" zPosition="1"/>
 	</screen>
@@ -3146,11 +3146,11 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<panel name="RTSB_gEPG2_description"/>
 		<widget source="Event" render="Label" position="60,109" size="80,25" font="screen_text;19" halign="right" backgroundColor="epg-background" foregroundColor="epg-timeline-foreground" transparent="1" valign="center">
 			<convert type="EventTime">StartTime</convert>
-			<convert type="ClockToText"></convert>
+			<convert type="ClockToText">Format:%H:%M </convert>
 		</widget>
 		<widget source="Event" render="Label" position="1140,109" size="80,25" font="screen_text;19" backgroundColor="epg-background" foregroundColor="epg-timeline-foreground" transparent="1" halign="left" valign="center">
 			<convert type="EventTime">EndTime</convert>
-			<convert type="ClockToText"></convert>
+			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
 		<eLabel position="160,122" size="960,1" backgroundColor="layer-a-accent1" zPosition="1" />
 		<widget source="Event" render="Progress" position="160,120" size="960,5" borderWidth="0" foregroundColor="layer-a-progress" transparent="1" zPosition="2">
@@ -3368,11 +3368,11 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<panel name="RTSB_gEPGPIG1_description"/>
 		<widget source="Event" render="Label" position="60,109" size="80,25" font="screen_text;19" halign="right" backgroundColor="epg-background" foregroundColor="epg-timeline-foreground" transparent="1" valign="center">
 			<convert type="EventTime">StartTime</convert>
-			<convert type="ClockToText"></convert>
+			<convert type="ClockToText">Format:%H:%M </convert>
 		</widget>
 		<widget source="Event" render="Label" position="810,109" size="80,25" font="screen_text;19" backgroundColor="epg-background" foregroundColor="epg-timeline-foreground" transparent="1" halign="left" valign="center">
 			<convert type="EventTime">EndTime</convert>
-			<convert type="ClockToText"></convert>
+			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
 		<eLabel position="160,122" size="630,1" backgroundColor="layer-a-accent1" zPosition="1" />
 		<widget source="Event" render="Progress" position="160,120" size="630,5" borderWidth="0" foregroundColor="layer-a-progress" transparent="1" zPosition="2">
@@ -3413,11 +3413,11 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<panel name="RTSB_gEPGPIG2_description"/>
 		<widget source="Event" render="Label" position="60,109" size="80,25" font="screen_text;19" halign="right" backgroundColor="epg-background" foregroundColor="epg-timeline-foreground" transparent="1" valign="center">
 			<convert type="EventTime">StartTime</convert>
-			<convert type="ClockToText"></convert>
+			<convert type="ClockToText">Format:%H:%M </convert>
 		</widget>
 		<widget source="Event" render="Label" position="638,109" size="80,25" font="screen_text;19" backgroundColor="epg-background" foregroundColor="epg-timeline-foreground" transparent="1" halign="left" valign="center">
 			<convert type="EventTime">EndTime</convert>
-			<convert type="ClockToText"></convert>
+			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
 		<eLabel position="160,122" size="458,1" backgroundColor="layer-a-accent1" zPosition="1" />
 		<widget source="Event" render="Progress" position="160,120" size="458,5" borderWidth="0" foregroundColor="layer-a-progress" transparent="1" zPosition="2">
@@ -3457,11 +3457,11 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<panel name="RTSB_gEPG1_description"/>
 		<widget source="Event" render="Label" position="60,109" size="80,25" font="screen_text;19" halign="right" backgroundColor="epg-background" foregroundColor="epg-timeline-foreground" transparent="1" valign="center">
 			<convert type="EventTime">StartTime</convert>
-			<convert type="ClockToText"></convert>
+			<convert type="ClockToText">Format:%H:%M </convert>
 		</widget>
 		<widget source="Event" render="Label" position="1140,109" size="80,25" font="screen_text;19" backgroundColor="epg-background" foregroundColor="epg-timeline-foreground" transparent="1" halign="left" valign="center">
 			<convert type="EventTime">EndTime</convert>
-			<convert type="ClockToText"></convert>
+			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
 		<eLabel position="160,122" size="960,1" backgroundColor="layer-a-accent1" zPosition="1" />
 		<widget source="Event" render="Progress" position="160,120" size="960,5" borderWidth="0" foregroundColor="layer-a-progress" transparent="1" zPosition="2">
@@ -3498,11 +3498,11 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<panel name="RTSB_gEPG2_description"/>
 		<widget source="Event" render="Label" position="60,109" size="80,25" font="screen_text;19" halign="right" backgroundColor="epg-background" foregroundColor="epg-timeline-foreground" transparent="1" valign="center">
 			<convert type="EventTime">StartTime</convert>
-			<convert type="ClockToText"></convert>
+			<convert type="ClockToText">Format:%H:%M </convert>
 		</widget>
 		<widget source="Event" render="Label" position="1140,109" size="80,25" font="screen_text;19" backgroundColor="epg-background" foregroundColor="epg-timeline-foreground" transparent="1" halign="left" valign="center">
 			<convert type="EventTime">EndTime</convert>
-			<convert type="ClockToText"></convert>
+			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
 		<eLabel position="160,122" size="960,1" backgroundColor="layer-a-accent1" zPosition="1" />
 		<widget source="Event" render="Progress" position="160,120" size="960,5" borderWidth="0" foregroundColor="layer-a-progress" transparent="1" zPosition="2">
@@ -3533,10 +3533,10 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 			<convert type="ClockToText">Default</convert>
 		</widget>
 		<widget source="global.CurrentTime" render="Label" position="968,9" size="160,27" font="global_clock;16" noWrap="1" halign="right" valign="bottom" foregroundColor="layer-a-clock-foreground" backgroundColor="epg-background" transparent="1">
-			<convert type="ClockToText"></convert>
+			<convert type="ClockToText">Format:%A</convert>
 		</widget>
 		<widget source="global.CurrentTime" render="Label" position="968,33" size="160,27" font="global_clock;16" noWrap="1" halign="right" valign="bottom" foregroundColor="layer-a-clock-foreground" backgroundColor="epg-background" transparent="1">
-			<convert type="ClockToText"></convert>
+			<convert type="ClockToText">Format:%e. %B</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="30,9" size="850,55" font="infobar_event; 40" valign="center" noWrap="1" backgroundColor="epg-background" foregroundColor="epg-event-foreground" transparent="1">
 			<convert type="ServiceName">Name</convert>
@@ -3577,10 +3577,10 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 			<convert type="ClockToText">Default</convert>
 		</widget>
 		<widget source="global.CurrentTime" render="Label" position="968,9" size="160,27" font="global_clock;16" noWrap="1" halign="right" valign="bottom" foregroundColor="layer-a-clock-foreground" backgroundColor="epg-background" transparent="1">
-			<convert type="ClockToText"></convert>
+			<convert type="ClockToText">Format:%A</convert>
 		</widget>
 		<widget source="global.CurrentTime" render="Label" position="968,33" size="160,27" font="global_clock;16" noWrap="1" halign="right" valign="bottom" foregroundColor="layer-a-clock-foreground" backgroundColor="epg-background" transparent="1">
-			<convert type="ClockToText"></convert>
+			<convert type="ClockToText">Format:%e. %B</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="30,9" size="850,55" font="infobar_event; 40" valign="center" noWrap="1" backgroundColor="epg-background" foregroundColor="epg-event-foreground" transparent="1">
 			<convert type="ServiceName">Name</convert>
@@ -4024,11 +4024,11 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 			<convert type="FrontendInfo">BER</convert>
 		</widget>
 		<eLabel name="lock" text="Lock:" position="120,219" size=" 80,30" font="SetrixHD;21" halign="right" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
-		<widget source="Frontend" render="Pixmap" position="210,220" size=" 32,32" zPosition="1" pixmap="icons/lock_on.png" alphatest="blend">
+		<widget source="Frontend" render="Pixmap" position="210,220" size=" 32,32" zPosition="1" pixmap="skin_default/icons/lock_on.png" alphatest="blend">
 			<convert type="FrontendInfo">LOCK</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="Frontend" render="Pixmap" position="210,220" size=" 32,32" zPosition="1" pixmap="icons/lock_off.png" alphatest="blend">
+		<widget source="Frontend" render="Pixmap" position="210,220" size=" 32,32" zPosition="1" pixmap="skin_default/icons/lock_off.png" alphatest="blend">
 			<convert type="FrontendInfo">LOCK</convert>
 			<convert type="ConditionalShowHide">Invert</convert>
 		</widget>
@@ -4043,17 +4043,17 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	</screen>
 	<screen name="ServiceScan" position="0,0" size="1280,720" title="Service Scan" flags="wfNoBorder" backgroundColor="transparent">
 		<widget name="Title" position="58,36" foregroundColor="layer-a-title-foreground" size="525,50" valign="bottom" font="global_title;34" backgroundColor="layer-a-background" transparent="1" />
-		<widget source="FrontendInfo" render="Pixmap" pixmap="icons/scan-s.png" position="995,420" size="64,64" transparent="1" alphatest="blend">
+		<widget source="FrontendInfo" render="Pixmap" pixmap="skin_default/icons/scan-s.png" position="995,420" size="64,64" transparent="1" alphatest="blend">
 			<convert type="FrontendInfo">TYPE</convert>
 			<convert type="ValueRange">0,0</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="FrontendInfo" render="Pixmap" pixmap="icons/scan-c.png" position="995,420" size="64,64" transparent="1" alphatest="blend">
+		<widget source="FrontendInfo" render="Pixmap" pixmap="skin_default/icons/scan-c.png" position="995,420" size="64,64" transparent="1" alphatest="blend">
 			<convert type="FrontendInfo">TYPE</convert>
 			<convert type="ValueRange">1,1</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="FrontendInfo" render="Pixmap" pixmap="icons/scan-t.png" position="995,420" size="64,64" transparent="1" alphatest="blend">
+		<widget source="FrontendInfo" render="Pixmap" pixmap="skin_default/icons/scan-t.png" position="995,420" size="64,64" transparent="1" alphatest="blend">
 			<convert type="FrontendInfo">TYPE</convert>
 			<convert type="ValueRange">2,2</convert>
 			<convert type="ConditionalShowHide" />
@@ -4628,11 +4628,11 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<widget name="labstop" position="320,190" size="172,30" font="Regular;22" valign="center" halign="center" backgroundColor="red" zPosition="1" />
 		<widget name="labrun" position="320,190" size="172,30" font="Regular;22" valign="center" halign="center" backgroundColor="green" zPosition="2" />
 		<widget name="ci0" position="110,550" size="300,30" font="Regular;22" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
-		<widget name="ci0active" position="70,550" zPosition="1" pixmap="icons/lock_on.png" size="32,32" alphatest="on" />
-		<widget name="ci0inactive" position="70,550" zPosition="2" pixmap="icons/lock_off.png" size="32,32" alphatest="on" />
+		<widget name="ci0active" position="70,550" zPosition="1" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
+		<widget name="ci0inactive" position="70,550" zPosition="2" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
 		<widget name="ci1" position="440,550" size="300,30" font="Regular;22" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
-		<widget name="ci1active" position="400,550" zPosition="1" pixmap="icons/lock_on.png" size="32,32" alphatest="on" />
-		<widget name="ci1inactive" position="400,550" zPosition="2" pixmap="icons/lock_off.png" size="32,32" alphatest="on" />
+		<widget name="ci1active" position="400,550" zPosition="1" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
+		<widget name="ci1inactive" position="400,550" zPosition="2" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
 		<panel name="template1_2layer" />
 		<panel name="rgy_-buttons_template1" />
 		<panel name="rgy_-keys_template1" />
@@ -4686,7 +4686,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<widget name="introduction" position="810,415" size="415,190" font="screen_info; 20" foregroundColor="layer-b-foreground" halign="center" backgroundColor="layer-b-background" valign="center" transparent="1"/>
 		<panel name="template1_2layer" />
 		<ePixmap position="890,175" size="256,256" zPosition="2" pixmap="MetrixHD/icons/search.png" transparent="1" alphatest="blend" />
-		<ePixmap position="995,420" size="64,64" zPosition="3" pixmap="icons/scan-c.png"  transparent="1" alphatest="blend" />
+		<ePixmap position="995,420" size="64,64" zPosition="3" pixmap="skin_default/icons/scan-c.png"  transparent="1" alphatest="blend" />
 		<panel name="_oe-buttons_template1" />
 	</screen>
 	<screen name="CableScanStatus" title="Cable Scan" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
@@ -4694,7 +4694,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<!--widget source="Title" render="Label" position="58,36" foregroundColor="layer-a-title-foreground" size="525,50" valign="bottom" font="global_title;34" backgroundColor="layer-a-background" transparent="1" /-->
 		<widget name="scan_state" position="70,100" zPosition="2" size="700,30" font="screen_text;20" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1"/>
 		<widget name="scan_progress" position="70,150" size="700,20" borderColor="layer-a-accent1" foregroundColor="layer-a-progress" borderWidth="2" transparent="1" />
-		<widget name="frontend" position="995,420" size="64,64" zPosition="3" pixmap="icons/scan-c.png"  transparent="1" alphatest="blend" />
+		<widget name="frontend" position="995,420" size="64,64" zPosition="3" pixmap="skin_default/icons/scan-c.png"  transparent="1" alphatest="blend" />
 		<panel name="template1_2layer" />
 		<ePixmap position="890,175" size="256,256" zPosition="2" pixmap="MetrixHD/icons/search.png" transparent="1" alphatest="blend" />
 		<panel name="_oe-buttons_template1" />
@@ -4731,7 +4731,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 			</convert>
 		</widget>
 		<widget name="config" position="70,435" size="700,180" itemHeight="30" zPosition="14" font="screen_text; 20" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarSlidercolor" scrollbarSliderBorderColor="scrollbarSliderbordercolor" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" backgroundColorSelected="layer-a-selection-background" foregroundColorSelected="layer-a-selection-foreground" transparent="1" />
-		<widget name="HelpWindow" position="210,135" size="402,128" zPosition="1" transparent="1" alphatest="blend" />
+		<widget name="HelpWindow" position="166,148" size="486,102" zPosition="1" transparent="1" alphatest="blend" />
 		<panel name="r___-buttons_template1" />
 		<widget name="languagetext" position="70,638" size="170,30" noWrap="1" zPosition="1" valign="center" font="global_button; 20" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-button-foreground" transparent="1" />
 		<panel name="__e-buttons_template1" />
@@ -4739,27 +4739,27 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	</screen>
 <!-- cf#_#rename -->
 	<screen name="wizard_rc_template">
-		<widget name="rc" position="955,100" size="154,500" pixmaps="rc.png,rcold.png" zPosition="10" alphatest="blend" />
-		<widget name="arrowdown" position="-100,-100" size="37,70" pixmap="arrowdown.png" zPosition="11" alphatest="blend" />
-		<widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="arrowdown.png" zPosition="11" alphatest="blend" />
-		<widget name="arrowup" position="-100,-100" size="37,70" pixmap="arrowup.png" zPosition="11" alphatest="blend" />
-		<widget name="arrowup2" position="-100,-100" size="37,70" pixmap="arrowup.png" zPosition="11" alphatest="blend" />
+		<widget name="rc" position="955,100" size="154,500" pixmaps="skin_default/rc.png,skin_default/rcold.png" zPosition="10" alphatest="blend" />
+		<widget name="arrowdown" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="blend" />
+		<widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="blend" />
+		<widget name="arrowup" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="blend" />
+		<widget name="arrowup2" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="blend" />
 	</screen>
 <!-- cf#_#rename -->
 	<screen name="wizard_rc_template#_FHDscreen">
-		<widget name="rc" position="1475,250" size="154,500" pixmaps="rc.png,rcold.png" zPosition="10" alphatest="blend" />
-		<widget name="arrowdown" position="-100,-100" size="37,70" pixmap="arrowdown.png" zPosition="11" alphatest="blend" />
-		<widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="arrowdown.png" zPosition="11" alphatest="blend" />
-		<widget name="arrowup" position="-100,-100" size="37,70" pixmap="arrowup.png" zPosition="11" alphatest="blend" />
-		<widget name="arrowup2" position="-100,-100" size="37,70" pixmap="arrowup.png" zPosition="11" alphatest="blend" />
+		<widget name="rc" position="1475,250" size="154,500" pixmaps="skin_default/rc.png,skin_default/rcold.png" zPosition="10" alphatest="blend" />
+		<widget name="arrowdown" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="blend" />
+		<widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="blend" />
+		<widget name="arrowup" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="blend" />
+		<widget name="arrowup2" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="blend" />
 	</screen>
 <!-- cf#_#rename -->
 	<screen name="wizard_rc_template#_UHDscreen">
-		<widget name="rc" position="3000,400" size="154,500" pixmaps="rc.png,rcold.png" zPosition="10" alphatest="blend" />
-		<widget name="arrowdown" position="-100,-100" size="37,70" pixmap="arrowdown.png" zPosition="11" alphatest="blend" />
-		<widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="arrowdown.png" zPosition="11" alphatest="blend" />
-		<widget name="arrowup" position="-100,-100" size="37,70" pixmap="arrowup.png" zPosition="11" alphatest="blend" />
-		<widget name="arrowup2" position="-100,-100" size="37,70" pixmap="arrowup.png" zPosition="11" alphatest="blend" />
+		<widget name="rc" position="3000,400" size="154,500" pixmaps="skin_default/rc.png,skin_default/rcold.png" zPosition="10" alphatest="blend" />
+		<widget name="arrowdown" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="blend" />
+		<widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="blend" />
+		<widget name="arrowup" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="blend" />
+		<widget name="arrowup2" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="blend" />
 	</screen>
 <!-- cf#_#start -->
 	<screen name="HelpMenu" position="0,0" size="1280,720" title="Menu" flags="wfNoBorder" backgroundColor="transparent">
@@ -4864,7 +4864,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<eLabel name="GRADIENT_BACKGROUND" position="0,640" zPosition="-2" size="1280,80" backgroundColor="infobarbackground" />
 		<eLabel backgroundColor="infobaraccent1" position="110,683" size="796,1" zPosition="3"/>
 		<widget source="global.CurrentTime" render="Label" position="940,605" size="300,30" font="global_clock; 20" halign="right" shadowOffset="-2,-2" shadowColor="black" backgroundColor="infobarbackground" foregroundColor="layer-a-clock-foreground" transparent="1">
-			<convert type="ClockToText"></convert>
+			<convert type="ClockToText">Format:%H:%M , %A , %d.%m.%Y</convert>
 		</widget>
 		<widget source="session.CurrentService" render="PositionGauge" position="110,679" size="796,9" zPosition="6" transparent="1">
 			<convert type="ServicePosition">Gauge</convert>
@@ -5265,4 +5265,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<widget name="text" font="Console;18"  position="0,4" size="1280,664"/>
 	</screen>
 	<!-- IceTV -->
+	<!-- HideVBILine -->
+	<screen name="HideVBILine" position="0,0" size="1280,2" backgroundColor="black" flags="wfNoBorder"/>
+	<!-- HideVBILine -->
 </skin>

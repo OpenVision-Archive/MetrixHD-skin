@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: openATV / MyMetrixLite\n"
+"Project-Id-Version: MyMetrixLite\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-02-04 01:00+0300\n"
 "PO-Revision-Date: 2019-02-04 01:36+0300\n"
