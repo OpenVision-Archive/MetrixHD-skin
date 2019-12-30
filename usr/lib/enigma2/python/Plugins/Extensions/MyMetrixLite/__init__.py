@@ -203,18 +203,18 @@ SysFontTypeList = [
 	#("/usr/share/fonts/valis_enigma.ttf", ("valis_enigma (valis_enigma.ttf)"))
 ]
 SkinFontTypeList = [
-	("/usr/share/enigma2/MetrixHD/fonts/analog.ttf", ("Analog (analog.ttf)")),
-	("/usr/share/enigma2/MetrixHD/fonts/DejaVuSans.ttf", ("DejaVu Sans (DejaVuSans.ttf)")),
-	("/usr/share/enigma2/MetrixHD/fonts/digi.ttf", ("LCD (digi.ttf)")),
-	("/usr/share/enigma2/MetrixHD/fonts/DroidSans.ttf", ("Droid Sans (DroidSans.ttf)")),
-	("/usr/share/enigma2/MetrixHD/fonts/DroidSans-Bold.ttf", ("Droid Sans Bold (DroidSans-Bold.ttf)")),
-	("/usr/share/enigma2/MetrixHD/fonts/HandelGotD.ttf", ("HandelGotD (HandelGotD.ttf)")),
-	("/usr/share/enigma2/MetrixHD/fonts/HandelGotDBol.ttf", ("HandelGotD Bold (HandelGotDBol.ttf)")),
-	("/usr/share/enigma2/MetrixHD/fonts/OpenSans-Regular.ttf", ("OpenSans Regular (OpenSans-Regular.ttf)")),
-	("/usr/share/enigma2/MetrixHD/fonts/Raleway-Channel.ttf", ("Raleway Channel (Raleway-Channel.ttf)")),
-	("/usr/share/enigma2/MetrixHD/fonts/Raleway-Light.ttf", ("Raleway Light(Raleway-Light.ttf)")),
-	("/usr/share/enigma2/MetrixHD/fonts/Raleway-Regular.ttf", ("Raleway Regular (Raleway-Regular.ttf)")),
-	("/usr/share/enigma2/MetrixHD/fonts/setrixHD.ttf", ("Segoe UI Light 8 (setrixHD.ttf)"))
+	("/usr/share/fonts/analog.ttf", ("Analog (analog.ttf)")),
+	("/usr/share/fonts/DejaVuSans.ttf", ("DejaVu Sans (DejaVuSans.ttf)")),
+	("/usr/share/fonts/digi.ttf", ("LCD (digi.ttf)")),
+	("/usr/share/fonts/DroidSans.ttf", ("Droid Sans (DroidSans.ttf)")),
+	("/usr/share/fonts/DroidSans-Bold.ttf", ("Droid Sans Bold (DroidSans-Bold.ttf)")),
+	("/usr/share/fonts/HandelGotD.ttf", ("HandelGotD (HandelGotD.ttf)")),
+	("/usr/share/fonts/HandelGotDBol.ttf", ("HandelGotD Bold (HandelGotDBol.ttf)")),
+	("/usr/share/fonts/OpenSans-Regular.ttf", ("OpenSans Regular (OpenSans-Regular.ttf)")),
+	("/usr/share/fonts/Raleway-Channel.ttf", ("Raleway Channel (Raleway-Channel.ttf)")),
+	("/usr/share/fonts/Raleway-Light.ttf", ("Raleway Light(Raleway-Light.ttf)")),
+	("/usr/share/fonts/Raleway-Regular.ttf", ("Raleway Regular (Raleway-Regular.ttf)")),
+	("/usr/share/fonts/segoe-ui-light.ttf", ("Segoe UI Light 8 (segoe-ui-light.ttf)"))
 ]
 
 SkinFontPresetList = [
@@ -476,47 +476,47 @@ def initFontsConfig():
 	config.plugins.MyMetrixLiteFonts.Arial_type = ConfigSelection(default="/usr/share/fonts/nmsbd.ttf", choices = FontTypeList)
 	config.plugins.MyMetrixLiteFonts.Arial_scale = ConfigSelectionNumber(50, 150, 1, default = 100)
 #skin fonts
-	config.plugins.MyMetrixLiteFonts.Regular_type = ConfigSelection(default="/usr/share/enigma2/MetrixHD/fonts/OpenSans-Regular.ttf", choices = FontTypeList)
+	config.plugins.MyMetrixLiteFonts.Regular_type = ConfigSelection(default="/usr/share/fonts/OpenSans-Regular.ttf", choices = FontTypeList)
 	config.plugins.MyMetrixLiteFonts.Regular_scale = ConfigSelectionNumber(50, 150, 1, default = 95)
-	config.plugins.MyMetrixLiteFonts.RegularLight_type = ConfigSelection(default="/usr/share/enigma2/MetrixHD/fonts/OpenSans-Regular.ttf", choices = FontTypeList)
+	config.plugins.MyMetrixLiteFonts.RegularLight_type = ConfigSelection(default="/usr/share/fonts/OpenSans-Regular.ttf", choices = FontTypeList)
 	config.plugins.MyMetrixLiteFonts.RegularLight_scale = ConfigSelectionNumber(50, 150, 1, default = 95)
-	config.plugins.MyMetrixLiteFonts.SetrixHD_type = ConfigSelection(default="/usr/share/enigma2/MetrixHD/fonts/setrixHD.ttf", choices = FontTypeList)
-	config.plugins.MyMetrixLiteFonts.SetrixHD_scale = ConfigSelectionNumber(50, 150, 1, default = 100)
+	config.plugins.MyMetrixLiteFonts.segoe-ui-light_type = ConfigSelection(default="/usr/share/fonts/segoe-ui-light.ttf", choices = FontTypeList)
+	config.plugins.MyMetrixLiteFonts.segoe-ui-light_scale = ConfigSelectionNumber(50, 150, 1, default = 100)
 	config.plugins.MyMetrixLiteFonts.Meteo_scale = ConfigSelectionNumber(50, 150, 1, default = 100)
 #------------------------------#
 #for individual skinned screens#
 #------------------------------#
 #global
-	config.plugins.MyMetrixLiteFonts.globaltitle_type = ConfigSelection(default="/usr/share/enigma2/MetrixHD/fonts/setrixHD.ttf", choices = FontTypeList)
+	config.plugins.MyMetrixLiteFonts.globaltitle_type = ConfigSelection(default="/usr/share/fonts/segoe-ui-light.ttf", choices = FontTypeList)
 	config.plugins.MyMetrixLiteFonts.globaltitle_scale = ConfigSelectionNumber(50, 150, 1, default = 100)
-	config.plugins.MyMetrixLiteFonts.globalbutton_type = ConfigSelection(default="/usr/share/enigma2/MetrixHD/fonts/setrixHD.ttf", choices = FontTypeList)
+	config.plugins.MyMetrixLiteFonts.globalbutton_type = ConfigSelection(default="/usr/share/fonts/segoe-ui-light.ttf", choices = FontTypeList)
 	config.plugins.MyMetrixLiteFonts.globalbutton_scale = ConfigSelectionNumber(50, 150, 1, default = 90)
-	config.plugins.MyMetrixLiteFonts.globalclock_type = ConfigSelection(default="/usr/share/enigma2/MetrixHD/fonts/setrixHD.ttf", choices = FontTypeList)
+	config.plugins.MyMetrixLiteFonts.globalclock_type = ConfigSelection(default="/usr/share/fonts/segoe-ui-light.ttf", choices = FontTypeList)
 	config.plugins.MyMetrixLiteFonts.globalclock_scale = ConfigSelectionNumber(50, 150, 1, default = 100)
-	config.plugins.MyMetrixLiteFonts.globallarge_type = ConfigSelection(default="/usr/share/enigma2/MetrixHD/fonts/setrixHD.ttf", choices = FontTypeList)
+	config.plugins.MyMetrixLiteFonts.globallarge_type = ConfigSelection(default="/usr/share/fonts/segoe-ui-light.ttf", choices = FontTypeList)
 	config.plugins.MyMetrixLiteFonts.globallarge_scale = ConfigSelectionNumber(50, 150, 1, default = 80)
-	config.plugins.MyMetrixLiteFonts.globalsmall_type = ConfigSelection(default="/usr/share/enigma2/MetrixHD/fonts/OpenSans-Regular.ttf", choices = FontTypeList)
+	config.plugins.MyMetrixLiteFonts.globalsmall_type = ConfigSelection(default="/usr/share/fonts/OpenSans-Regular.ttf", choices = FontTypeList)
 	config.plugins.MyMetrixLiteFonts.globalsmall_scale = ConfigSelectionNumber(50, 150, 1, default = 95)
-	config.plugins.MyMetrixLiteFonts.globalmenu_type = ConfigSelection(default="/usr/share/enigma2/MetrixHD/fonts/setrixHD.ttf", choices = FontTypeList)
+	config.plugins.MyMetrixLiteFonts.globalmenu_type = ConfigSelection(default="/usr/share/fonts/segoe-ui-light.ttf", choices = FontTypeList)
 	config.plugins.MyMetrixLiteFonts.globalmenu_scale = ConfigSelectionNumber(50, 150, 1, default = 100)
 #screens, plugins
-	config.plugins.MyMetrixLiteFonts.screenlabel_type = ConfigSelection(default="/usr/share/enigma2/MetrixHD/fonts/OpenSans-Regular.ttf", choices = FontTypeList)
+	config.plugins.MyMetrixLiteFonts.screenlabel_type = ConfigSelection(default="/usr/share/fonts/OpenSans-Regular.ttf", choices = FontTypeList)
 	config.plugins.MyMetrixLiteFonts.screenlabel_scale = ConfigSelectionNumber(50, 150, 1, default = 95)
-	config.plugins.MyMetrixLiteFonts.screentext_type = ConfigSelection(default="/usr/share/enigma2/MetrixHD/fonts/OpenSans-Regular.ttf", choices = FontTypeList)
+	config.plugins.MyMetrixLiteFonts.screentext_type = ConfigSelection(default="/usr/share/fonts/OpenSans-Regular.ttf", choices = FontTypeList)
 	config.plugins.MyMetrixLiteFonts.screentext_scale = ConfigSelectionNumber(50, 150, 1, default = 95)
-	config.plugins.MyMetrixLiteFonts.screeninfo_type = ConfigSelection(default="/usr/share/enigma2/MetrixHD/fonts/setrixHD.ttf", choices = FontTypeList)
+	config.plugins.MyMetrixLiteFonts.screeninfo_type = ConfigSelection(default="/usr/share/fonts/segoe-ui-light.ttf", choices = FontTypeList)
 	config.plugins.MyMetrixLiteFonts.screeninfo_scale = ConfigSelectionNumber(50, 150, 1, default = 100)
 #epg, channellist, movielist
-	config.plugins.MyMetrixLiteFonts.epgevent_type = ConfigSelection(default="/usr/share/enigma2/MetrixHD/fonts/OpenSans-Regular.ttf", choices = FontTypeList)
+	config.plugins.MyMetrixLiteFonts.epgevent_type = ConfigSelection(default="/usr/share/fonts/OpenSans-Regular.ttf", choices = FontTypeList)
 	config.plugins.MyMetrixLiteFonts.epgevent_scale = ConfigSelectionNumber(50, 150, 1, default = 95)
-	config.plugins.MyMetrixLiteFonts.epgtext_type = ConfigSelection(default="/usr/share/enigma2/MetrixHD/fonts/OpenSans-Regular.ttf", choices = FontTypeList)
+	config.plugins.MyMetrixLiteFonts.epgtext_type = ConfigSelection(default="/usr/share/fonts/OpenSans-Regular.ttf", choices = FontTypeList)
 	config.plugins.MyMetrixLiteFonts.epgtext_scale = ConfigSelectionNumber(50, 150, 1, default = 95)
-	config.plugins.MyMetrixLiteFonts.epginfo_type = ConfigSelection(default="/usr/share/enigma2/MetrixHD/fonts/OpenSans-Regular.ttf", choices = FontTypeList)
+	config.plugins.MyMetrixLiteFonts.epginfo_type = ConfigSelection(default="/usr/share/fonts/OpenSans-Regular.ttf", choices = FontTypeList)
 	config.plugins.MyMetrixLiteFonts.epginfo_scale = ConfigSelectionNumber(50, 150, 1, default = 95)
 #infobar, movieplayer
-	config.plugins.MyMetrixLiteFonts.infobarevent_type = ConfigSelection(default="/usr/share/enigma2/MetrixHD/fonts/setrixHD.ttf", choices = FontTypeList)
+	config.plugins.MyMetrixLiteFonts.infobarevent_type = ConfigSelection(default="/usr/share/fonts/segoe-ui-light.ttf", choices = FontTypeList)
 	config.plugins.MyMetrixLiteFonts.infobarevent_scale = ConfigSelectionNumber(50, 150, 1, default = 100)
-	config.plugins.MyMetrixLiteFonts.infobartext_type = ConfigSelection(default="/usr/share/enigma2/MetrixHD/fonts/OpenSans-Regular.ttf", choices = FontTypeList)
+	config.plugins.MyMetrixLiteFonts.infobartext_type = ConfigSelection(default="/usr/share/fonts/OpenSans-Regular.ttf", choices = FontTypeList)
 	config.plugins.MyMetrixLiteFonts.infobartext_scale = ConfigSelectionNumber(50, 150, 1, default = 95)
 
 #######################################################################
@@ -818,7 +818,7 @@ def initOtherConfig():
 	config.plugins.MyMetrixLiteOther.SkinDesignButtonsFrameColorTransparency = ConfigSelection(default="00", choices = TransparencyList)
 	config.plugins.MyMetrixLiteOther.SkinDesignButtonsTextColor = ConfigSelection(default="000000", choices = ColorList)
 	config.plugins.MyMetrixLiteOther.SkinDesignButtonsTextColorTransparency = ConfigSelection(default="00", choices = TransparencyList)
-	config.plugins.MyMetrixLiteOther.SkinDesignButtonsTextFont = ConfigSelection(default="/usr/share/enigma2/MetrixHD/fonts/OpenSans-Regular.ttf", choices = FontTypeList)
+	config.plugins.MyMetrixLiteOther.SkinDesignButtonsTextFont = ConfigSelection(default="/usr/share/fonts/OpenSans-Regular.ttf", choices = FontTypeList)
 	config.plugins.MyMetrixLiteOther.SkinDesignButtonsTextSize = ConfigSelectionNumber(10, 30, 1, default = 24)
 	config.plugins.MyMetrixLiteOther.SkinDesignButtonsFrameSize = ConfigSelectionNumber(0, 5, 1, default = 0)
 	config.plugins.MyMetrixLiteOther.SkinDesignButtonsTextPosition = ConfigSelectionNumber(-10, 10, 1, default = 0)

@@ -1076,101 +1076,101 @@ class ActivateSkinSettings:
 			#fonts skin
 			type = config.plugins.MyMetrixLiteFonts.Regular_type.value
 			scale = config.plugins.MyMetrixLiteFonts.Regular_scale.value
-			old = '<font filename="/usr/share/enigma2/MetrixHD/fonts/OpenSans-Regular.ttf" name="Regular" scale="95" />'
+			old = '<font filename="/usr/share/fonts/OpenSans-Regular.ttf" name="Regular" scale="95" />'
 			new = '<font filename="' + type + '" name="Regular" scale="' + str(scale) + '" />'
 			if path.exists(type):
 				skinSearchAndReplace.append([old, new ])
 
 			type = config.plugins.MyMetrixLiteFonts.RegularLight_type.value
 			scale = config.plugins.MyMetrixLiteFonts.RegularLight_scale.value
-			old = '<font filename="/usr/share/enigma2/MetrixHD/fonts/OpenSans-Regular.ttf" name="RegularLight" scale="95" />'
+			old = '<font filename="/usr/share/fonts/OpenSans-Regular.ttf" name="RegularLight" scale="95" />'
 			new = '<font filename="' + type + '" name="RegularLight" scale="' + str(scale) + '" />'
 			if path.exists(type):
 				skinSearchAndReplace.append([old, new ])
 
-			type = config.plugins.MyMetrixLiteFonts.SetrixHD_type.value
-			scale = config.plugins.MyMetrixLiteFonts.SetrixHD_scale.value
-			old = '<font filename="/usr/share/enigma2/MetrixHD/fonts/setrixHD.ttf" name="SetrixHD" scale="100" />'
-			new = '<font filename="' + type + '" name="SetrixHD" scale="' + str(scale) + '" />'
+			type = config.plugins.MyMetrixLiteFonts.segoe-ui-light_type.value
+			scale = config.plugins.MyMetrixLiteFonts.segoe-ui-light_scale.value
+			old = '<font filename="/usr/share/fonts/segoe-ui-light.ttf" name="segoe-ui-light" scale="100" />'
+			new = '<font filename="' + type + '" name="segoe-ui-light" scale="' + str(scale) + '" />'
 			if path.exists(type):
 				skinSearchAndReplace.append([old, new ])
 
 			scale = config.plugins.MyMetrixLiteFonts.Meteo_scale.value
-			old = '<font filename="/usr/share/enigma2/MetrixHD/fonts/meteocons.ttf" name="Meteo" scale="100" />'
-			new = '<font filename="/usr/share/enigma2/MetrixHD/fonts/meteocons.ttf" name="Meteo" scale="' + str(scale) + '" />'
+			old = '<font filename="/usr/share/fonts/meteocons.ttf" name="Meteo" scale="100" />'
+			new = '<font filename="/usr/share/fonts/meteocons.ttf" name="Meteo" scale="' + str(scale) + '" />'
 			if path.exists(type):
 				skinSearchAndReplace.append([old, new ])
 
 			#global
 			type = config.plugins.MyMetrixLiteFonts.globaltitle_type.value
 			scale = config.plugins.MyMetrixLiteFonts.globaltitle_scale.value
-			old = '<font filename="/usr/share/enigma2/MetrixHD/fonts/setrixHD.ttf" name="global_title" scale="100" />'
+			old = '<font filename="/usr/share/fonts/segoe-ui-light.ttf" name="global_title" scale="100" />'
 			new = '<font filename="' + type + '" name="global_title" scale="' + str(scale) + '" />'
 			if path.exists(type):
 				skinSearchAndReplace.append([old, new ])
 
 			type = config.plugins.MyMetrixLiteFonts.globalbutton_type.value
 			scale = config.plugins.MyMetrixLiteFonts.globalbutton_scale.value
-			old = '<font filename="/usr/share/enigma2/MetrixHD/fonts/setrixHD.ttf" name="global_button" scale="90" />'
+			old = '<font filename="/usr/share/fonts/segoe-ui-light.ttf" name="global_button" scale="90" />'
 			new = '<font filename="' + type + '" name="global_button" scale="' + str(scale) + '" />'
 			if path.exists(type):
 				skinSearchAndReplace.append([old, new ])
 
 			type = config.plugins.MyMetrixLiteFonts.globalclock_type.value
 			scale = config.plugins.MyMetrixLiteFonts.globalclock_scale.value
-			old = '<font filename="/usr/share/enigma2/MetrixHD/fonts/setrixHD.ttf" name="global_clock" scale="100" />'
+			old = '<font filename="/usr/share/fonts/segoe-ui-light.ttf" name="global_clock" scale="100" />'
 			new = '<font filename="' + type + '" name="global_clock" scale="' + str(scale) + '" />'
 			if path.exists(type):
 				skinSearchAndReplace.append([old, new ])
 
 			type = config.plugins.MyMetrixLiteFonts.globallarge_type.value
 			scale = config.plugins.MyMetrixLiteFonts.globallarge_scale.value
-			old = '<font filename="/usr/share/enigma2/MetrixHD/fonts/setrixHD.ttf" name="global_large" scale="100" />'
+			old = '<font filename="/usr/share/fonts/segoe-ui-light.ttf" name="global_large" scale="100" />'
 			new = '<font filename="' + type + '" name="global_large" scale="' + str(scale) + '" />'
 			if path.exists(type):
 				skinSearchAndReplace.append([old, new ])
 			else:
-				type = "/usr/share/enigma2/MetrixHD/fonts/setrixHD.ttf"
+				type = "/usr/share/fonts/segoe-ui-light.ttf"
 
 			if config.plugins.MyMetrixLiteOther.SkinDesignShowLargeText.value == "both":
-				old = '<font filename="/usr/share/enigma2/MetrixHD/fonts/setrixHD.ttf" name="global_large_menu" scale="100" />'
+				old = '<font filename="/usr/share/fonts/segoe-ui-light.ttf" name="global_large_menu" scale="100" />'
 				new = '<font filename="' + type + '" name="global_large_menu" scale="' + str(scale) + '" />'
 				skinSearchAndReplace.append([old, new ])
-				old = '<font filename="/usr/share/enigma2/MetrixHD/fonts/setrixHD.ttf" name="global_large_screen" scale="100" />'
+				old = '<font filename="/usr/share/fonts/segoe-ui-light.ttf" name="global_large_screen" scale="100" />'
 				new = '<font filename="' + type + '" name="global_large_screen" scale="' + str(scale) + '" />'
 				skinSearchAndReplace.append([old, new ])
 			elif config.plugins.MyMetrixLiteOther.SkinDesignShowLargeText.value == "menus":
-				old = '<font filename="/usr/share/enigma2/MetrixHD/fonts/setrixHD.ttf" name="global_large_menu" scale="100" />'
+				old = '<font filename="/usr/share/fonts/segoe-ui-light.ttf" name="global_large_menu" scale="100" />'
 				new = '<font filename="' + type + '" name="global_large_menu" scale="' + str(scale) + '" />'
 				skinSearchAndReplace.append([old, new ])
-				old = '<font filename="/usr/share/enigma2/MetrixHD/fonts/setrixHD.ttf" name="global_large_screen" scale="100" />'
+				old = '<font filename="/usr/share/fonts/segoe-ui-light.ttf" name="global_large_screen" scale="100" />'
 				new = '<font filename="' + type + '" name="global_large_screen" scale="0" />'
 				skinSearchAndReplace.append([old, new ])
 			elif config.plugins.MyMetrixLiteOther.SkinDesignShowLargeText.value == "screens":
-				old = '<font filename="/usr/share/enigma2/MetrixHD/fonts/setrixHD.ttf" name="global_large_menu" scale="100" />'
+				old = '<font filename="/usr/share/fonts/segoe-ui-light.ttf" name="global_large_menu" scale="100" />'
 				new = '<font filename="' + type + '" name="global_large_menu" scale="0" />'
 				skinSearchAndReplace.append([old, new ])
-				old = '<font filename="/usr/share/enigma2/MetrixHD/fonts/setrixHD.ttf" name="global_large_screen" scale="100" />'
+				old = '<font filename="/usr/share/fonts/segoe-ui-light.ttf" name="global_large_screen" scale="100" />'
 				new = '<font filename="' + type + '" name="global_large_screen" scale="' + str(scale) + '" />'
 				skinSearchAndReplace.append([old, new ])
 			else:
-				old = '<font filename="/usr/share/enigma2/MetrixHD/fonts/setrixHD.ttf" name="global_large_menu" scale="100" />'
+				old = '<font filename="/usr/share/fonts/segoe-ui-light.ttf" name="global_large_menu" scale="100" />'
 				new = '<font filename="' + type + '" name="global_large_menu" scale="0" />'
 				skinSearchAndReplace.append([old, new ])
-				old = '<font filename="/usr/share/enigma2/MetrixHD/fonts/setrixHD.ttf" name="global_large_screen" scale="100" />'
+				old = '<font filename="/usr/share/fonts/segoe-ui-light.ttf" name="global_large_screen" scale="100" />'
 				new = '<font filename="' + type + '" name="global_large_screen" scale="0" />'
 				skinSearchAndReplace.append([old, new ])
 
 			type = config.plugins.MyMetrixLiteFonts.globalsmall_type.value
 			scale = config.plugins.MyMetrixLiteFonts.globalsmall_scale.value
-			old = '<font filename="/usr/share/enigma2/MetrixHD/fonts/OpenSans-Regular.ttf" name="global_small" scale="95" />'
+			old = '<font filename="/usr/share/fonts/OpenSans-Regular.ttf" name="global_small" scale="95" />'
 			new = '<font filename="' + type + '" name="global_small" scale="' + str(scale) + '" />'
 			if path.exists(type):
 				skinSearchAndReplace.append([old, new ])
 
 			type = config.plugins.MyMetrixLiteFonts.globalmenu_type.value
 			scale = config.plugins.MyMetrixLiteFonts.globalmenu_scale.value
-			old = '<font filename="/usr/share/enigma2/MetrixHD/fonts/setrixHD.ttf" name="global_menu" scale="100" />'
+			old = '<font filename="/usr/share/fonts/segoe-ui-light.ttf" name="global_menu" scale="100" />'
 			new = '<font filename="' + type + '" name="global_menu" scale="' + str(scale) + '" />'
 			if path.exists(type):
 				skinSearchAndReplace.append([old, new ])
@@ -1178,21 +1178,21 @@ class ActivateSkinSettings:
 			#screens
 			type = config.plugins.MyMetrixLiteFonts.screenlabel_type.value
 			scale = config.plugins.MyMetrixLiteFonts.screenlabel_scale.value
-			old = '<font filename="/usr/share/enigma2/MetrixHD/fonts/OpenSans-Regular.ttf" name="screen_label" scale="95" />'
+			old = '<font filename="/usr/share/fonts/OpenSans-Regular.ttf" name="screen_label" scale="95" />'
 			new = '<font filename="' + type + '" name="screen_label" scale="' + str(scale) + '" />'
 			if path.exists(type):
 				skinSearchAndReplace.append([old, new ])
 
 			type = config.plugins.MyMetrixLiteFonts.screentext_type.value
 			scale = config.plugins.MyMetrixLiteFonts.screentext_scale.value
-			old = '<font filename="/usr/share/enigma2/MetrixHD/fonts/OpenSans-Regular.ttf" name="screen_text" scale="95" />'
+			old = '<font filename="/usr/share/fonts/OpenSans-Regular.ttf" name="screen_text" scale="95" />'
 			new = '<font filename="' + type + '" name="screen_text" scale="' + str(scale) + '" />'
 			if path.exists(type):
 				skinSearchAndReplace.append([old, new ])
 
 			type = config.plugins.MyMetrixLiteFonts.screeninfo_type.value
 			scale = config.plugins.MyMetrixLiteFonts.screeninfo_scale.value
-			old = '<font filename="/usr/share/enigma2/MetrixHD/fonts/setrixHD.ttf" name="screen_info" scale="100" />'
+			old = '<font filename="/usr/share/fonts/segoe-ui-light.ttf" name="screen_info" scale="100" />'
 			new = '<font filename="' + type + '" name="screen_info" scale="' + str(scale) + '" />'
 			if path.exists(type):
 				skinSearchAndReplace.append([old, new ])
@@ -1200,21 +1200,21 @@ class ActivateSkinSettings:
 			#channellist
 			type = config.plugins.MyMetrixLiteFonts.epgevent_type.value
 			scale = config.plugins.MyMetrixLiteFonts.epgevent_scale.value
-			old = '<font filename="/usr/share/enigma2/MetrixHD/fonts/OpenSans-Regular.ttf" name="epg_event" scale="95" />'
+			old = '<font filename="/usr/share/fonts/OpenSans-Regular.ttf" name="epg_event" scale="95" />'
 			new = '<font filename="' + type + '" name="epg_event" scale="' + str(scale) + '" />'
 			if path.exists(type):
 				skinSearchAndReplace.append([old, new ])
 
 			type = config.plugins.MyMetrixLiteFonts.epgtext_type.value
 			scale = config.plugins.MyMetrixLiteFonts.epgtext_scale.value
-			old = '<font filename="/usr/share/enigma2/MetrixHD/fonts/OpenSans-Regular.ttf" name="epg_text" scale="95" />'
+			old = '<font filename="/usr/share/fonts/OpenSans-Regular.ttf" name="epg_text" scale="95" />'
 			new = '<font filename="' + type + '" name="epg_text" scale="' + str(scale) + '" />'
 			if path.exists(type):
 				skinSearchAndReplace.append([old, new ])
 
 			type = config.plugins.MyMetrixLiteFonts.epginfo_type.value
 			scale = config.plugins.MyMetrixLiteFonts.epginfo_scale.value
-			old = '<font filename="/usr/share/enigma2/MetrixHD/fonts/OpenSans-Regular.ttf" name="epg_info" scale="95" />'
+			old = '<font filename="/usr/share/fonts/OpenSans-Regular.ttf" name="epg_info" scale="95" />'
 			new = '<font filename="' + type + '" name="epg_info" scale="' + str(scale) + '" />'
 			if path.exists(type):
 				skinSearchAndReplace.append([old, new ])
@@ -1222,14 +1222,14 @@ class ActivateSkinSettings:
 			#infobar
 			type = config.plugins.MyMetrixLiteFonts.infobarevent_type.value
 			scale = config.plugins.MyMetrixLiteFonts.infobarevent_scale.value
-			old = '<font filename="/usr/share/enigma2/MetrixHD/fonts/setrixHD.ttf" name="infobar_event" scale="100" />'
+			old = '<font filename="/usr/share/fonts/segoe-ui-light.ttf" name="infobar_event" scale="100" />'
 			new = '<font filename="' + type + '" name="infobar_event" scale="' + str(scale) + '" />'
 			if path.exists(type):
 				skinSearchAndReplace.append([old, new ])
 
 			type = config.plugins.MyMetrixLiteFonts.infobartext_type.value
 			scale = config.plugins.MyMetrixLiteFonts.infobartext_scale.value
-			old = '<font filename="/usr/share/enigma2/MetrixHD/fonts/OpenSans-Regular.ttf" name="infobar_text" scale="95" />'
+			old = '<font filename="/usr/share/fonts/OpenSans-Regular.ttf" name="infobar_text" scale="95" />'
 			new = '<font filename="' + type + '" name="infobar_text" scale="' + str(scale) + '" />'
 			if path.exists(type):
 				skinSearchAndReplace.append([old, new ])
@@ -1453,10 +1453,10 @@ class ActivateSkinSettings:
 			#symbols
 			symbolpos = 0
 			if 'key_leftright.png' in button or 'key_updown.png' in button:
-				unicodechar = 'setrixHD' in config.plugins.MyMetrixLiteOther.SkinDesignButtonsTextFont.value or 'Raleway' in config.plugins.MyMetrixLiteOther.SkinDesignButtonsTextFont.value
+				unicodechar = 'segoe-ui-light' in config.plugins.MyMetrixLiteOther.SkinDesignButtonsTextFont.value or 'Raleway' in config.plugins.MyMetrixLiteOther.SkinDesignButtonsTextFont.value
 				if unicodechar:
 					symbolpos = -2
-					fonttyp = '/usr/share/enigma2/MetrixHD/fonts/setrixHD.ttf'
+					fonttyp = '/usr/share/fonts/segoe-ui-light.ttf'
 					fontsize += int(fontsize/2)
 					if 'key_leftright.png' in button:
 						text = u'\u02c2'+' '+u'\u02c3'
@@ -1464,7 +1464,7 @@ class ActivateSkinSettings:
 						text = u'\u02c4'+' '+u'\u02c5'
 				else:
 					symbolpos = 0
-					fonttyp = '/usr/share/enigma2/MetrixHD/fonts/OpenSans-Regular.ttf'
+					fonttyp = '/usr/share/fonts/OpenSans-Regular.ttf'
 					fontsize += int(fontsize/2)
 			else:
 				text = u'%s' %text
