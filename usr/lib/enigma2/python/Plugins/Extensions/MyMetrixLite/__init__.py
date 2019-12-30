@@ -481,7 +481,7 @@ def initFontsConfig():
 	config.plugins.MyMetrixLiteFonts.RegularLight_type = ConfigSelection(default="/usr/share/fonts/OpenSans-Regular.ttf", choices = FontTypeList)
 	config.plugins.MyMetrixLiteFonts.RegularLight_scale = ConfigSelectionNumber(50, 150, 1, default = 95)
 	config.plugins.MyMetrixLiteFonts.segoeuilight_type = ConfigSelection(default="/usr/share/fonts/segoe-ui-light.ttf", choices = FontTypeList)
-	config.plugins.MyMetrixLiteFonts.segoe-ui-light_scale = ConfigSelectionNumber(50, 150, 1, default = 100)
+	config.plugins.MyMetrixLiteFonts.segoeuilight_scale = ConfigSelectionNumber(50, 150, 1, default = 100)
 	config.plugins.MyMetrixLiteFonts.Meteo_scale = ConfigSelectionNumber(50, 150, 1, default = 100)
 #------------------------------#
 #for individual skinned screens#
