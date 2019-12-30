@@ -1088,7 +1088,7 @@ class ActivateSkinSettings:
 			if path.exists(type):
 				skinSearchAndReplace.append([old, new ])
 
-			type = config.plugins.MyMetrixLiteFonts.segoe-ui-light_type.value
+			type = config.plugins.MyMetrixLiteFonts.segoeuilight_type.value
 			scale = config.plugins.MyMetrixLiteFonts.segoe-ui-light_scale.value
 			old = '<font filename="/usr/share/fonts/segoe-ui-light.ttf" name="segoe-ui-light" scale="100" />'
 			new = '<font filename="' + type + '" name="segoe-ui-light" scale="' + str(scale) + '" />'

@@ -133,7 +133,7 @@ class FontsSettingsView(ConfigListScreen, Screen):
 		list.append(getConfigListEntry(tab*2 + _("Font type"), config.plugins.MyMetrixLiteFonts.RegularLight_type, _("helptext")))
 		list.append(getConfigListEntry(tab*2 + _("Font scale [%]"), config.plugins.MyMetrixLiteFonts.RegularLight_scale, _("helptext")))
 		list.append(getConfigListEntry(tab + _("segoe-ui-light"), ))
-		list.append(getConfigListEntry(tab*2 + _("Font type"), config.plugins.MyMetrixLiteFonts.segoe-ui-light_type, _("helptext")))
+		list.append(getConfigListEntry(tab*2 + _("Font type"), config.plugins.MyMetrixLiteFonts.segoeuilight_type, _("helptext")))
 		list.append(getConfigListEntry(tab*2 + _("Font scale [%]"), config.plugins.MyMetrixLiteFonts.segoe-ui-light_scale, _("helptext")))
 		list.append(getConfigListEntry(tab + _("Meteo"), ))
 		list.append(getConfigListEntry(tab*2 + _("Font scale [%]"), config.plugins.MyMetrixLiteFonts.Meteo_scale, _("helptext")))
@@ -225,7 +225,7 @@ class FontsSettingsView(ConfigListScreen, Screen):
 			config.plugins.MyMetrixLiteFonts.Regular_scale.value = 95
 			config.plugins.MyMetrixLiteFonts.RegularLight_type.value = "/usr/share/fonts/OpenSans-Regular.ttf"
 			config.plugins.MyMetrixLiteFonts.RegularLight_scale.value = 95
-			config.plugins.MyMetrixLiteFonts.segoe-ui-light_type.value = "/usr/share/fonts/segoe-ui-light.ttf"
+			config.plugins.MyMetrixLiteFonts.segoeuilight_type.value = "/usr/share/fonts/segoe-ui-light.ttf"
 			config.plugins.MyMetrixLiteFonts.segoe-ui-light_scale.value = 100
 			config.plugins.MyMetrixLiteFonts.Meteo_scale.value = 100
 			#global
@@ -276,7 +276,7 @@ class FontsSettingsView(ConfigListScreen, Screen):
 			config.plugins.MyMetrixLiteFonts.Regular_scale.value = 100
 			config.plugins.MyMetrixLiteFonts.RegularLight_type.value = "/usr/share/fonts/OpenSans-Regular.ttf"
 			config.plugins.MyMetrixLiteFonts.RegularLight_scale.value = 100
-			config.plugins.MyMetrixLiteFonts.segoe-ui-light_type.value = "/usr/share/fonts/segoe-ui-light.ttf"
+			config.plugins.MyMetrixLiteFonts.segoeuilight_type.value = "/usr/share/fonts/segoe-ui-light.ttf"
 			config.plugins.MyMetrixLiteFonts.segoe-ui-light_scale.value = 105
 			config.plugins.MyMetrixLiteFonts.Meteo_scale.value = 105
 			#global
@@ -330,7 +330,7 @@ class FontsSettingsView(ConfigListScreen, Screen):
 			config.plugins.MyMetrixLiteFonts.Regular_scale.value = 105
 			config.plugins.MyMetrixLiteFonts.RegularLight_type.value = "/usr/share/fonts/nmsbd.ttf"
 			config.plugins.MyMetrixLiteFonts.RegularLight_scale.value = 100
-			config.plugins.MyMetrixLiteFonts.segoe-ui-light_type.value = "/usr/share/fonts/nmsbd.ttf"
+			config.plugins.MyMetrixLiteFonts.segoeuilight_type.value = "/usr/share/fonts/nmsbd.ttf"
 			config.plugins.MyMetrixLiteFonts.segoe-ui-light_scale.value = 105
 			config.plugins.MyMetrixLiteFonts.Meteo_scale.value = 105
 			#global
@@ -384,7 +384,7 @@ class FontsSettingsView(ConfigListScreen, Screen):
 			config.plugins.MyMetrixLiteFonts.Regular_scale.value = 100
 			config.plugins.MyMetrixLiteFonts.RegularLight_type.value = "/usr/share/fonts/Raleway-Regular.ttf"
 			config.plugins.MyMetrixLiteFonts.RegularLight_scale.value = 100
-			config.plugins.MyMetrixLiteFonts.segoe-ui-light_type.value = "/usr/share/fonts/Raleway-Light.ttf"
+			config.plugins.MyMetrixLiteFonts.segoeuilight_type.value = "/usr/share/fonts/Raleway-Light.ttf"
 			config.plugins.MyMetrixLiteFonts.segoe-ui-light_scale.value = 105
 			config.plugins.MyMetrixLiteFonts.Meteo_scale.value = 100
 			#global
@@ -438,7 +438,7 @@ class FontsSettingsView(ConfigListScreen, Screen):
 			config.plugins.MyMetrixLiteFonts.Regular_scale.value = 75
 			config.plugins.MyMetrixLiteFonts.RegularLight_type.value = "/usr/share/fonts/digi.ttf"
 			config.plugins.MyMetrixLiteFonts.RegularLight_scale.value = 75
-			config.plugins.MyMetrixLiteFonts.segoe-ui-light_type.value = "/usr/share/fonts/digi.ttf"
+			config.plugins.MyMetrixLiteFonts.segoeuilight_type.value = "/usr/share/fonts/digi.ttf"
 			config.plugins.MyMetrixLiteFonts.segoe-ui-light_scale.value = 75
 			config.plugins.MyMetrixLiteFonts.Meteo_scale.value = 100
 			#global
@@ -492,7 +492,7 @@ class FontsSettingsView(ConfigListScreen, Screen):
 			config.plugins.MyMetrixLiteFonts.Regular_scale.value = 100
 			config.plugins.MyMetrixLiteFonts.RegularLight_type.value = "/usr/share/fonts/analog.ttf"
 			config.plugins.MyMetrixLiteFonts.RegularLight_scale.value = 100
-			config.plugins.MyMetrixLiteFonts.segoe-ui-light_type.value = "/usr/share/fonts/analog.ttf"
+			config.plugins.MyMetrixLiteFonts.segoeuilight_type.value = "/usr/share/fonts/analog.ttf"
 			config.plugins.MyMetrixLiteFonts.segoe-ui-light_scale.value = 100
 			config.plugins.MyMetrixLiteFonts.Meteo_scale.value = 100
 			#global
@@ -546,7 +546,7 @@ class FontsSettingsView(ConfigListScreen, Screen):
 			config.plugins.MyMetrixLiteFonts.Regular_scale.value = 100
 			config.plugins.MyMetrixLiteFonts.RegularLight_type.value = "/usr/share/fonts/HandelGotD.ttf"
 			config.plugins.MyMetrixLiteFonts.RegularLight_scale.value = 100
-			config.plugins.MyMetrixLiteFonts.segoe-ui-light_type.value = "/usr/share/fonts/HandelGotD.ttf"
+			config.plugins.MyMetrixLiteFonts.segoeuilight_type.value = "/usr/share/fonts/HandelGotD.ttf"
 			config.plugins.MyMetrixLiteFonts.segoe-ui-light_scale.value = 100
 			config.plugins.MyMetrixLiteFonts.Meteo_scale.value = 105
 			#global
