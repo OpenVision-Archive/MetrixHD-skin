@@ -1,5 +1,6 @@
+# -*- coding: utf-8 -*-
+from __future__ import print_function
 #!/usr/bin/env python
-# -*- coding: iso-8859-1 -*-
 #######################################################################
 #
 #    MetrixMODWeather for openTV
@@ -93,15 +94,15 @@ class MetrixHDWeatherUpdaterStandalone(Renderer, VariableText):
 					datavalid = 2
 				if datavalid == 1:
 					if config.plugins.MetrixWeather.weatherservice.value == "MSN":
-						print "MetrixHDWeatherStandalone lookup for City " + str(self.cityname) + " paused 5 mins, to many errors ..."
+						print("MetrixHDWeatherStandalone lookup for City " + str(self.cityname) + " paused 5 mins, to many errors ...")
 					else:
-						print "MetrixHDWeatherStandalone lookup for ID " + str(self.woeid) + " paused 5 mins, to many errors ..."
+						print("MetrixHDWeatherStandalone lookup for ID " + str(self.woeid) + " paused 5 mins, to many errors ...")
 					seconds = 300
 				else:
 					if config.plugins.MetrixWeather.weatherservice.value == "MSN":
-						print "MetrixHDWeatherStandalone lookup for City " + str(self.cityname) + " aborted, to many errors ..."
+						print("MetrixHDWeatherStandalone lookup for City " + str(self.cityname) + " aborted, to many errors ...")
 					else:
-						print "MetrixHDWeatherStandalone lookup for ID " + str(self.woeid) + " aborted, to many errors ..."
+						print("MetrixHDWeatherStandalone lookup for ID " + str(self.woeid) + " aborted, to many errors ...")
 					seconds = pausetime
 
 			self.setWeatherDataValid(datavalid)
@@ -142,9 +143,9 @@ class MetrixHDWeatherUpdaterStandalone(Renderer, VariableText):
 
 		if g_updateRunning:
 			if config.plugins.MetrixWeather.weatherservice.value == "MSN":
-				print "MetrixHDWeatherStandalone lookup for City " + str(self.cityname) + " skipped, allready running..."
+				print("MetrixHDWeatherStandalone lookup for City " + str(self.cityname) + " skipped, allready running...")
 			else:
-				print "MetrixHDWeatherStandalone lookup for ID " + str(self.woeid) + " skipped, allready running..."
+				print("MetrixHDWeatherStandalone lookup for ID " + str(self.woeid) + " skipped, allready running...")
 			return
 		g_updateRunning = True
 		g_isRunning = True
@@ -158,13 +159,13 @@ class MetrixHDWeatherUpdaterStandalone(Renderer, VariableText):
 			errormessage = str(error.getErrorMessage())
 		elif message is not None:
 			errormessage = str(message)
-		print "MetrixHDWeatherStandalone get weather data failed - Error code: %s" %errormessage
+		print("MetrixHDWeatherStandalone get weather data failed - Error code: %s" %errormessage)
 		if self.check:
 			self.writeCheckFile(errormessage)
 		else:
 			nextcall = 30
 			if not self.once:
-				print "MetrixHDWeatherStandalone try next in %d sec ..." %nextcall
+				print("MetrixHDWeatherStandalone try next in %d sec ..." %nextcall)
 			self.startTimer(True, nextcall)
 
 	def getWeatherThread(self):
@@ -180,7 +181,7 @@ class MetrixHDWeatherUpdaterStandalone(Renderer, VariableText):
 			text = "MetrixHDWeatherStandalone lookup for ID " + str(self.woeid)
 		if self.check:
 			self.writeCheckFile(text)
-		print text
+		print(text)
 
 		if config.plugins.MetrixWeather.weatherservice.value == "MSN":
 			units = 'C'
@@ -323,7 +324,7 @@ class MetrixHDWeatherUpdaterStandalone(Renderer, VariableText):
 			city="id=%s" % self.woeid
 			cnt = (24 + (24 - int(datetime.now().strftime('%H')))) / 3 + 1
 			feedurl = "http://api.openweathermap.org/data/2.5/forecast?%s&lang=%s&units=%s&cnt=%d%s" % (city,language[:2],units,cnt,apikey)
-			print feedurl
+			print(feedurl)
 			getPage(feedurl).addCallback(self.jsonCallback).addErrback(self.errorCallback)
 
 	def jsonCallback(self, jsonstring):

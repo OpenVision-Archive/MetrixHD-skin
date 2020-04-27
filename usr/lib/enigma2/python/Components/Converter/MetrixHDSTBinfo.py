@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from Components.Converter.Converter import Converter
 from Components.config import config
 from Components.Element import cached

@@ -1,4 +1,5 @@
-# -*- coding: UTF-8 -*-
+# -*- coding: utf-8 -*-
+from __future__ import print_function
 #######################################################################
 #
 #    MyMetrixLite by arn354 & svox
@@ -170,10 +171,10 @@ class SkinpartSettingsView(ConfigListScreen, Screen):
 							if not path.exists(dir_local_skinparts + "/" + d):
 								makedirs(dir_local_skinparts + "/" + d)
 							for f in listdir(dir_global_skinparts + "/" + pack + "/" + d):
-								print dir_local_skinparts + "/" + d + "/" + f
-								print dir_global_skinparts + "/" + pack + "/" + d + "/" + f
+								print(dir_local_skinparts + "/" + d + "/" + f)
+								print(dir_global_skinparts + "/" + pack + "/" + d + "/" + f)
 								if (not path.islink(dir_local_skinparts + "/" + d + "/" + f)) and (not path.exists(dir_local_skinparts + "/" + d + "/" + f)):
-									print "1"
+									print("1")
 									symlink(dir_global_skinparts + "/" + pack + "/" + d + "/" + f, dir_local_skinparts + "/" + d + "/" + f)
 
 	def getSkinParts(self):

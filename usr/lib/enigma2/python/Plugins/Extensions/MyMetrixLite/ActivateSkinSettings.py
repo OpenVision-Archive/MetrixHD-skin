@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+from __future__ import print_function
 #######################################################################
 #
 #    MyMetrixLite by arn354 & svox
@@ -70,7 +72,7 @@ class ActivateSkinSettings:
 		if self.silent:
 			self.E2settings = open("/etc/enigma2/settings", "r").read()
 			if config.skin.primary_skin.value != "MetrixHD/skin.MySkin.xml" and not 'config.skin.primary_skin=MetrixHD/skin.MySkin.xml' in self.E2settings:
-				print 'MetrixHD is not the primary skin or runs with default settings. No restore action needed!'
+				print('MetrixHD is not the primary skin or runs with default settings. No restore action needed!')
 				return 0
 			from Components.PluginComponent import plugins #need for fast restore in skin.py
 		self.initConfigs()
@@ -96,11 +98,11 @@ class ActivateSkinSettings:
 		if screenwidth and screenwidth != 1280 or restore:
 			if restore:
 				self.EHDres = 'HD'
-				print "[MetrixHD] restoring original %s icons after changing skin..." % self.EHDres
+				print("[MetrixHD] restoring original %s icons after changing skin..." % self.EHDres)
 			else:
-				print "[MetrixHD] refreshing %s icons after software update..." % self.EHDres
+				print("[MetrixHD] refreshing %s icons after software update..." % self.EHDres)
 			self.updateIcons(self.EHDres)
-			print "[MetrixHD] ...done."
+			print("[MetrixHD] ...done.")
 
 	def getEHDSettings(self, onlyCheck=False):
 		tested = config.plugins.MyMetrixLiteOther.EHDtested.value.split('_|_')
@@ -444,7 +446,7 @@ class ActivateSkinSettings:
 					config.EMC.save()
 					progress = 'P' in config.EMC.movie_progress.value
 				except:
-					print "Error: find emc config - it's not installed ?"
+					print("Error: find emc config - it's not installed ?")
 			else:
 				progress = "config.EMC.movie_progress=P" in self.E2settings or not "config.EMC.movie_progress=" in self.E2settings
 
@@ -1322,7 +1324,7 @@ class ActivateSkinSettings:
 				self.picon_zoom = self.EHDfactor
 
 			#make *_TARGET files
-			print "--------   make %s-skin  --------" % self.EHDres
+			print("--------   make %s-skin  --------" % self.EHDres)
 			for file in skinfiles:
 				if self.skinline_error:
 					break
@@ -1332,7 +1334,7 @@ class ActivateSkinSettings:
 					self.optionEHD(file[0],file[1])
 
 			if self.skinline_error:
-				print "--------   force HD-skin   --------"
+				print("--------   force HD-skin   --------")
 				self.EHDenabled = False
 				self.EHDfactor = 1
 				self.EHDres = 'HD'
@@ -1397,7 +1399,7 @@ class ActivateSkinSettings:
 				self.ErrorCode = 'reboot', text
 
 		except Exception as error:
-			print '[ActivateSkinSettings - applyChanges]', error
+			print('[ActivateSkinSettings - applyChanges]', error)
 			self.ErrorCode = 1
 			if not self.silent:
 				self.ErrorCode = 'error', _("Error creating Skin!") + '\n< %s >' %error
@@ -1423,7 +1425,7 @@ class ActivateSkinSettings:
 			config.skin.primary_skin.setValue("MetrixHD/skin.MySkin.xml")
 		config.skin.primary_skin.save()
 		configfile.save()
-		print "MyMetrixLite apply Changes - duration time: %ss" % (round(time()-apply_starttime,1))
+		print("MyMetrixLite apply Changes - duration time: %ss" % (round(time()-apply_starttime,1)))
 
 	def makeButtons(self, button, text, extern = True):
 		try:
@@ -1637,7 +1639,7 @@ class ActivateSkinSettings:
 			return color
 
 	def makeColorGradient(self, name, sizex, sizey, color, begin, height, direction, alphaA = None, alphaB = None):
-		#print name
+		#print(name)
 		if alphaA is None:
 			alphaA = 255-int(config.plugins.MyMetrixLiteColors.cologradient_transparencyA.value, 16)
 		if alphaB is None:
@@ -1749,7 +1751,7 @@ class ActivateSkinSettings:
 		self.xpos = 0
 		self.ypos = 0
 
-		print "starting   " + sourceFile + "   --->   " + targetFile
+		print("starting   " + sourceFile + "   --->   " + targetFile)
 
 		f = open(sourceFile, "r")
 		f1 = open(targetFile, "w")
@@ -1818,7 +1820,7 @@ class ActivateSkinSettings:
 								next_pixmap_ignore = False
 #line disabled on
 					if not 'cf#_#' in line and re.match('<!--|#+', line.lstrip()):
-						#print 'line disabled on', i, line
+						#print('line disabled on', i, line)
 						line_disabled = True
 #test pixmap path
 					if not line_disabled and not next_pixmap_ignore and 'MetrixHD/' in line and '.png' in line:
@@ -1828,7 +1830,7 @@ class ActivateSkinSettings:
 								pic = '/usr/share/enigma2/' + pic
 							if not path.isfile(pic):
 								pic = path.realpath(pic)
-								print "pixmap missing - line:", i, pic
+								print("pixmap missing - line:", i, pic)
 								self.pixmap_error = pic
 								self.skinline_error = True
 								break
@@ -1839,23 +1841,23 @@ class ActivateSkinSettings:
 							line = self.linerchanger_new(line, next_picon_zoom)
 #line disabled off
 					if line_disabled and not 'cf#_#' in line and (re.match('#+', line.lstrip()) or re.match('.*-->.*', line.rstrip())):
-						#print 'line disabled off', i, line
+						#print('line disabled off', i, line)
 						line_disabled = False
 				except Exception as error:
 					self.skinline_error = error
-					print "error in line:", i, line, error
-					print "--------"
+					print("error in line:", i, line, error)
+					print("--------")
 			f1.write(line)
 			if self.skinline_error:
 				break
 		f.close()
 		f1.close()
 		if not self.skinline_error:
-			print "complete"
-			print "--------"
+			print("complete")
+			print("--------")
 
 	def linereplacer(self, m):
-		#print m.groups()
+		#print(m.groups())
 		ret = list(m.groups())
 		if ret[0].startswith('name="underline"'):
 			ulsize = config.plugins.MyMetrixLiteOther.layeraunderlinesize.value

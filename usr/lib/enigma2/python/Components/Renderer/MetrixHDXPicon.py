@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+from __future__ import print_function
 ##
 ## Picon renderer by Gruffy .. some speedups by Ghost
 ## XPicon mod by iMaxxx
@@ -114,7 +116,7 @@ class MetrixHDXPicon(Renderer):
 						try:
 							im = Image.open(pngname).convert('RGBA')
 						except:
-							print "[MetrixHDXPicon] cant load image:",pngname
+							print("[MetrixHDXPicon] cant load image:",pngname)
 							tmp = resolveFilename(SCOPE_CURRENT_SKIN, "picon_default.png")
 							if fileExists(tmp):
 								pngname = tmp

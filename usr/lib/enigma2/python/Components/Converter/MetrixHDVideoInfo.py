@@ -1,4 +1,5 @@
-# -*- coding: UTF-8 -*-
+# -*- coding: utf-8 -*-
+from __future__ import print_function
 ##
 ## Example usage in the skin.xml:
 ##		<widget source="session.CurrentService" render="Label" position="164,435" size="390,28" font="Regular;26" transparent="1" >
@@ -102,7 +103,7 @@ class MetrixHDVideoInfo(Poll, Converter, object):
 				else:
 					text = "16:9"
 		else:
-			print "type must be {VideoMode, VideoSize, VideoSizeWidth, VideoSizeHeight, VideoSizeShort, VideoCodec, VideoFormat} for MetrixHDVideoInfo converter"
+			print("type must be {VideoMode, VideoSize, VideoSizeWidth, VideoSizeHeight, VideoSizeShort, VideoCodec, VideoFormat} for MetrixHDVideoInfo converter")
 			text = "type-error"
 
 		return text

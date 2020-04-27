@@ -1,4 +1,4 @@
-# -*- coding: UTF-8 -*-
+# -*- coding: utf-8 -*-
 ##
 ## Extended Service-Info Converter
 ## by AliAbdul

@@ -1,4 +1,5 @@
-# -*- coding: UTF-8 -*-
+# -*- coding: utf-8 -*-
+from __future__ import print_function
 #######################################################################
 #
 #    MyMetrixLite by arn354 & svox
@@ -655,7 +656,7 @@ def initOtherConfig():
 		else:
 			risk = True
 	except:
-		print "[MyMetrixLite] - can't read video modes"
+		print("[MyMetrixLite] - can't read video modes")
 		risk = True
 
 	tested = config.plugins.MyMetrixLiteOther.EHDtested.value.split('_|_')

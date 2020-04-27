@@ -1,4 +1,5 @@
-# -*- coding: UTF-8 -*-
+# -*- coding: utf-8 -*-
+from __future__ import print_function
 #######################################################################
 #
 #    MyMetrixLite by arn354 & svox
@@ -331,7 +332,7 @@ def search_title(id):
 	try:
 		msnpage = urlopen(msnrequest)
 	except (URLError) as err:
-		print '[WeatherSettingsView] Error: Unable to retrieve page - Error code: ', str(err)
+		print('[WeatherSettingsView] Error: Unable to retrieve page - Error code: ', str(err))
 		return "error"
 
 	content = msnpage.read()

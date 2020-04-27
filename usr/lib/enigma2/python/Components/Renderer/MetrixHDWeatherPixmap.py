@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # by nikolasi for MetrixHD
 #    <widget source="session.CurrentService" render="MetrixHDWeatherPixmap" position="156,50" size="50,50" alphatest="blend" zPosition="9">
 #        <convert type="MetrixHDWeather">currentWeatherCode</convert>
