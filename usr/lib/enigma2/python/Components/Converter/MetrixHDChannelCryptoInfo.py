@@ -1,3 +1,4 @@
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
 from enigma import iServiceInformation
 from Components.Converter.Converter import Converter

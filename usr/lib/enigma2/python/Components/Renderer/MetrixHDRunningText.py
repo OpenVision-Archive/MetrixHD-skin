@@ -1,3 +1,4 @@
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
 ################################################################################
 #    RunningText.py - Running Text Renderer for Enigma2

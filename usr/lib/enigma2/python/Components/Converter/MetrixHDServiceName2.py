@@ -1,3 +1,4 @@
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
 #Embedded file name: /usr/lib/enigma2/python/Components/Converter/ServiceName2.py
 from Components.Converter.Converter import Converter
