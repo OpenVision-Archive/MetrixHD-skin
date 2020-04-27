@@ -165,7 +165,7 @@ class ActivateSkinSettings:
 
 	def applyChanges(self):
 		apply_starttime = time()
-		print"MyMetrixLite apply Changes"
+		print("MyMetrixLite apply Changes")
 
 		try:
 			# make backup of skin.xml
