@@ -1,5 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+from __future__ import division
 from Components.Converter.Converter import Converter
 from Components.Element import cached
 
@@ -36,19 +37,19 @@ class MetrixHDRemainingToText(Converter, object):
 
 		if self.type == self.WITH_SECONDS:
 			if remaining is not None:
-				return "%d:%02d:%02d" % (remaining / 3600, (remaining / 60) - ((remaining / 3600) * 60), remaining % 60)
+				return "%d:%02d:%02d" % (remaining // 3600, (remaining // 60) - ((remaining // 3600) * 60), remaining % 60)
 			else:
-				return "%02d:%02d:%02d" % (duration / 3600, (duration / 60) - ((duration / 3600) * 60), duration % 60)
+				return "%02d:%02d:%02d" % (duration // 3600, (duration // 60) - ((duration // 3600) * 60), duration % 60)
 		elif self.type == self.NO_SECONDS:
 			if remaining is not None:
-				return "+%d:%02d" % (remaining / 3600, (remaining / 60) - ((remaining / 3600) * 60))
+				return "+%d:%02d" % (remaining // 3600, (remaining // 60) - ((remaining // 3600) * 60))
 			else:
-				return "%02d:%02d" % (duration / 3600, (duration / 60) - ((duration / 3600) * 60))
+				return "%02d:%02d" % (duration // 3600, (duration // 60) - ((duration // 3600) * 60))
 		elif self.type == self.SHOWHOURS:
 			if remaining is not None:
-				return "%d:%02d" % (remaining / 3600, (remaining / 60) - ((remaining / 3600) * 60))
+				return "%d:%02d" % (remaining // 3600, (remaining // 60) - ((remaining // 3600) * 60))
 			else:
-				return "%2d:%02d" % (duration / 3600, (duration / 60) - ((duration / 3600) * 60))
+				return "%2d:%02d" % (duration // 3600, (duration // 60) - ((duration // 3600) * 60))
 		elif self.type == self.IN_SECONDS:
 			if remaining is not None:
 				return str(remaining)
@@ -56,14 +57,14 @@ class MetrixHDRemainingToText(Converter, object):
 				return str(duration)
 		elif self.type == self.SHOWHOURS_NEGATE:
 			if remaining is not None:
-				return "-%d:%02d" % (remaining / 3600, (remaining / 60) - ((remaining / 3600) * 60))
+				return "-%d:%02d" % (remaining // 3600, (remaining // 60) - ((remaining // 3600) * 60))
 			else:
-				return "-%2d:%02d" % (duration / 3600, (duration / 60) - ((duration / 3600) * 60))
+				return "-%2d:%02d" % (duration // 3600, (duration // 60) - ((duration // 3600) * 60))
 		elif self.type == self.DEFAULT:
 			if remaining is not None:
-				return "+%d min" % (remaining / 60)
+				return "+%d min" % (remaining // 60)
 			else:
-				return "%d min" % (duration / 60)
+				return "%d min" % (duration // 60)
 		else:
 			return "???"
 

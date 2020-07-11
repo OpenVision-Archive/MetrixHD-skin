@@ -1,5 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+from __future__ import division
 #######################################################################
 #
 #    MyMetrixLite by arn354 & svox
@@ -253,7 +254,7 @@ class OtherSettingsView(ConfigListScreen, Screen):
 
 	def freeFlashCheck(self):
 		stat = statvfs("/usr/share/enigma2/MetrixHD/")
-		freeflash = stat.f_bavail * stat.f_bsize / 1024 / 1024
+		freeflash = stat.f_bavail * stat.f_bsize // 1024 // 1024
 		filesize = 10
 		if self.EHDres == 'UHD':
 			filesize = 25

@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-from __future__ import print_function
+from __future__ import division, print_function
 ##
 ## Example usage in the skin.xml:
 ##		<widget source="session.CurrentService" render="Label" position="164,435" size="390,28" font="Regular;26" transparent="1" >
@@ -71,9 +71,9 @@ class MetrixHDVideoInfo(Poll, Converter, object):
 				text = "%dx%d" % (width,height)
 				#text += ("i", "p", " ")[sProgressive]
 				if sProgressive:
-					text += "p" + str((info.getInfo(iServiceInformation.sFrameRate) + 499) / 1000)
+					text += "p" + str((info.getInfo(iServiceInformation.sFrameRate) + 499) // 1000)
 				else:
-					text += "i" + str((info.getInfo(iServiceInformation.sFrameRate) + 499) / 500)
+					text += "i" + str((info.getInfo(iServiceInformation.sFrameRate) + 499) // 500)
 		elif self.type == self.VIDEOSIZEWIDTH:
 			if width > 0:
 				text = "%d" % (width)
@@ -83,9 +83,9 @@ class MetrixHDVideoInfo(Poll, Converter, object):
 				text = "%d" % (height)
 				#text += ("i", "p", " ")[sProgressive]
 				if sProgressive:
-					text += "p" + str((info.getInfo(iServiceInformation.sFrameRate) + 499) / 1000)
+					text += "p" + str((info.getInfo(iServiceInformation.sFrameRate) + 499) // 1000)
 				else:
-					text += "i" + str((info.getInfo(iServiceInformation.sFrameRate) + 499) / 500)
+					text += "i" + str((info.getInfo(iServiceInformation.sFrameRate) + 499) // 500)
 		elif self.type == self.VIDEOSIZESHORT:
 			if width > 0 and height > 0:
 				text = "%dx%d" % (width,height)

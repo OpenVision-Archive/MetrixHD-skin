@@ -1,5 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+from __future__ import division
 ################################################################################
 #    RunningText.py - Running Text Renderer for Enigma2
 #    Version: 1.5 (04.04.2012 23:40)
@@ -26,7 +27,7 @@
 # - new property: mShown --> this fixes the bug that this renderer keeps running in background when its not shown
 # - this renderer can be used in OLED display with dmm oe2.0 images
 # - due to changing to eWidget in combination with eLabel transparent flag is possible (still cpu killer!)
-# - fixed left / right scrolling , fixed nowrap-mode
+# - fixed left // right scrolling , fixed nowrap-mode
 # take a look at the discussion: http://board.dreambox-tools.info/showthread.php?6050-Erweiterung-Running-Text-render
 ################################################################################
 
@@ -255,7 +256,7 @@ class MetrixHDRunningText(Renderer):
 		self.mStop = None
 		# text height correction if necessary:
 		if self.lineHeight and self.direction in (TOP,BOTTOM):
-			text_height = max(text_height, (text_height + self.lineHeight - 1) / self.lineHeight * self.lineHeight)
+			text_height = max(text_height, (text_height + self.lineHeight - 1) // self.lineHeight * self.lineHeight)
 			
 		
 #		self.type =		0 - NONE; 1 - RUNNING; 2 - SWIMMING; 3 - AUTO(???)
@@ -292,7 +293,7 @@ class MetrixHDRunningText(Renderer):
 						self.P = self.B
 						self.mStep = -abs(self.mStep)
 					else: # if self.halign in (CENTER, BLOCK):
-						self.P = int(self.B / 2)
+						self.P = int(self.B // 2)
 						self.mStep = (self.direction == RIGHT) and abs(self.mStep) or -abs(self.mStep)
 				else:
 					if text_width == self.W:
@@ -306,7 +307,7 @@ class MetrixHDRunningText(Renderer):
 						self.P = self.A
 						self.mStep = abs(self.mStep)
 					else: # if self.halign in (CENTER, BLOCK):
-						self.P = int(self.A / 2)
+						self.P = int(self.A // 2)
 						self.mStep = (self.direction == RIGHT) and abs(self.mStep) or -abs(self.mStep)
 			else:
 				return False
