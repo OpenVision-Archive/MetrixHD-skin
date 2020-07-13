@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-from __future__ import division, print_function
+from __future__ import print_function
 #######################################################################
 #
 #    MetrixMODWeather for openTV
@@ -322,7 +322,7 @@ class MetrixHDWeatherUpdaterStandalone(Renderer, VariableText):
 			language = config.osd.language.value
 			apikey = "&appid=%s" % config.plugins.MetrixWeather.apikey.value
 			city="id=%s" % self.woeid
-			cnt = (24 + (24 - int(datetime.now().strftime('%H')))) // 3 + 1
+			cnt = (24 + (24 - int(datetime.now().strftime('%H')))) / 3 + 1
 			feedurl = "http://api.openweathermap.org/data/2.5/forecast?%s&lang=%s&units=%s&cnt=%d%s" % (city,language[:2],units,cnt,apikey)
 			print(feedurl)
 			getPage(feedurl).addCallback(self.jsonCallback).addErrback(self.errorCallback)

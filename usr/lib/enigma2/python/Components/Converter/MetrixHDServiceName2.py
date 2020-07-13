@@ -1,6 +1,5 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-from __future__ import division
 #Embedded file name: /usr/lib/enigma2/python/Components/Converter/ServiceName2.py
 from Components.Converter.Converter import Converter
 from enigma import iServiceInformation, iPlayableService, iPlayableServicePtr, eServiceReference, eServiceCenter, eTimer
@@ -184,7 +183,7 @@ class MetrixHDServiceName2(Poll, Converter, object):
 				else:
 					result += type
 			elif f == 'F':
-				result += '%d' % (self.tpdata.get('frequency', 0) // 1000)
+				result += '%d' % (self.tpdata.get('frequency', 0) / 1000)
 			elif f == 'f':
 				if type in ('DVB-S', 'DVB-C'):
 					x = self.tpdata.get('fec_inner', 15)
@@ -215,7 +214,7 @@ class MetrixHDServiceName2(Poll, Converter, object):
 			elif f == 'O':
 				if type == 'DVB-S':
 					x = self.tpdata.get('orbital_position', 0)
-					result += x > 1800 and '%d.%d\xc2\xb0W' % ((3600 - x) // 10, (3600 - x) % 10) or '%d.%d\xc2\xb0E' % (x // 10, x % 10)
+					result += x > 1800 and '%d.%d\xc2\xb0W' % ((3600 - x) / 10, (3600 - x) % 10) or '%d.%d\xc2\xb0E' % (x / 10, x % 10)
 			elif f == 'M':
 				x = self.tpdata.get('modulation', 1)
 				if type == 'DVB-S':
@@ -239,7 +238,7 @@ class MetrixHDServiceName2(Poll, Converter, object):
 					 3: 'R'}[x] or '?'
 			elif f == 'Y':
 				if type in ('DVB-S', 'DVB-C'):
-					result += '%d' % (self.tpdata.get('symbol_rate', 0) // 1000)
+					result += '%d' % (self.tpdata.get('symbol_rate', 0) / 1000)
 			elif f == 'r':
 				x = self.tpdata.get('rolloff')
 				if x is not None:
@@ -330,7 +329,7 @@ class MetrixHDServiceName2(Poll, Converter, object):
 					from Components.NimManager import nimmanager
 					name = str(nimmanager.getSatDescription(orbpos))
 				except:
-					name = orbpos > 1800 and '%d.%d\xc2\xb0W' % ((3600 - orbpos) // 10, (3600 - orbpos) % 10) or '%d.%d\xc2\xb0E' % (orbpos // 10, orbpos % 10)
+					name = orbpos > 1800 and '%d.%d\xc2\xb0W' % ((3600 - orbpos) / 10, (3600 - orbpos) % 10) or '%d.%d\xc2\xb0E' % (orbpos / 10, orbpos % 10)
 
 		return name
 

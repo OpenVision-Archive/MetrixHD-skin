@@ -1,6 +1,5 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-from __future__ import division
 from Components.Converter.Converter import Converter
 from Components.config import config
 from Components.Element import cached
@@ -148,8 +147,8 @@ class MetrixHDSTBinfo(Converter, object):
 				for lines in temp:
 					lisp = lines.split()
 					if lisp[0] == "MemFree:":
-						#info = "RAM-Free: " + str(int(lisp[1]) // 1024) + " MB"
-						info = str(int(lisp[1]) // 1024)
+						#info = "RAM-Free: " + str(int(lisp[1]) / 1024) + " MB"
+						info = str(int(lisp[1]) / 1024)
 						info = _("RAM-Free: %s MB") % info
 						break
 			except:
