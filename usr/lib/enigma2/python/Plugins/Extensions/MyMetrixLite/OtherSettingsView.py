@@ -288,7 +288,7 @@ class OtherSettingsView(ConfigListScreen, Screen):
 
 	def checkNetworkStateFinished(self, result, retval,extra_args=None):
 		if 'bad address' in result:
-			self.session.openWithCallback(self.InstallPackageFailed, MessageBox, _("Your %s is not connected to the internet, please check your network settings and try again.") % (getBoxType()), type=MessageBox.TYPE_INFO, timeout=10, close_on_any_key=True)
+			self.session.openWithCallback(self.InstallPackageFailed, MessageBox, _("Your %s is not connected to the internet, please check your network settings and try again.") % (BoxType), type=MessageBox.TYPE_INFO, timeout=10, close_on_any_key=True)
 		elif ('wget returned 1' or 'wget returned 255' or '404 Not Found') in result:
 			self.session.openWithCallback(self.InstallPackageFailed, MessageBox, _("Sorry feeds are down for maintenance, please try again later."), type=MessageBox.TYPE_INFO, timeout=10, close_on_any_key=True)
 		else:

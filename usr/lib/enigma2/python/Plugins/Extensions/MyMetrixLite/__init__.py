@@ -27,6 +27,9 @@ from Components.config import config, ConfigSubsection, ConfigSelection, ConfigN
 from os import path
 import gettext
 from enigma import getBoxType
+
+BoxType = getBoxType()
+
 #############################################################
 
 PLUGIN_PATH = resolveFilename(SCOPE_PLUGINS, "Extensions/MyMetrixLite")
@@ -537,12 +540,7 @@ def initWeatherConfig():
 	config.plugins.MetrixWeather.refreshInterval = ConfigSelectionNumber(0, 1440, 30, default = 120, wraparound = True)
 	config.plugins.MetrixWeather.woeid = ConfigNumber(default=2911298)
 	config.plugins.MetrixWeather.apikey = ConfigText(default="a4bd84726035d0ce2c6185740617d8c5")
-	BoxType = getBoxType()
-	if BoxType.startswith("beyonwiz"):
-		# Beyonwiz - marketed only in Australia
-		weathercity = "Sydney, Australia"
-	else:
-		weathercity = "Hamburg, Germany"
+	weathercity = "Hamburg, Germany"
 	config.plugins.MetrixWeather.weathercity = ConfigText(default=weathercity, visible_width=250, fixed_size=False)
 	config.plugins.MetrixWeather.tempUnit = ConfigSelection(default="Celsius", choices = [
 		("Celsius", _("Celsius")),
@@ -642,7 +640,6 @@ def initOtherConfig():
 
 	#OtherSettings
 	#EHD-Option -> Enhanced HD
-	BoxType = getBoxType()
 	config.plugins.MyMetrixLiteOther.EHDtested = ConfigText(default = "%s_|_0" %BoxType)
 
 	skinmodes = [("0", _("Standard HD (1280x720)"))]
