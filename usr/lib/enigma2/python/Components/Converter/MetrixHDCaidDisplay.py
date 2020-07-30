@@ -112,29 +112,13 @@ class MetrixHDCaidDisplay(Poll, Converter, object):
 						if using:
 							if using == "emu":
 								textvalue = "(EMU) %s - %s" % (caid, ecm_time)
-							elif using == "CCcam-s2s":
-								textvalue = "(NET) %s - %s - %s - %s" % (caid, address, hops, ecm_time)
 							else:
 								textvalue = "%s - %s - %s - %s" % (caid, address, hops, ecm_time)
 						else:
-							# mgcamd
-							source = ecm_info.get("source", None)
-							if source:
-								if source == "emu":
-									textvalue = "(EMU) %s" % (caid)
-								else:
-									textvalue = "%s - %s - %s" % (caid, source, ecm_time)
 							# oscam
 							oscsource = ecm_info.get("from", None)
 							if oscsource:
 								textvalue = "%s - %s - %s - %s" % (caid, oscsource, hops, ecm_time)
-							# gbox
-							decode = ecm_info.get("decode", None)
-							if decode:
-								if decode == "Internal":
-									textvalue = "(EMU) %s" % (caid)
-								else:
-									textvalue = "%s - %s" % (caid, decode)
 						return textvalue'''
 
 						show_reader = config.plugins.MyMetrixLiteOther.showExtended_reader.value
@@ -228,49 +212,6 @@ class MetrixHDCaidDisplay(Poll, Converter, object):
 								prov = prov.zfill(6)
 								caid = "%s:%s" % (caid, prov)
 							textvalue = "%s%s%s%s%s%s" % (caid, pid, oscsource, protocol, hops, ecm_time)
-						# emu,cccam
-						elif using:
-							# address
-							if show_source:
-								address = ecm_info.get("address", '#')
-								if show_caid:
-									address = " - %s" % address
-								else:
-									address = "SOURCE: %s" % address
-							else:
-								address = ""
-							if using == "emu":
-								textvalue = "(EMU) %s%s" % (caid, ecm_time)
-							elif using == "CCcam-s2s":
-								textvalue = "(NET) %s%s%s%s" % (caid, address, hops, ecm_time)
-							else:
-								textvalue = "%s%s%s%s" % (caid, address, hops, ecm_time)
-						# mgcamd
-						elif source:
-							if source == "emu":
-								textvalue = "(EMU) %s" % (caid)
-							else:
-								if show_source:
-									if show_caid:
-										source = " - %s" % source
-									else:
-										source = "SOURCE: %s" % source
-								else:
-									source = ""
-								textvalue = "%s%s%s" % (caid, source, ecm_time)
-						# gbox
-						elif decode:
-							if decode == "Internal":
-								textvalue = "(EMU) %s" % (caid)
-							else:
-								if show_source:
-									if show_caid:
-										decode = " - %s" % decode
-									else:
-										decode = "SOURCE: %s" % decode
-								else:
-									decode = ""
-								textvalue = "%s%s" % (caid, decode)
 		return textvalue 
 
 	text = property(getText)
