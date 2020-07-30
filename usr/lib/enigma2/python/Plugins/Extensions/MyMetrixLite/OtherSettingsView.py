@@ -531,7 +531,7 @@ class OtherSettingsView(ConfigListScreen, Screen):
 		list.append(getConfigListEntry(tab + _("Show Extended-Info"), config.plugins.MyMetrixLiteOther.showExtendedinfo, _("After enabling, 'Apply changes' and restart needs never press 'Apply changes' (and restart) when you change subordinate options."), "ENABLED"))
 		itext = _("Show only if available.\n\nPositions:\n")
 		if config.plugins.MyMetrixLiteOther.showExtendedinfo.value:
-			oscam = path.exists('/tmp/.oscam')
+			oscam = path.exists('/tmp/.oscam') or path.exists('/tmp/.ncam')
 			list.append(getConfigListEntry(tab*2 + _("Show CAID"), config.plugins.MyMetrixLiteOther.showExtended_caid, itext + "(CAID - pid - source - protocol - hops - ecm time)", "ENABLED"))
 			if config.plugins.MyMetrixLiteOther.showExtended_caid.value and oscam:
 				list.append(getConfigListEntry(tab*3 + _("Show PROV"), config.plugins.MyMetrixLiteOther.showExtended_prov, itext + "(caid:PROV - pid - source - protocol - hops - ecm time)"))

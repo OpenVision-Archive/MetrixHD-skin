@@ -115,7 +115,7 @@ class MetrixHDCaidDisplay(Poll, Converter, object):
 							else:
 								textvalue = "%s - %s - %s - %s" % (caid, address, hops, ecm_time)
 						else:
-							# oscam
+							# oscam and ncam
 							oscsource = ecm_info.get("from", None)
 							if oscsource:
 								textvalue = "%s - %s - %s - %s" % (caid, oscsource, hops, ecm_time)
@@ -176,7 +176,7 @@ class MetrixHDCaidDisplay(Poll, Converter, object):
 								ecm_time = "ECM: %s" % ecm_time
 
 						# source
-						# oscam
+						# oscam and ncam
 						if oscsource:
 							if show_source:
 								if show_caid or show_pid:
