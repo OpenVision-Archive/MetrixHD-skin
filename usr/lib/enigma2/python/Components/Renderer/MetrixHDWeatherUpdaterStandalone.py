@@ -311,7 +311,7 @@ class MetrixHDWeatherUpdaterStandalone(Renderer, VariableText):
 					text = "%s|%s|%s°|%s°|%s°" %(id, name, temp, temp_max, temp_min)
 					self.writeCheckFile(text)
 					return
-			except IndexError, err:
+			except IndexError as err:
 				self.errorCallback(message = str(err))
 				return
 			self.setWeatherDataValid(3)
@@ -400,7 +400,7 @@ class MetrixHDWeatherUpdaterStandalone(Renderer, VariableText):
 			config.plugins.MetrixWeather.forecastTomorrowCode.value = self.ConvertCondition(code_tomorrow)
 			config.plugins.MetrixWeather.forecastTomorrowTempMin.value = tmin_tomorrow
 			config.plugins.MetrixWeather.forecastTomorrowTempMax.value = tmax_tomorrow
-		except IndexError, err:
+		except IndexError as err:
 			self.errorCallback(message = str(err))
 			return
 		self.setWeatherDataValid(3)

@@ -1737,7 +1737,7 @@ class ActivateSkinSettings:
 				rename(dest, hd)
 			try:
 				symlink(src, dest)
-			except OSError, e:
+			except OSError as e:
 				raise Exception(_("Can't create symlink:") + "\n%s\n---> %s\n(%s)" %(src, dest, e))
 
 	def optionEHD(self, sourceFile, targetFile):
