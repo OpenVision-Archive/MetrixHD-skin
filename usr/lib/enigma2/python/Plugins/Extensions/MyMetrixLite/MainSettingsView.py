@@ -218,7 +218,7 @@ class MainSettingsView(Screen):
 
 	def applyChanges(self):
 		ret = ActivateSkinSettings().WriteSkin()
-		if not type(ret) == tuple:
+		if not isinstance(ret, tuple):
 			self.session.open(MessageBox, _('Unknown error occurred!'), MessageBox.TYPE_ERROR)
 		elif ret[0] == 'ErrorCode_2':
 			self.session.open(MessageBox, ret[1], MessageBox.TYPE_ERROR)
@@ -226,12 +226,12 @@ class MainSettingsView(Screen):
 			self.reboot(ret[1])
 		elif ret[0] == 'error':
 			self.session.open(MessageBox, ret[1], MessageBox.TYPE_ERROR)
-		elif type(ret) == tuple and ret[0] == 'checkEHDsettings':
+		elif isinstance(ret, tuple) and ret[0] == 'checkEHDsettings':
 			self.session.openWithCallback(self.checkEHDsettingsCallback, MessageBox, ret[1], MessageBox.TYPE_INFO, timeout=10)
 
 	def checkEHDsettings(self):
 		ret = ActivateSkinSettings().CheckSettings(True)
-		if type(ret) == tuple and ret[0] == 'checkEHDsettings':
+		if isinstance(ret, tuple) and ret[0] == 'checkEHDsettings':
 			self.session.openWithCallback(self.checkEHDsettingsCallback, MessageBox, ret[1], MessageBox.TYPE_INFO, timeout=10)
 
 	def checkEHDsettingsCallback(self, ret = None):
