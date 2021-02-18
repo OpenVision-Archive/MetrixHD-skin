@@ -64,7 +64,7 @@ class WeatherSettingsView(ConfigListScreen, Screen):
 	</screen>
 """
 
-	def __init__(self, session, args = None):
+	def __init__(self, session, args=None):
 		Screen.__init__(self, session)
 		self.session = session
 		self.Scale = AVSwitch().getFramebufferScale()
@@ -92,7 +92,7 @@ class WeatherSettingsView(ConfigListScreen, Screen):
 		self.checkTimer = eTimer()
 		self.checkTimer.callback.append(self.readCheckFile)
 
-		ConfigListScreen.__init__(self, self.getMenuItemList(), session = session, on_change = self.changedEntry)
+		ConfigListScreen.__init__(self, self.getMenuItemList(), session=session, on_change=self.changedEntry)
 
 		self["actions"] = ActionMap(
 		[
@@ -160,7 +160,7 @@ class WeatherSettingsView(ConfigListScreen, Screen):
 		self.PicLoad.startDecode(self.GetPicturePath())
 		self.showHelperText()
 
-	def DecodePicture(self, PicInfo = ""):
+	def DecodePicture(self, PicInfo=""):
 		ptr = self.PicLoad.getData()
 		self["helperimage"].instance.setPixmap(ptr)
 
@@ -244,7 +244,7 @@ class WeatherSettingsView(ConfigListScreen, Screen):
 		MetrixHDWeatherUpdaterStandalone(once=True)
 		self.exit()
 
-	def defaults(self, SAVE = False):
+	def defaults(self, SAVE=False):
 		for x in self["config"].list:
 			if len(x) > 1:
 				self.setInputToDefault(x[1])
