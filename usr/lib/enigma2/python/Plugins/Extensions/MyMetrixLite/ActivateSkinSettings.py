@@ -91,7 +91,7 @@ class ActivateSkinSettings:
 		initWeatherConfig()
 		initFontsConfig()
 
-	def RefreshIcons(self,restore=False):
+	def RefreshIcons(self, restore=False):
 		# called from SystemPlugins/SoftwareManager/plugin.py after software update and from Screens/SkinSelector.py after changing skin
 		self.initConfigs()
 		self.getEHDSettings()
@@ -208,7 +208,7 @@ class ActivateSkinSettings:
 						('ok.png', _('OK')),
 						('text.png', _('TEXT'))
 						]
-			buttonpath = {'HD':'/usr/share/enigma2/MetrixHD/buttons/', 'FHD':'/usr/share/enigma2/MetrixHD/FHD/buttons/', 'UHD':'/usr/share/enigma2/MetrixHD/UHD/buttons/'}
+			buttonpath = {'HD': '/usr/share/enigma2/MetrixHD/buttons/', 'FHD': '/usr/share/enigma2/MetrixHD/FHD/buttons/', 'UHD': '/usr/share/enigma2/MetrixHD/UHD/buttons/'}
 
 			################
 			# check free flash for _TARGET and _TMP files 

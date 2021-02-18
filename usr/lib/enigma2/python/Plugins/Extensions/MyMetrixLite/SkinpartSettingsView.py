@@ -301,7 +301,7 @@ class SkinpartSettingsView(ConfigListScreen, Screen):
 				picturepath = MAIN_IMAGE_PATH % "MyMetrixLiteSkinpart"
 
 		if zoomEnable and not "blue" in self["actions"].actions:
-			self["actions"].actions.update({"blue":self.zoom})
+			self["actions"].actions.update({"blue": self.zoom})
 			self["zoomBtn"].setText(_("Zoom"))
 		elif not zoomEnable and "blue" in self["actions"].actions:
 			del self["actions"].actions["blue"]

@@ -193,10 +193,10 @@ class OtherSettingsView(ConfigListScreen, Screen):
 			if "green" in self["actions"].actions:
 				del self["actions"].actions['green']
 				self["saveBtn"].setText(_(" "))
-			self["actions"].actions.update({"blue":self.test})
+			self["actions"].actions.update({"blue": self.test})
 			self["testBtn"].setText(_("Test Resolution"))
 		else:
-			self["actions"].actions.update({"green":self.save})
+			self["actions"].actions.update({"green": self.save})
 			self["saveBtn"].setText(_("Save"))
 			if "blue" in self["actions"].actions:
 				del self["actions"].actions['blue']
@@ -286,7 +286,7 @@ class OtherSettingsView(ConfigListScreen, Screen):
 			self.CheckConsole = Console()
 			self.CheckConsole.ePopen(cmd1, self.checkNetworkStateFinished)
 
-	def checkNetworkStateFinished(self, result, retval,extra_args=None):
+	def checkNetworkStateFinished(self, result, retval, extra_args=None):
 		if 'bad address' in result:
 			self.session.openWithCallback(self.InstallPackageFailed, MessageBox, _("Your %s is not connected to the internet, please check your network settings and try again.") % (BoxType), type=MessageBox.TYPE_INFO, timeout=10, close_on_any_key=True)
 		elif ('wget returned 1' or 'wget returned 255' or '404 Not Found') in result:
@@ -340,7 +340,7 @@ class OtherSettingsView(ConfigListScreen, Screen):
 		self.message.setTitle(_('Removing ...'))
 		self.Console.ePopen('/usr/bin/opkg remove ' + pkgname + ' --force-remove --autoremove', callback)
 
-	def removeComplete(self,result=None, retval=None, extra_args=None):
+	def removeComplete(self, result=None, retval=None, extra_args=None):
 		self.message.close()
 
 	def getPreset(self):
