@@ -10,7 +10,7 @@ class MetrixHDEventName(Converter, object):
 	EXTENDED_DESCRIPTION = 2
 	ID = 3
 	COMPLETE = 4
-	
+
 	def __init__(self, type):
 		Converter.__init__(self, type)
 		if type == "Description":
@@ -29,7 +29,7 @@ class MetrixHDEventName(Converter, object):
 		event = self.source.event
 		if event is None:
 			return ""
-			
+
 		if self.type == self.NAME:
 			return event.getEventName()
 		elif self.type == self.SHORT_DESCRIPTION:
@@ -49,5 +49,5 @@ class MetrixHDEventName(Converter, object):
 			else:
 			   return_str = event.getEventName() + ": " + event.getShortDescription()
 			return return_str
-		
+
 	text = property(getText)

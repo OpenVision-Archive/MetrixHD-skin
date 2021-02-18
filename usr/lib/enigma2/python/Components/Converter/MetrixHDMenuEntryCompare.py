@@ -39,4 +39,3 @@ class MetrixHDMenuEntryCompare(Converter, object):
 		return 0
 
 	value = property(getValue)
-

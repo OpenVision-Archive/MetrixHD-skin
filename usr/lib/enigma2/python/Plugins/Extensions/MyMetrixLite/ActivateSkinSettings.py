@@ -59,7 +59,7 @@ class ActivateSkinSettings:
 		#silent = True  -> returned int value for defined error code
 		#silent = False -> tuple returned -> ident, message
 
-		#error codes for silent mode 
+		#error codes for silent mode
 		#(called from SystemPlugins/SoftwareManager/BackupRestore.py after restore settings and from skin.py after flash a new image (fast restore function))
 		#0:"No Error"
 		#1:"Unknown Error creating Skin. Please check after reboot MyMetrixLite-Plugin and apply your settings."
@@ -212,7 +212,7 @@ class ActivateSkinSettings:
 			buttonpath = {'HD': '/usr/share/enigma2/MetrixHD/buttons/', 'FHD': '/usr/share/enigma2/MetrixHD/FHD/buttons/', 'UHD': '/usr/share/enigma2/MetrixHD/UHD/buttons/'}
 
 			################
-			# check free flash for _TARGET and _TMP files 
+			# check free flash for _TARGET and _TMP files
 			################
 
 			stat = statvfs("/usr/share/enigma2/MetrixHD/")
@@ -227,7 +227,7 @@ class ActivateSkinSettings:
 						filesize += path.getsize(file[0]) * 2
 
 			reserve = 256
-			filesize = filesize / 1024 + reserve 
+			filesize = filesize / 1024 + reserve
 
 			if freeflash < filesize:
 				self.ErrorCode = 2
@@ -247,7 +247,7 @@ class ActivateSkinSettings:
 				#else:
 				#    infobarSkinSearchAndReplace.append(['<panel name="INFOBARTUNERINFO-X" />', '<panel name="INFOBARTUNERINFO-%d" />' % self.getTunerCount()])
 			else:
-				infobarSkinSearchAndReplace.append(['<panel name="INFOBARTUNERINFO-X" />', '']) 
+				infobarSkinSearchAndReplace.append(['<panel name="INFOBARTUNERINFO-X" />', ''])
 
 			if config.plugins.MyMetrixLiteOther.showInfoBarClock.getValue() is False:
 				infobarSkinSearchAndReplace.append(['<panel name="CLOCKWIDGET" />', ''])
@@ -260,20 +260,20 @@ class ActivateSkinSettings:
 			else:
 				infobarSkinSearchAndReplace.append(['<panel name="INFOBARWEATHERWIDGET" />', '<panel name="INFOBARWEATHERWIDGET-2" />'])
 
-			if config.plugins.MyMetrixLiteOther.showInfoBarServiceIcons.getValue() is False: 
-				infobarSkinSearchAndReplace.append(['<panel name="INFOBARSERVICEINFO" />', '']) 
+			if config.plugins.MyMetrixLiteOther.showInfoBarServiceIcons.getValue() is False:
+				infobarSkinSearchAndReplace.append(['<panel name="INFOBARSERVICEINFO" />', ''])
 
-			if config.plugins.MyMetrixLiteOther.showRecordstate.getValue() is False: 
-				infobarSkinSearchAndReplace.append(['<panel name="INFOBARRECORDSTATE" />', '']) 
+			if config.plugins.MyMetrixLiteOther.showRecordstate.getValue() is False:
+				infobarSkinSearchAndReplace.append(['<panel name="INFOBARRECORDSTATE" />', ''])
 
-			if config.plugins.MyMetrixLiteOther.showSnr.getValue() is False: 
-				infobarSkinSearchAndReplace.append(['<panel name="INFOBARSNR" />', '']) 
+			if config.plugins.MyMetrixLiteOther.showSnr.getValue() is False:
+				infobarSkinSearchAndReplace.append(['<panel name="INFOBARSNR" />', ''])
 			else:
 				if (config.plugins.MyMetrixLiteOther.showOrbitalposition.getValue() and config.plugins.MyMetrixLiteOther.showInfoBarResolution.getValue() and config.plugins.MyMetrixLiteOther.showInfoBarResolutionExtended.getValue()) is True:
 					infobarSkinSearchAndReplace.append(['<panel name="INFOBARSNR" />', '<panel name="INFOBARSNR-2" />'])
 
-			if config.plugins.MyMetrixLiteOther.showOrbitalposition.getValue() is False: 
-				infobarSkinSearchAndReplace.append(['<panel name="INFOBARORBITALPOSITION" />', '']) 
+			if config.plugins.MyMetrixLiteOther.showOrbitalposition.getValue() is False:
+				infobarSkinSearchAndReplace.append(['<panel name="INFOBARORBITALPOSITION" />', ''])
 			else:
 				if (config.plugins.MyMetrixLiteOther.showInfoBarResolution.getValue() and config.plugins.MyMetrixLiteOther.showInfoBarResolutionExtended.getValue()) is True:
 					infobarSkinSearchAndReplace.append(['<panel name="INFOBARORBITALPOSITION" />', '<panel name="INFOBARORBITALPOSITION-2" />'])
@@ -305,7 +305,7 @@ class ActivateSkinSettings:
 
 			# InfoBar
 			if config.plugins.MyMetrixLiteOther.showExtendedinfo.getValue() is True:
-				infobarSkinSearchAndReplace.append(['<!--panel name="INFOBAREXTENDEDINFO" /-->', '<panel name="INFOBAREXTENDEDINFO" />']) 
+				infobarSkinSearchAndReplace.append(['<!--panel name="INFOBAREXTENDEDINFO" /-->', '<panel name="INFOBAREXTENDEDINFO" />'])
 
 			skin_lines = appendSkinFile(SKIN_INFOBAR_SOURCE, infobarSkinSearchAndReplace)
 
@@ -568,7 +568,7 @@ class ActivateSkinSettings:
 					EMCSkinSearchAndReplace.append(['<panel name="RESOLUTIONMOVIEPLAYER" />', '<panel name="RESOLUTIONMOVIEPLAYER-2" />'])
 			else:
 				EMCSkinSearchAndReplace.append(['<panel name="EMCMediaCenter_2" />', '<panel name="EMCMediaCenter_%s" />' % (config.plugins.MyMetrixLiteOther.InfoBarMoviePlayerDesign.value)])
-				if config.plugins.MyMetrixLiteOther.InfoBarMoviePlayerDesign.getValue() == "3": 
+				if config.plugins.MyMetrixLiteOther.InfoBarMoviePlayerDesign.getValue() == "3":
 					namepos = "30,535"
 
 			channelNameXML = self.getChannelNameXML(
@@ -612,7 +612,7 @@ class ActivateSkinSettings:
 
 			#SkinDesign
 			confvalue = config.plugins.MyMetrixLiteOther.SkinDesignLUC.getValue()
-			if confvalue != "no": 
+			if confvalue != "no":
 				color = (config.plugins.MyMetrixLiteColors.upperleftcornertransparency.value + config.plugins.MyMetrixLiteColors.upperleftcornerbackground.value)
 				width = config.plugins.MyMetrixLiteOther.SkinDesignLUCwidth.value
 				height = config.plugins.MyMetrixLiteOther.SkinDesignLUCheight.value
@@ -621,7 +621,7 @@ class ActivateSkinSettings:
 				posz = -105 + int(config.plugins.MyMetrixLiteOther.SkinDesignLUCposz.value)
 				newlines = (('<eLabel name="upperleftcorner-s" position="%s,%s" zPosition="%s" size="%s,%s" backgroundColor="#%s" />') % (posx, posy, posz, width, height, color))
 				newlinem = (('<eLabel name="upperleftcorner-m" position="%s,%s" zPosition="%s" size="%s,%s" backgroundColor="#%s" />') % (posx, posy, posz, width, height, color))
-				if confvalue == "both": 
+				if confvalue == "both":
 					DESIGNSkinSearchAndReplace.append(['<!--eLabel name="upperleftcorner-s" position="0,0" zPosition="-105" size="40,25" backgroundColor="#1A27408B" /-->', newlines])
 					DESIGNSkinSearchAndReplace.append(['<!--eLabel name="upperleftcorner-m" position="0,0" zPosition="-105" size="40,25" backgroundColor="#1A27408B" /-->', newlinem])
 				elif confvalue == "screens":
@@ -630,7 +630,7 @@ class ActivateSkinSettings:
 					DESIGNSkinSearchAndReplace.append(['<!--eLabel name="upperleftcorner-m" position="0,0" zPosition="-105" size="40,25" backgroundColor="#1A27408B" /-->', newlinem])
 
 			confvalue = config.plugins.MyMetrixLiteOther.SkinDesignLLC.getValue()
-			if confvalue != "no": 
+			if confvalue != "no":
 				color = (config.plugins.MyMetrixLiteColors.lowerleftcornertransparency.value + config.plugins.MyMetrixLiteColors.lowerleftcornerbackground.value)
 				width = config.plugins.MyMetrixLiteOther.SkinDesignLLCwidth.value
 				height = int(config.plugins.MyMetrixLiteOther.SkinDesignLLCheight.value)
@@ -639,7 +639,7 @@ class ActivateSkinSettings:
 				posz = -105 + int(config.plugins.MyMetrixLiteOther.SkinDesignLLCposz.value)
 				newlines = (('<eLabel name="lowerleftcorner-s" position="%s,%s" zPosition="%s" size="%s,%s" backgroundColor="#%s" />') % (posx, posy, posz, width, height, color))
 				newlinem = (('<eLabel name="lowerleftcorner-m" position="%s,%s" zPosition="%s" size="%s,%s" backgroundColor="#%s" />') % (posx, posy, posz, width, height, color))
-				if confvalue == "both": 
+				if confvalue == "both":
 					DESIGNSkinSearchAndReplace.append(['<!--eLabel name="lowerleftcorner-s" position="0,675" zPosition="-105" size="40,45" backgroundColor="#1A27408B" /-->', newlines])
 					DESIGNSkinSearchAndReplace.append(['<!--eLabel name="lowerleftcorner-m" position="0,675" zPosition="-105" size="40,45" backgroundColor="#1A27408B" /-->', newlinem])
 				elif confvalue == "screens":
@@ -648,7 +648,7 @@ class ActivateSkinSettings:
 					DESIGNSkinSearchAndReplace.append(['<!--eLabel name="lowerleftcorner-m" position="0,675" zPosition="-105" size="40,45" backgroundColor="#1A27408B" /-->', newlinem])
 
 			confvalue = config.plugins.MyMetrixLiteOther.SkinDesignRUC.getValue()
-			if confvalue != "no": 
+			if confvalue != "no":
 				color = (config.plugins.MyMetrixLiteColors.upperrightcornertransparency.value + config.plugins.MyMetrixLiteColors.upperrightcornerbackground.value)
 				width = int(config.plugins.MyMetrixLiteOther.SkinDesignRUCwidth.value)
 				height = config.plugins.MyMetrixLiteOther.SkinDesignRUCheight.value
@@ -657,7 +657,7 @@ class ActivateSkinSettings:
 				posz = -105 + int(config.plugins.MyMetrixLiteOther.SkinDesignRUCposz.value)
 				newlines = (('<eLabel name="upperrightcorner-s" position="%s,%s" zPosition="%s" size="%s,%s" backgroundColor="#%s" />') % (posx, posy, posz, width, height, color))
 				newlinem = (('<eLabel name="upperrightcorner-m" position="%s,%s" zPosition="%s" size="%s,%s" backgroundColor="#%s" />') % (posx, posy, posz, width, height, color))
-				if confvalue == "both": 
+				if confvalue == "both":
 					DESIGNSkinSearchAndReplace.append(['<!--eLabel name="upperrightcorner-s" position="1240,0" zPosition="-105" size="40,60" backgroundColor="#1A0F0F0F" /-->', newlines])
 					DESIGNSkinSearchAndReplace.append(['<!--eLabel name="upperrightcorner-m" position="1240,0" zPosition="-105" size="40,60" backgroundColor="#1A0F0F0F" /-->', newlinem])
 				elif confvalue == "screens":
@@ -666,7 +666,7 @@ class ActivateSkinSettings:
 					DESIGNSkinSearchAndReplace.append(['<!--eLabel name="upperrightcorner-m" position="1240,0" zPosition="-105" size="40,60" backgroundColor="#1A0F0F0F" /-->', newlinem])
 
 			confvalue = config.plugins.MyMetrixLiteOther.SkinDesignRLC.getValue()
-			if confvalue != "no": 
+			if confvalue != "no":
 				color = (config.plugins.MyMetrixLiteColors.lowerrightcornertransparency.value + config.plugins.MyMetrixLiteColors.lowerrightcornerbackground.value)
 				width = int(config.plugins.MyMetrixLiteOther.SkinDesignRLCwidth.value)
 				height = int(config.plugins.MyMetrixLiteOther.SkinDesignRLCheight.value)
@@ -675,7 +675,7 @@ class ActivateSkinSettings:
 				posz = -105 + int(config.plugins.MyMetrixLiteOther.SkinDesignRLCposz.value)
 				newlines = (('<eLabel name="lowerrightcorner-s" position="%s,%s" zPosition="%s" size="%s,%s" backgroundColor="#%s" />') % (posx, posy, posz, width, height, color))
 				newlinem = (('<eLabel name="lowerrightcorner-m" position="%s,%s" zPosition="%s" size="%s,%s" backgroundColor="#%s" />') % (posx, posy, posz, width, height, color))
-				if confvalue == "both": 
+				if confvalue == "both":
 					DESIGNSkinSearchAndReplace.append(['<!--eLabel name="lowerrightcorner-s" position="1240,640" zPosition="-105" size="40,80" backgroundColor="#1A0F0F0F" /-->', newlines])
 					DESIGNSkinSearchAndReplace.append(['<!--eLabel name="lowerrightcorner-m" position="1240,640" zPosition="-105" size="40,80" backgroundColor="#1A0F0F0F" /-->', newlinem])
 				elif confvalue == "screens":
@@ -684,7 +684,7 @@ class ActivateSkinSettings:
 					DESIGNSkinSearchAndReplace.append(['<!--eLabel name="lowerrightcorner-m" position="1240,640" zPosition="-105" size="40,80" backgroundColor="#1A0F0F0F" /-->', newlinem])
 
 			confvalue = config.plugins.MyMetrixLiteOther.SkinDesignOLH.getValue()
-			if confvalue != "no": 
+			if confvalue != "no":
 				color = (config.plugins.MyMetrixLiteColors.optionallayerhorizontaltransparency.value + config.plugins.MyMetrixLiteColors.optionallayerhorizontalbackground.value)
 				width = config.plugins.MyMetrixLiteOther.SkinDesignOLHwidth.value
 				height = config.plugins.MyMetrixLiteOther.SkinDesignOLHheight.value
@@ -693,7 +693,7 @@ class ActivateSkinSettings:
 				posz = -105 + int(config.plugins.MyMetrixLiteOther.SkinDesignOLHposz.value)
 				newlines = (('<eLabel name="optionallayerhorizontal-s" position="%s,%s" zPosition="%s" size="%s,%s" backgroundColor="#%s" />') % (posx, posy, posz, width, height, color))
 				newlinem = (('<eLabel name="optionallayerhorizontal-m" position="%s,%s" zPosition="%s" size="%s,%s" backgroundColor="#%s" />') % (posx, posy, posz, width, height, color))
-				if confvalue == "both": 
+				if confvalue == "both":
 					DESIGNSkinSearchAndReplace.append(['<!--eLabel name="optionallayerhorizontal-s" position="0,655" zPosition="-105" size="1127,30" backgroundColor="#1A27408B" /-->', newlines])
 					DESIGNSkinSearchAndReplace.append(['<!--eLabel name="optionallayerhorizontal-m" position="0,655" zPosition="-105" size="1127,30" backgroundColor="#1A27408B" /-->', newlinem])
 				elif confvalue == "screens":
@@ -702,7 +702,7 @@ class ActivateSkinSettings:
 					DESIGNSkinSearchAndReplace.append(['<!--eLabel name="optionallayerhorizontal-m" position="0,655" zPosition="-105" size="1127,30" backgroundColor="#1A27408B" /-->', newlinem])
 
 			confvalue = config.plugins.MyMetrixLiteOther.SkinDesignOLV.getValue()
-			if confvalue != "no": 
+			if confvalue != "no":
 				color = (config.plugins.MyMetrixLiteColors.optionallayerverticaltransparency.value + config.plugins.MyMetrixLiteColors.optionallayerverticalbackground.value)
 				width = config.plugins.MyMetrixLiteOther.SkinDesignOLVwidth.value
 				height = config.plugins.MyMetrixLiteOther.SkinDesignOLVheight.value
@@ -711,7 +711,7 @@ class ActivateSkinSettings:
 				posz = -105 + int(config.plugins.MyMetrixLiteOther.SkinDesignOLVposz.value)
 				newlines = (('<eLabel name="optionallayervertical-s" position="%s,%s" zPosition="%s" size="%s,%s" backgroundColor="#%s" />') % (posx, posy, posz, width, height, color))
 				newlinem = (('<eLabel name="optionallayervertical-m" position="%s,%s" zPosition="%s" size="%s,%s" backgroundColor="#%s" />') % (posx, posy, posz, width, height, color))
-				if confvalue == "both": 
+				if confvalue == "both":
 					DESIGNSkinSearchAndReplace.append(['<!--eLabel name="optionallayervertical-s" position="102,51" zPosition="-105" size="60,669" backgroundColor="#1A27408B" /-->', newlines])
 					DESIGNSkinSearchAndReplace.append(['<!--eLabel name="optionallayervertical-m" position="102,51" zPosition="-105" size="60,669" backgroundColor="#1A27408B" /-->', newlinem])
 				elif confvalue == "screens":
@@ -1802,7 +1802,7 @@ class ActivateSkinSettings:
 					else:
 						if next_rename:
 							if '#_' + self.EHDres + 'screen' in line:
-								line = line.replace('#_%sscreen' % self.EHDres, "") 
+								line = line.replace('#_%sscreen' % self.EHDres, "")
 							elif 'name="' in line and not '#_' in line and not 'HDscreen' in line:
 									line = re.sub('(name=")(\w+)', r'\1\2#_HDscreen', line)
 							next_rename = False
@@ -1921,8 +1921,8 @@ class ActivateSkinSettings:
 #EventFontSingle="epg_event;22"
 #EventFontMulti="epg_event;22"
 #TimeFontVertical="epg_event;22" EventFontVertical="epg_event;18"
-#CoolFont="epg_text;20" CoolSelectFont="epg_text;20" CoolDateFont="epg_text;30" 
-#CoolFont="Regular;19" CoolServiceFont="Regular;19" CoolEventFont="Regular;19" 
+#CoolFont="epg_text;20" CoolSelectFont="epg_text;20" CoolDateFont="epg_text;30"
+#CoolFont="Regular;19" CoolServiceFont="Regular;19" CoolEventFont="Regular;19"
 		if ('font' in line or 'Font' in line) and not 'alias name="' in line:
 			line = re.sub('(\w*[Ff]ont\w*=" *)(\w+; *)(\d+)', self.linereplacer, line)
 #<alias name="Body" font="screen_text" size="20" height="25" />
@@ -1938,7 +1938,7 @@ class ActivateSkinSettings:
 #rowSplit1="25"
 #rowSplit2="25"
 #rowHeight="25"
-#satPosLeft="160" 
+#satPosLeft="160"
 #iconMargin="5"
 #fieldMargins="10"
 #itemsDistances="10"
@@ -1964,13 +1964,13 @@ class ActivateSkinSettings:
 			line = re.sub('(offset_*\w* *= *|min_\w+ *= *)(\d+)', self.linereplacer, line)
 #messagebox end
 #emc special start
-#CoolSelNumTxtWidth="26" 
-#CoolDateHPos="1" 
-#CoolProgressHPos="1" 
-#CoolMovieHPos="1" 
-#CoolDirInfoWidth="110" 
-#CoolCSWidth="110" 
-#CoolProgressPos="35" 
+#CoolSelNumTxtWidth="26"
+#CoolDateHPos="1"
+#CoolProgressHPos="1"
+#CoolMovieHPos="1"
+#CoolDirInfoWidth="110"
+#CoolCSWidth="110"
+#CoolProgressPos="35"
 #CoolIconPos="35"
 #CoolIconHPos="35"
 #CoolBarPos="35"
@@ -1981,12 +1981,12 @@ class ActivateSkinSettings:
 #CoolMovieSize="490"
 #CoolFolderSize="490"
 #CoolDateWidth="110"
-#CoolPiconPos="100" 
-#CoolPiconHPos="2" 
-#CoolPiconWidth="60" 
-#CoolPiconHeight="26" 
-#CoolMoviePiconPos="160" 
-#CoolMoviePiconSize="425" 
+#CoolPiconPos="100"
+#CoolPiconHPos="2"
+#CoolPiconWidth="60"
+#CoolPiconHeight="26"
+#CoolMoviePiconPos="160"
+#CoolMoviePiconSize="425"
 #CoolIconSize="24,24"
 #CoolBarSize="65,10"
 #CoolBarSizeSa="65,10"
@@ -2048,8 +2048,8 @@ class ActivateSkinSettings:
 #<parameter name="AutotimerEnabledIcon" value="6,2,24,25"
 		if '<parameter name="' in line and 'value="' in line:
 			n1 = line.find('value="', 0)
-			n2 = line.find('"', n1) 
-			n12 = line.find('"', n2 + 1) 
+			n2 = line.find('"', n1)
+			n12 = line.find('"', n2 + 1)
 			if 'Font' in line:
 				parcount = len(line[n2:n12 + 1].split(';'))
 			else:
@@ -2060,36 +2060,36 @@ class ActivateSkinSettings:
 				strnew = 'value="%d"' % (p1)
 			elif parcount == 2:
 				if 'Font' in line:
-					n3 = line.find(';', n2) 
+					n3 = line.find(';', n2)
 					p1 = line[(n2 + 1):n3]
 					p2 = int(f_offset + round(float(int(line[(n3 + 1):n12]) * FACT), r_par))
 					strnew = 'value="%s;%d"' % (p1, p2)
 				else:
-					n3 = line.find(',', n2) 
+					n3 = line.find(',', n2)
 					p1 = int(round(float(int(line[(n2 + 1):n3]) * FACT), r_par))
 					p2 = int(round(float(int(line[(n3 + 1):n12]) * FACT), r_par))
 					strnew = 'value="%d,%d"' % (p1, p2)
 			elif parcount == 3:
-				n3 = line.find(',', n2) 
-				n4 = line.find(',', n3 + 1) 
+				n3 = line.find(',', n2)
+				n4 = line.find(',', n3 + 1)
 				p1 = int(round(float(int(line[(n2 + 1):n3]) * FACT), r_par))
 				p2 = int(round(float(int(line[(n3 + 1):n4]) * FACT), r_par))
 				p3 = int(round(float(int(line[(n4 + 1):n12]) * FACT), r_par))
 				strnew = 'value="%d,%d,%d"' % (p1, p2, p3)
 			elif parcount == 4:
-				n3 = line.find(',', n2) 
-				n4 = line.find(',', n3 + 1) 
-				n5 = line.find(',', n4 + 1) 
+				n3 = line.find(',', n2)
+				n4 = line.find(',', n3 + 1)
+				n5 = line.find(',', n4 + 1)
 				p1 = int(round(float(int(line[(n2 + 1):n3]) * FACT), r_par))
 				p2 = int(round(float(int(line[(n3 + 1):n4]) * FACT), r_par))
 				p3 = int(round(float(int(line[(n4 + 1):n5]) * FACT), r_par))
 				p4 = int(round(float(int(line[(n5 + 1):n12]) * FACT), r_par))
 				strnew = 'value="%d,%d,%d,%d"' % (p1, p2, p3, p4)
 			elif parcount == 5:
-				n3 = line.find(',', n2) 
-				n4 = line.find(',', n3 + 1) 
-				n5 = line.find(',', n4 + 1) 
-				n6 = line.find(',', n5 + 1) 
+				n3 = line.find(',', n2)
+				n4 = line.find(',', n3 + 1)
+				n5 = line.find(',', n4 + 1)
+				n6 = line.find(',', n5 + 1)
 				p1 = int(round(float(int(line[(n2 + 1):n3]) * FACT), r_par))
 				p2 = int(round(float(int(line[(n3 + 1):n4]) * FACT), r_par))
 				p3 = int(round(float(int(line[(n4 + 1):n5]) * FACT), r_par))
@@ -2097,11 +2097,11 @@ class ActivateSkinSettings:
 				p5 = int(round(float(int(line[(n6 + 1):n12]) * FACT), r_par))
 				strnew = 'value="%d,%d,%d,%d,%d"' % (p1, p2, p3, p4, p5)
 			elif parcount == 6:
-				n3 = line.find(',', n2) 
-				n4 = line.find(',', n3 + 1) 
-				n5 = line.find(',', n4 + 1) 
-				n6 = line.find(',', n5 + 1) 
-				n7 = line.find(',', n6 + 1) 
+				n3 = line.find(',', n2)
+				n4 = line.find(',', n3 + 1)
+				n5 = line.find(',', n4 + 1)
+				n6 = line.find(',', n5 + 1)
+				n7 = line.find(',', n6 + 1)
 				p1 = int(round(float(int(line[(n2 + 1):n3]) * FACT), r_par))
 				p2 = int(round(float(int(line[(n3 + 1):n4]) * FACT), r_par))
 				p3 = int(round(float(int(line[(n4 + 1):n5]) * FACT), r_par))
@@ -2110,12 +2110,12 @@ class ActivateSkinSettings:
 				p6 = int(round(float(int(line[(n7 + 1):n12]) * FACT), r_par))
 				strnew = 'value="%d,%d,%d,%d,%d,%d"' % (p1, p2, p3, p4, p5, p6)
 			elif parcount == 7:
-				n3 = line.find(',', n2) 
-				n4 = line.find(',', n3 + 1) 
-				n5 = line.find(',', n4 + 1) 
-				n6 = line.find(',', n5 + 1) 
-				n7 = line.find(',', n6 + 1) 
-				n8 = line.find(',', n7 + 1) 
+				n3 = line.find(',', n2)
+				n4 = line.find(',', n3 + 1)
+				n5 = line.find(',', n4 + 1)
+				n6 = line.find(',', n5 + 1)
+				n7 = line.find(',', n6 + 1)
+				n8 = line.find(',', n7 + 1)
 				p1 = int(round(float(int(line[(n2 + 1):n3]) * FACT), r_par))
 				p2 = int(round(float(int(line[(n3 + 1):n4]) * FACT), r_par))
 				p3 = int(round(float(int(line[(n4 + 1):n5]) * FACT), r_par))
@@ -2125,13 +2125,13 @@ class ActivateSkinSettings:
 				p7 = int(round(float(int(line[(n8 + 1):n12]) * FACT), r_par))
 				strnew = 'value="%d,%d,%d,%d,%d,%d,%d"' % (p1, p2, p3, p4, p5, p6, p7)
 			elif parcount == 8:
-				n3 = line.find(',', n2) 
-				n4 = line.find(',', n3 + 1) 
-				n5 = line.find(',', n4 + 1) 
-				n6 = line.find(',', n5 + 1) 
-				n7 = line.find(',', n6 + 1) 
-				n8 = line.find(',', n7 + 1) 
-				n9 = line.find(',', n8 + 1) 
+				n3 = line.find(',', n2)
+				n4 = line.find(',', n3 + 1)
+				n5 = line.find(',', n4 + 1)
+				n6 = line.find(',', n5 + 1)
+				n7 = line.find(',', n6 + 1)
+				n8 = line.find(',', n7 + 1)
+				n9 = line.find(',', n8 + 1)
 				p1 = int(round(float(int(line[(n2 + 1):n3]) * FACT), r_par))
 				p2 = int(round(float(int(line[(n3 + 1):n4]) * FACT), r_par))
 				p3 = int(round(float(int(line[(n4 + 1):n5]) * FACT), r_par))
@@ -2151,7 +2151,7 @@ class ActivateSkinSettings:
 			for s in range(0, line.count('rowSplit')):
 				n1 = line.find('rowSplit', n3)
 				n2 = line.find('="', n1)
-				n3 = line.find('"', n2 + 2) 
+				n3 = line.find('"', n2 + 2)
 				y = line[(n2 + 2):n3]
 				ynew = str(int(round(float(int(y) * FACT), r_par)))
 				strnew = line[n1:n2 + 2] + ynew
@@ -2160,17 +2160,17 @@ class ActivateSkinSettings:
 		if 'rowHeight="' in line:
 			n1 = line.find('rowHeight="', 0)
 			n2 = line.find('"', n1)
-			n3 = line.find('"', n2 + 1) 
+			n3 = line.find('"', n2 + 1)
 			y = line[(n2 + 1):n3]
 
 			ynew = str(int(round(float(int(y) * FACT), r_par)))
 			strnew = line[n1:n2 + 1] + ynew + '"'
 			line = line[:n1] + strnew + line[(n3 + 1):]
-#satPosLeft="160" 
+#satPosLeft="160"
 		if 'satPosLeft="' in line:
 			n1 = line.find('satPosLeft="', 0)
 			n2 = line.find('"', n1)
-			n3 = line.find('"', n2 + 1) 
+			n3 = line.find('"', n2 + 1)
 			y = line[(n2 + 1):n3]
 
 			ynew = str(int(round(float(int(y) * FACT), r_par)))
@@ -2181,7 +2181,7 @@ class ActivateSkinSettings:
 		if 'iconMargin="' in line:
 			n1 = line.find('iconMargin="', 0)
 			n2 = line.find('"', n1)
-			n3 = line.find('"', n2 + 1) 
+			n3 = line.find('"', n2 + 1)
 			y = line[(n2 + 1):n3]
 
 			ynew = str(int(round(float(int(y) * FACT), r_par)))
@@ -2192,9 +2192,9 @@ class ActivateSkinSettings:
 		ypos = 0
 		if 'size="' in line and not 'alias name="' in line:
 			n1 = line.find('size="', 0)
-			n2 = line.find('"', n1) 
-			n3 = line.find(',', n2) 
-			n4 = line.find('"', n3) 
+			n2 = line.find('"', n1)
+			n3 = line.find(',', n2)
+			n4 = line.find('"', n3)
 			x = line[(n2 + 1):n3]
 			y = line[(n3 + 1):n4]
 			if "c+" in x:
@@ -2244,9 +2244,9 @@ class ActivateSkinSettings:
 
 		if 'position="' in line:
 			n1 = line.find('position="', 0)
-			n2 = line.find('"', n1) 
-			n3 = line.find(',', n2) 
-			n4 = line.find('"', n3) 
+			n2 = line.find('"', n1)
+			n3 = line.find(',', n2)
+			n4 = line.find('"', n3)
 			x = line[(n2 + 1):n3]
 			y = line[(n3 + 1):n4]
 			if "c+" in x:
@@ -2288,8 +2288,8 @@ class ActivateSkinSettings:
 #font="Regular;20"
 		if 'font="' in line and not 'alias name="' in line:
 			n1 = line.find('font="', 0)
-			n2 = line.find(';', n1) 
-			n3 = line.find('"', n2) 
+			n2 = line.find(';', n1)
+			n3 = line.find('"', n2)
 			y = line[(n2 + 1):n3]
 			ynew = str(int(f_offset + round(float(int(y) * FACT), r_par)))
 			strnew = line[n1:(n2 + 1)] + ynew + '"'
@@ -2301,7 +2301,7 @@ class ActivateSkinSettings:
 			for s in range(0, line.count('Font="')):
 				n1 = line.find('Font="', n3)
 				n2 = line.find(';', n1)
-				n3 = line.find('"', n2) 
+				n3 = line.find('"', n2)
 				y = line[(n2 + 1):n3]
 				ynew = str(int(f_offset + round(float(int(y) * FACT), r_par)))
 				strnew = line[n1:n2 + 1] + ynew
@@ -2313,7 +2313,7 @@ class ActivateSkinSettings:
 			for s in range(0, line.count('FontGraphical="')):
 				n1 = line.find('FontGraphical="', n3)
 				n2 = line.find(';', n1)
-				n3 = line.find('"', n2) 
+				n3 = line.find('"', n2)
 				y = line[(n2 + 1):n3]
 				ynew = str(int(f_offset + round(float(int(y) * FACT), r_par)))
 				strnew = line[n1:n2 + 1] + ynew
@@ -2325,7 +2325,7 @@ class ActivateSkinSettings:
 			for s in range(0, line.count('FontInfobar="')):
 				n1 = line.find('FontInfobar="', n3)
 				n2 = line.find(';', n1)
-				n3 = line.find('"', n2) 
+				n3 = line.find('"', n2)
 				y = line[(n2 + 1):n3]
 				ynew = str(int(f_offset + round(float(int(y) * FACT), r_par)))
 				strnew = line[n1:n2 + 1] + ynew
@@ -2337,7 +2337,7 @@ class ActivateSkinSettings:
 			for s in range(0, line.count('FontSingle="')):
 				n1 = line.find('FontSingle="', n3)
 				n2 = line.find(';', n1)
-				n3 = line.find('"', n2) 
+				n3 = line.find('"', n2)
 				y = line[(n2 + 1):n3]
 				ynew = str(int(f_offset + round(float(int(y) * FACT), r_par)))
 				strnew = line[n1:n2 + 1] + ynew
@@ -2349,7 +2349,7 @@ class ActivateSkinSettings:
 			for s in range(0, line.count('FontMulti="')):
 				n1 = line.find('FontMulti="', n3)
 				n2 = line.find(';', n1)
-				n3 = line.find('"', n2) 
+				n3 = line.find('"', n2)
 				y = line[(n2 + 1):n3]
 				ynew = str(int(f_offset + round(float(int(y) * FACT), r_par)))
 				strnew = line[n1:n2 + 1] + ynew
@@ -2361,7 +2361,7 @@ class ActivateSkinSettings:
 			for s in range(0, line.count('FontVertical="')):
 				n1 = line.find('FontVertical="', n3)
 				n2 = line.find(';', n1)
-				n3 = line.find('"', n2) 
+				n3 = line.find('"', n2)
 				y = line[(n2 + 1):n3]
 				ynew = str(int(f_offset + round(float(int(y) * FACT), r_par)))
 				strnew = line[n1:n2 + 1] + ynew
@@ -2369,8 +2369,8 @@ class ActivateSkinSettings:
 #<alias name="Body" font="screen_text" size="20" height="25" />
 		if 'font="' in line and 'alias name="' in line and 'size="' in line:
 			n1 = line.find('size="', 0)
-			n2 = line.find('"', n1) 
-			n3 = line.find('"', n2 + 1) 
+			n2 = line.find('"', n1)
+			n3 = line.find('"', n2 + 1)
 			y = line[(n2 + 1):n3]
 			ynew = str(int(f_offset + round(float(int(y) * FACT), r_par)))
 			strnew = line[n1:(n2 + 1)] + ynew + '"'
@@ -2378,8 +2378,8 @@ class ActivateSkinSettings:
 #<alias name="Body" font="screen_text" size="20" height="25" />
 		if 'font="' in line and 'alias name="' in line and 'height="' in line:
 			n1 = line.find('height="', 0)
-			n2 = line.find('"', n1) 
-			n3 = line.find('"', n2 + 1) 
+			n2 = line.find('"', n1)
+			n3 = line.find('"', n2 + 1)
 			y = line[(n2 + 1):n3]
 			ynew = str(int(f_offset + round(float(int(y) * FACT), r_par)))
 			strnew = line[n1:(n2 + 1)] + ynew + '"'
@@ -2391,7 +2391,7 @@ class ActivateSkinSettings:
 			for s in range(0, line.count('gFont(')):
 				n1 = line.find('gFont(', n3)
 				n2 = line.find(',', n1)
-				n3 = line.find(')', n2) 
+				n3 = line.find(')', n2)
 				y = line[(n2 + 1):n3]
 				ynew = str(int(f_offset + round(float(int(y) * FACT), r_par)))
 				strnew = line[n1:n2 + 1] + " " + ynew
@@ -2399,9 +2399,9 @@ class ActivateSkinSettings:
 #(pos = (40, 5)
 		if '(pos' in line and ')' in line:
 			n1 = line.find('(pos', 0)
-			n2 = line.find('(', n1 + 1) 
-			n3 = line.find(',', n2) 
-			n4 = line.find(')', n3) 
+			n2 = line.find('(', n1 + 1)
+			n3 = line.find(',', n2)
+			n4 = line.find(')', n3)
 			x = line[(n2 + 1):n3]
 			y = line[(n3 + 1):n4]
 			if "c+" in x:
@@ -2415,7 +2415,7 @@ class ActivateSkinSettings:
 			elif "e-" in x:
 				x1 = x.replace("e-", "")
 				x1new = str(int(round(float(int(x1) * FACT), r_par)))
-				xnew = "e-" + x1new      
+				xnew = "e-" + x1new
 			elif 'ente' in x:
 				xnew = 'center'
 			else:
@@ -2443,9 +2443,9 @@ class ActivateSkinSettings:
 #size = (500, 45)
 			if 'size' in line and '(' in line and ')' in line:
 				n1 = line.find('size', 0)
-				n2 = line.find('(', n1) 
-				n3 = line.find(',', n2) 
-				n4 = line.find(')', n3) 
+				n2 = line.find('(', n1)
+				n3 = line.find(',', n2)
+				n4 = line.find(')', n3)
 				x = line[(n2 + 1):n3]
 				y = line[(n3 + 1):n4]
 				if "c+" in x:
@@ -2487,9 +2487,9 @@ class ActivateSkinSettings:
 #offset="5,0"
 		if ' offset="' in line:
 			n1 = line.find(' offset', 0)
-			n2 = line.find('"', n1) 
-			n3 = line.find(',', n2) 
-			n4 = line.find('"', n3) 
+			n2 = line.find('"', n1)
+			n3 = line.find(',', n2)
+			n4 = line.find('"', n3)
 			x = line[(n2 + 1):n3]
 			y = line[(n3 + 1):n4]
 			xnew = str(int(round(float(int(x) * FACT), r_par)))
@@ -2501,7 +2501,7 @@ class ActivateSkinSettings:
 		if 'fieldMargins="' in line:
 			n1 = line.find('fieldMargins="', 0)
 			n2 = line.find('"', n1)
-			n3 = line.find('"', n2 + 1) 
+			n3 = line.find('"', n2 + 1)
 			y = line[(n2 + 1):n3]
 
 			ynew = str(int(round(float(int(y) * FACT), r_par)))
@@ -2511,7 +2511,7 @@ class ActivateSkinSettings:
 		if 'itemsDistances="' in line:
 			n1 = line.find('itemsDistances="', 0)
 			n2 = line.find('"', n1)
-			n3 = line.find('"', n2 + 1) 
+			n3 = line.find('"', n2 + 1)
 			y = line[(n2 + 1):n3]
 
 			ynew = str(int(round(float(int(y) * FACT), r_par)))
@@ -2521,17 +2521,17 @@ class ActivateSkinSettings:
 		if 'progressbarHeight="' in line:
 			n1 = line.find('progressbarHeight="', 0)
 			n2 = line.find('"', n1)
-			n3 = line.find('"', n2 + 1) 
+			n3 = line.find('"', n2 + 1)
 			y = line[(n2 + 1):n3]
 
 			ynew = str(int(round(float(int(y) * FACT), r_par)))
 			strnew = line[n1:n2 + 1] + ynew + '"'
 			line = line[:n1] + strnew + line[(n3 + 1):]
-#progressBarWidth="50" 
+#progressBarWidth="50"
 		if 'progressBarWidth="' in line:
 			n1 = line.find('progressBarWidth="', 0)
 			n2 = line.find('"', n1)
-			n3 = line.find('"', n2 + 1) 
+			n3 = line.find('"', n2 + 1)
 			y = line[(n2 + 1):n3]
 
 			ynew = str(int(round(float(int(y) * FACT), r_par)))
@@ -2541,7 +2541,7 @@ class ActivateSkinSettings:
 		#if 'progressbarBorderWidth="' in line:
 		#	n1 = line.find('progressbarBorderWidth="', 0)
 		#	n2 = line.find('"', n1)
-		#	n3 = line.find('"', n2+1) 
+		#	n3 = line.find('"', n2+1)
 		#	y = line[(n2+1):n3]
 
 		#	ynew = str(int(round(float(int(y)*FACT),r_par)))
@@ -2551,7 +2551,7 @@ class ActivateSkinSettings:
 		if 'itemHeight="' in line:
 			n1 = line.find('itemHeight="', 0)
 			n2 = line.find('"', n1)
-			n3 = line.find('"', n2 + 1) 
+			n3 = line.find('"', n2 + 1)
 			y = line[(n2 + 1):n3]
 
 			ynew = str(int(round(float(int(y) * FACT), r_par)))
@@ -2561,7 +2561,7 @@ class ActivateSkinSettings:
 		if '"itemHeight":' in line:
 			n1 = line.find('"itemHeight":', 0)
 			n2 = line.find(':', n1)
-			n3 = line.find(',', n2) 
+			n3 = line.find(',', n2)
 			if n3 == -1:
 				n3 = line.find(')', n2)
 				if n3 == -1:
@@ -2575,7 +2575,7 @@ class ActivateSkinSettings:
 		if '": (' in line and '[' in line:
 			n1 = line.find('":', 0)
 			n2 = line.find('(', n1)
-			n3 = line.find(',', n2 + 1) 
+			n3 = line.find(',', n2 + 1)
 			y = line[(n2 + 1):n3]
 
 			ynew = str(int(round(float(int(y) * FACT), r_par)))
@@ -2595,7 +2595,7 @@ class ActivateSkinSettings:
 		if 'offset_listposx =' in line:
 			n1 = line.find('offset_listposx', 0)
 			n2 = line.find('=', n1)
-			n3 = line.find(',', n2) 
+			n3 = line.find(',', n2)
 			if n3 == -1:
 				n3 = line.find(')', n2)
 				if n3 == -1:
@@ -2607,7 +2607,7 @@ class ActivateSkinSettings:
 		elif 'offset_listposy =' in line:
 			n1 = line.find('offset_listposy', 0)
 			n2 = line.find('=', n1)
-			n3 = line.find(',', n2) 
+			n3 = line.find(',', n2)
 			if n3 == -1:
 				n3 = line.find(')', n2)
 				if n3 == -1:
@@ -2619,7 +2619,7 @@ class ActivateSkinSettings:
 		elif 'offset_listwidth =' in line:
 			n1 = line.find('offset_listwidth', 0)
 			n2 = line.find('=', n1)
-			n3 = line.find(',', n2) 
+			n3 = line.find(',', n2)
 			if n3 == -1:
 				n3 = line.find(')', n2)
 				if n3 == -1:
@@ -2631,7 +2631,7 @@ class ActivateSkinSettings:
 		elif 'offset_listheight =' in line:
 			n1 = line.find('offset_listheight', 0)
 			n2 = line.find('=', n1)
-			n3 = line.find(',', n2) 
+			n3 = line.find(',', n2)
 			if n3 == -1:
 				n3 = line.find(')', n2)
 				if n3 == -1:
@@ -2643,7 +2643,7 @@ class ActivateSkinSettings:
 		elif 'offset_textwidth =' in line:
 			n1 = line.find('offset_textwidth', 0)
 			n2 = line.find('=', n1)
-			n3 = line.find(',', n2) 
+			n3 = line.find(',', n2)
 			if n3 == -1:
 				n3 = line.find(')', n2)
 				if n3 == -1:
@@ -2655,7 +2655,7 @@ class ActivateSkinSettings:
 		elif 'offset_textheight =' in line:
 			n1 = line.find('offset_textheight', 0)
 			n2 = line.find('=', n1)
-			n3 = line.find(',', n2) 
+			n3 = line.find(',', n2)
 			if n3 == -1:
 				n3 = line.find(')', n2)
 				if n3 == -1:
@@ -2667,7 +2667,7 @@ class ActivateSkinSettings:
 		elif 'min_width =' in line:
 			n1 = line.find('min_width', 0)
 			n2 = line.find('=', n1)
-			n3 = line.find(',', n2) 
+			n3 = line.find(',', n2)
 			if n3 == -1:
 				n3 = line.find(')', n2)
 				if n3 == -1:
@@ -2679,7 +2679,7 @@ class ActivateSkinSettings:
 		elif 'min_height =' in line:
 			n1 = line.find('min_height', 0)
 			n2 = line.find('=', n1)
-			n3 = line.find(',', n2) 
+			n3 = line.find(',', n2)
 			if n3 == -1:
 				n3 = line.find(')', n2)
 				if n3 == -1:
@@ -2691,7 +2691,7 @@ class ActivateSkinSettings:
 		elif 'offset =' in line:
 			n1 = line.find('offset', 0)
 			n2 = line.find('=', n1)
-			n3 = line.find(',', n2) 
+			n3 = line.find(',', n2)
 			if n3 == -1:
 				n3 = line.find(')', n2)
 				if n3 == -1:
@@ -2702,7 +2702,7 @@ class ActivateSkinSettings:
 			line = line[:n1] + strnew + line[n3:]
 #emc special start
 		if 'widget name="list"' in line and ' Cool' in line and not ' CoolEvent' in line or 'render="EMCPositionGauge"' in line:
-#CoolFont="epg_text;20" CoolSelectFont="epg_text;20" CoolDateFont="epg_text;30" 
+#CoolFont="epg_text;20" CoolSelectFont="epg_text;20" CoolDateFont="epg_text;30"
 			if 'CoolFont="' in line:
 				n1 = line.find('CoolFont=', 0)
 				n2 = line.find(';', n1)
@@ -2727,7 +2727,7 @@ class ActivateSkinSettings:
 				ynew = str(int(f_offset + round(float(int(y) * FACT), r_par)))
 				strnew = line[n1:n2 + 1] + ynew + '"'
 				line = line[:n1] + strnew + line[(n3 + 1):]
-#CoolSelNumTxtWidth="26" 
+#CoolSelNumTxtWidth="26"
 			if 'CoolSelNumTxtWidth="' in line:
 				n1 = line.find('CoolSelNumTxtWidth=', 0)
 				n2 = line.find('"', n1)
@@ -2736,7 +2736,7 @@ class ActivateSkinSettings:
 				ynew = str(int(round(float(int(y) * FACT), r_par)))
 				strnew = line[n1:n2 + 1] + ynew + '"'
 				line = line[:n1] + strnew + line[(n3 + 1):]
-#CoolDateHPos="1" 
+#CoolDateHPos="1"
 			if 'CoolDateHPos="' in line:
 				n1 = line.find('CoolDateHPos=', 0)
 				n2 = line.find('"', n1)
@@ -2745,7 +2745,7 @@ class ActivateSkinSettings:
 				ynew = str(int(round(float(int(y) * FACT), r_par)))
 				strnew = line[n1:n2 + 1] + ynew + '"'
 				line = line[:n1] + strnew + line[(n3 + 1):]
-#CoolProgressHPos="1" 
+#CoolProgressHPos="1"
 			if 'CoolProgressHPos="' in line:
 				n1 = line.find('CoolProgressHPos=', 0)
 				n2 = line.find('"', n1)
@@ -2754,7 +2754,7 @@ class ActivateSkinSettings:
 				ynew = str(int(round(float(int(y) * FACT), r_par)))
 				strnew = line[n1:n2 + 1] + ynew + '"'
 				line = line[:n1] + strnew + line[(n3 + 1):]
-#CoolMovieHPos="1" 
+#CoolMovieHPos="1"
 			if 'CoolMovieHPos="' in line:
 				n1 = line.find('CoolMovieHPos=', 0)
 				n2 = line.find('"', n1)
@@ -2763,7 +2763,7 @@ class ActivateSkinSettings:
 				ynew = str(int(round(float(int(y) * FACT), r_par)))
 				strnew = line[n1:n2 + 1] + ynew + '"'
 				line = line[:n1] + strnew + line[(n3 + 1):]
-#CoolDirInfoWidth="110" 
+#CoolDirInfoWidth="110"
 			if 'CoolDirInfoWidth="' in line:
 				n1 = line.find('CoolDirInfoWidth=', 0)
 				n2 = line.find('"', n1)
@@ -2772,7 +2772,7 @@ class ActivateSkinSettings:
 				ynew = str(int(round(float(int(y) * FACT), r_par)))
 				strnew = line[n1:n2 + 1] + ynew + '"'
 				line = line[:n1] + strnew + line[(n3 + 1):]
-#CoolCSWidth="110" 
+#CoolCSWidth="110"
 			if 'CoolCSWidth="' in line:
 				n1 = line.find('CoolCSWidth=', 0)
 				n2 = line.find('"', n1)
@@ -2781,7 +2781,7 @@ class ActivateSkinSettings:
 				ynew = str(int(round(float(int(y) * FACT), r_par)))
 				strnew = line[n1:n2 + 1] + ynew + '"'
 				line = line[:n1] + strnew + line[(n3 + 1):]
-#CoolProgressPos="35" 
+#CoolProgressPos="35"
 			if 'CoolProgressPos="' in line:
 				n1 = line.find('CoolProgressPos=', 0)
 				n2 = line.find('"', n1)
@@ -2880,66 +2880,66 @@ class ActivateSkinSettings:
 				ynew = str(int(round(float(int(y) * FACT), r_par)))
 				strnew = line[n1:n2 + 1] + ynew + '"'
 				line = line[:n1] + strnew + line[(n3 + 1):]
-#CoolPiconPos="100" 
-			if 'CoolPiconPos="' in line: 
-				n1 = line.find('CoolPiconPos=', 0) 
-				n2 = line.find('"', n1) 
-				n3 = line.find('"', n2 + 1) 
-				y = line[(n2 + 1):n3] 
-				ynew = str(int(round(float(int(y) * FACT), r_par))) 
-				strnew = line[n1:n2 + 1] + ynew + '"' 
-				line = line[:n1] + strnew + line[(n3 + 1):] 
-#CoolPiconHPos="2" 
-			if 'CoolPiconHPos="' in line: 
-				n1 = line.find('CoolPiconHPos=', 0) 
-				n2 = line.find('"', n1) 
-				n3 = line.find('"', n2 + 1) 
-				y = line[(n2 + 1):n3] 
-				ynew = str(int(round(float(int(y) * FACT), r_par))) 
-				strnew = line[n1:n2 + 1] + ynew + '"' 
-				line = line[:n1] + strnew + line[(n3 + 1):] 
-#CoolPiconWidth="60" 
-			if 'CoolPiconWidth="' in line: 
-				n1 = line.find('CoolPiconWidth=', 0) 
-				n2 = line.find('"', n1) 
-				n3 = line.find('"', n2 + 1) 
-				y = line[(n2 + 1):n3] 
-				ynew = str(int(round(float(int(y) * FACT), r_par))) 
-				strnew = line[n1:n2 + 1] + ynew + '"' 
-				line = line[:n1] + strnew + line[(n3 + 1):] 
-#CoolPiconHeight="26" 
-			if 'CoolPiconHeight="' in line: 
-				n1 = line.find('CoolPiconHeight=', 0) 
-				n2 = line.find('"', n1) 
-				n3 = line.find('"', n2 + 1) 
-				y = line[(n2 + 1):n3] 
-				ynew = str(int(round(float(int(y) * FACT), r_par))) 
-				strnew = line[n1:n2 + 1] + ynew + '"' 
-				line = line[:n1] + strnew + line[(n3 + 1):] 
-#CoolMoviePiconPos="160" 
-			if 'CoolMoviePiconPos="' in line: 
-				n1 = line.find('CoolMoviePiconPos=', 0) 
-				n2 = line.find('"', n1) 
-				n3 = line.find('"', n2 + 1) 
-				y = line[(n2 + 1):n3] 
-				ynew = str(int(round(float(int(y) * FACT), r_par))) 
-				strnew = line[n1:n2 + 1] + ynew + '"' 
-				line = line[:n1] + strnew + line[(n3 + 1):] 
-#CoolMoviePiconSize="425" 
-			if 'CoolMoviePiconSize="' in line: 
-				n1 = line.find('CoolMoviePiconSize=', 0) 
-				n2 = line.find('"', n1) 
-				n3 = line.find('"', n2 + 1) 
-				y = line[(n2 + 1):n3] 
-				ynew = str(int(round(float(int(y) * FACT), r_par))) 
-				strnew = line[n1:n2 + 1] + ynew + '"' 
-				line = line[:n1] + strnew + line[(n3 + 1):] 
+#CoolPiconPos="100"
+			if 'CoolPiconPos="' in line:
+				n1 = line.find('CoolPiconPos=', 0)
+				n2 = line.find('"', n1)
+				n3 = line.find('"', n2 + 1)
+				y = line[(n2 + 1):n3]
+				ynew = str(int(round(float(int(y) * FACT), r_par)))
+				strnew = line[n1:n2 + 1] + ynew + '"'
+				line = line[:n1] + strnew + line[(n3 + 1):]
+#CoolPiconHPos="2"
+			if 'CoolPiconHPos="' in line:
+				n1 = line.find('CoolPiconHPos=', 0)
+				n2 = line.find('"', n1)
+				n3 = line.find('"', n2 + 1)
+				y = line[(n2 + 1):n3]
+				ynew = str(int(round(float(int(y) * FACT), r_par)))
+				strnew = line[n1:n2 + 1] + ynew + '"'
+				line = line[:n1] + strnew + line[(n3 + 1):]
+#CoolPiconWidth="60"
+			if 'CoolPiconWidth="' in line:
+				n1 = line.find('CoolPiconWidth=', 0)
+				n2 = line.find('"', n1)
+				n3 = line.find('"', n2 + 1)
+				y = line[(n2 + 1):n3]
+				ynew = str(int(round(float(int(y) * FACT), r_par)))
+				strnew = line[n1:n2 + 1] + ynew + '"'
+				line = line[:n1] + strnew + line[(n3 + 1):]
+#CoolPiconHeight="26"
+			if 'CoolPiconHeight="' in line:
+				n1 = line.find('CoolPiconHeight=', 0)
+				n2 = line.find('"', n1)
+				n3 = line.find('"', n2 + 1)
+				y = line[(n2 + 1):n3]
+				ynew = str(int(round(float(int(y) * FACT), r_par)))
+				strnew = line[n1:n2 + 1] + ynew + '"'
+				line = line[:n1] + strnew + line[(n3 + 1):]
+#CoolMoviePiconPos="160"
+			if 'CoolMoviePiconPos="' in line:
+				n1 = line.find('CoolMoviePiconPos=', 0)
+				n2 = line.find('"', n1)
+				n3 = line.find('"', n2 + 1)
+				y = line[(n2 + 1):n3]
+				ynew = str(int(round(float(int(y) * FACT), r_par)))
+				strnew = line[n1:n2 + 1] + ynew + '"'
+				line = line[:n1] + strnew + line[(n3 + 1):]
+#CoolMoviePiconSize="425"
+			if 'CoolMoviePiconSize="' in line:
+				n1 = line.find('CoolMoviePiconSize=', 0)
+				n2 = line.find('"', n1)
+				n3 = line.find('"', n2 + 1)
+				y = line[(n2 + 1):n3]
+				ynew = str(int(round(float(int(y) * FACT), r_par)))
+				strnew = line[n1:n2 + 1] + ynew + '"'
+				line = line[:n1] + strnew + line[(n3 + 1):]
 #CoolIconSize="24,24"
 			if 'CoolIconSize="' in line:
 				n1 = line.find('CoolIconSize=', 0)
 				n2 = line.find('"', n1)
 				n3 = line.find(',', n2 + 1)
-				n4 = line.find('"', n3) 
+				n4 = line.find('"', n3)
 				x = line[(n2 + 1):n3]
 				y = line[(n3 + 1):n4]
 				xnew = str(int(round(float(int(x) * FACT), r_par)))
@@ -2951,7 +2951,7 @@ class ActivateSkinSettings:
 				n1 = line.find('CoolBarSize=', 0)
 				n2 = line.find('"', n1)
 				n3 = line.find(',', n2 + 1)
-				n4 = line.find('"', n3) 
+				n4 = line.find('"', n3)
 				x = line[(n2 + 1):n3]
 				y = line[(n3 + 1):n4]
 				xnew = str(int(round(float(int(x) * FACT), r_par)))
@@ -2963,7 +2963,7 @@ class ActivateSkinSettings:
 				n1 = line.find('CoolBarSizeSa=', 0)
 				n2 = line.find('"', n1)
 				n3 = line.find(',', n2 + 1)
-				n4 = line.find('"', n3) 
+				n4 = line.find('"', n3)
 				x = line[(n2 + 1):n3]
 				y = line[(n3 + 1):n4]
 				xnew = str(int(round(float(int(x) * FACT), r_par)))
@@ -2975,7 +2975,7 @@ class ActivateSkinSettings:
 				n1 = line.find('/CoolPointerRec.png', 0)
 				n2 = line.find(':', n1)
 				n3 = line.find(',', n2 + 1)
-				n4 = line.find('"', n3) 
+				n4 = line.find('"', n3)
 				x = line[(n2 + 1):n3]
 				y = line[(n3 + 1):n4]
 				xnew = str(int(round(float(int(x) * FACT), r_par)))
@@ -2987,7 +2987,7 @@ class ActivateSkinSettings:
 				n1 = line.find('/CoolPointerRec2.png', 0)
 				n2 = line.find(':', n1)
 				n3 = line.find(',', n2 + 1)
-				n4 = line.find('"', n3) 
+				n4 = line.find('"', n3)
 				x = line[(n2 + 1):n3]
 				y = line[(n3 + 1):n4]
 				xnew = str(int(round(float(int(x) * FACT), r_par)))
@@ -2998,7 +2998,7 @@ class ActivateSkinSettings:
 #emc special end
 #cool tv guide special start
 		if ('widget name="list"' in line or 'widget name="CoolEvent"' in line) and ' CoolEvent' in line:
-#CoolFont="Regular;19" CoolServiceFont="Regular;19" CoolEventFont="Regular;19" 
+#CoolFont="Regular;19" CoolServiceFont="Regular;19" CoolEventFont="Regular;19"
 			if 'CoolFont="' in line:
 				n1 = line.find('CoolFont=', 0)
 				n2 = line.find(';', n1)
