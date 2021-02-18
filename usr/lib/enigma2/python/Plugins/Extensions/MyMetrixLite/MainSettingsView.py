@@ -44,6 +44,7 @@ from Tools.Directories import resolveFilename, SCOPE_CURRENT_SKIN, fileExists
 
 #############################################################
 
+
 class MainMenuList(MenuList):
 	def __init__(self, list, font0=24, font1=16, itemHeight=50, enableWrapAround=True):
 		MenuList.__init__(self, list, enableWrapAround, eListboxPythonMultiContent)
@@ -63,6 +64,7 @@ class MainMenuList(MenuList):
 
 #############################################################
 
+
 def MenuEntryItem(itemDescription, key, helptext):
 	res = [(itemDescription, key, helptext)]
 	screenwidth = getDesktop(0).size().width()
@@ -75,6 +77,7 @@ def MenuEntryItem(itemDescription, key, helptext):
 	return res
 
 #############################################################
+
 
 class MainSettingsView(Screen):
 	skin = """

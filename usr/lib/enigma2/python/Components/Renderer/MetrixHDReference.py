@@ -22,6 +22,7 @@ from enigma import eLabel
 from Components.VariableText import VariableText
 from enigma import eServiceReference
 
+
 class MetrixHDReference(VariableText, Renderer):
 
 	def __init__(self):

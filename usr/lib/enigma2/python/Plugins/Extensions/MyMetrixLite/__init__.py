@@ -40,14 +40,17 @@ PLUGIN_PATH = resolveFilename(SCOPE_PLUGINS, "Extensions/MyMetrixLite")
 
 PluginLanguageDomain = "MyMetrixLite"
 
+
 def localeInit():
 	gettext.bindtextdomain(PluginLanguageDomain, PLUGIN_PATH + "/locale")
+
 
 def _(txt):
 	if gettext.dgettext(PluginLanguageDomain, txt):
 		return gettext.dgettext(PluginLanguageDomain, txt)
 	else:
 		return gettext.gettext(txt)
+
 
 language.addCallback(localeInit())
 
@@ -241,6 +244,7 @@ for lines in SysFontTypeList:
 for lines in SkinFontTypeList:
 	if path.exists(lines[0]):
 		FontTypeList.append(lines)
+
 
 def initColorsConfig():
 
@@ -464,6 +468,7 @@ def initColorsConfig():
 
 #############################################################
 
+
 def initFontsConfig():
 
 	config.plugins.MyMetrixLiteFonts = ConfigSubsection()
@@ -526,6 +531,7 @@ def initFontsConfig():
 
 #######################################################################
 
+
 def initWeatherConfig():
 	config.plugins.MetrixWeather = ConfigSubsection()
 
@@ -550,7 +556,6 @@ def initWeatherConfig():
 		("MSN", _("MSN")),
 		("openweather", _("openweather"))
 	])
-
 
 	## RENDERER CONFIG:
 
@@ -598,6 +603,7 @@ def initWeatherConfig():
 	config.plugins.MetrixWeather.forecastTomorrowshortday3 = ConfigText(default="N/A")
 
 #######################################################################
+
 
 def initOtherConfig():
 	channelSelectionStyleList = [
@@ -832,6 +838,7 @@ def initOtherConfig():
 
 #######################################################################
 
+
 def getTunerPositionList():
 	tunerPositionList = [
 		("286,666", "286,693", "1", "0,0"),
@@ -845,6 +852,7 @@ def getTunerPositionList():
 	return tunerPositionList
 
 #######################################################################
+
 
 def appendSkinFile(appendFileName, skinPartSearchAndReplace):
 	"""

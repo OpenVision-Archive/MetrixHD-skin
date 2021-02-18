@@ -48,6 +48,7 @@ from time import time
 
 #############################################################
 
+
 class ActivateSkinSettings:
 
 	def __init__(self):
