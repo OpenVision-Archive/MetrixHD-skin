@@ -99,7 +99,7 @@ class MetrixHDCaidDisplay(Poll, Converter, object):
 						# hops
 						hops = ecm_info.get("hops", None)
 						hops = "HOPS: %s" % hops
-						# ecm time	
+						# ecm time
 						ecm_time = ecm_info.get("ecm time", None)
 						if ecm_time:
 							if "msec" in ecm_time:
